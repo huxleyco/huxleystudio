@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laura Huxley · Huxley & Co.</title>
+  <meta name="description" content="Laura Huxley is the principal of Huxley & Co., advising founders, family offices, and private enterprises on talent and organizational structure.">
+  <link rel="icon" type="image/png" href="data:image/png;base64,AAABAAEAEBAAAAAAIADoAQAAFgAAAIlQTkcNChoKAAAADUlIRFIAAAAQAAAAEAgGAAAAH/P/YQAAAa9JREFUeJyNk0tvE0EQhL+aHT9ih5BEiNjmKfkEF4jEhQOcEWcO3OHCj+LHcOcfICTgQHhYkYKRHXt3uznsrL12eLU0Gu1MV011d62Gw+EjyV8DY0Bp/S282vTJzF9pNDr6IIVb7u41WKrSUmY6BPc1iSSZ2WkEbYDNHE+ZIVSCSrOKSEpnyN1d0mFMkgTg7vR32mRZIAQxmy9xoL/TxcwpzZjNl0i1JjxsyE77syf3ePxgjLljpfHw/m2ePz0mCwF8nQsorIpyiFngy2TKbJ7z7fQnZ9NzprMFXydTzhcFn7//IGah2QvidntbMSBBr9tib7eLgH6vne4ynM2IW984UBTGjcE+x3euIeDm8ICytI0x/JFAQIyBdx8nvHn7njRR7o4Hv3VI3AYXRT0yyEJVTt20vLALHKsmSpCXxvDqHp125HC/x6Vem163xZWDXVox4/rRZfLSmlNAo9FgVZi70+20kCBILPMSd+i0I5bMNF/ktQ9WJTQsLOaLfO32lJjPFmvJYaMIjwm8IgnShWY1X2yCSUY6kerf57/DE2YazHjh7icN1n+Cq+UT8Je/APMZqTieYvrBAAAAAElFTkSuQmCC">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --cream: #F5F0E8;
+      --cream-dark: #EDE8DC;
+      --black: #1a1a18;
+      --gold: #9a8660;
+      --gold-light: rgba(180,160,100,0.25);
+      --text-body: #5a4e3a;
+      --text-muted: #6a5e48;
+      --text-dark: #8a7a5a;
+      --serif: 'Cormorant Garamond', Palatino, 'Palatino Linotype', Georgia, serif;
+      --sans: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--cream); font-family: var(--serif); color: var(--black); -webkit-font-smoothing: antialiased; }
+
+    /* NAV */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 28px 80px;
+      border-bottom: 0.5px solid var(--gold-light);
+      flex-wrap: nowrap;
+      gap: 16px;
+    }
+    .logo { font-family: var(--serif); font-size: 24px; font-weight: 500; letter-spacing: 0.2em; color: var(--black); text-decoration: none; white-space: nowrap; flex-shrink: 0; }
+    .logo-amp { font-size: 13px; font-weight: 400; font-style: italic; color: var(--text-dark); letter-spacing: 0.05em; }
+    .logo-co { font-size: 13px; font-weight: 400; color: var(--text-dark); letter-spacing: 0.28em; }
+    .nav-links { display: flex; gap: 40px; list-style: none; flex-shrink: 0; }
+    .nav-links a { font-family: var(--sans); font-size: 11px; letter-spacing: 0.18em; color: var(--text-body); text-decoration: none; transition: color 0.2s ease; white-space: nowrap; }
+    .nav-links a:hover { color: var(--black); }
+    .nav-links a.active { color: var(--black); border-bottom: 0.5px solid var(--gold); padding-bottom: 2px; }
+
+    /* PRINCIPAL HERO */
+    .principal-hero {
+      padding: 80px 80px 72px;
+      display: grid;
+      grid-template-columns: 5fr 3fr;
+      gap: 80px;
+      align-items: end;
+      border-bottom: 0.5px solid var(--gold-light);
+    }
+    .eyebrow { font-family: var(--sans); font-size: 10px; letter-spacing: 0.45em; color: var(--gold); margin-bottom: 24px; }
+    .principal-name { font-size: clamp(44px, 4.8vw, 78px); font-weight: 300; line-height: 1.06; color: var(--black); letter-spacing: 0.01em; }
+    .principal-title { font-family: var(--sans); font-size: 11px; letter-spacing: 0.3em; color: var(--text-muted); margin-top: 20px; }
+    .gold-rule { width: 32px; height: 0.5px; background: var(--gold); margin: 28px 0; }
+    .principal-intro { font-family: var(--sans); font-size: 15px; line-height: 1.9; color: var(--text-body); }
+
+    /* EXPERIENCE STAT */
+    .principal-stat { padding-bottom: 8px; }
+    .stat-number { font-family: var(--serif); font-size: clamp(64px, 7vw, 108px); font-weight: 300; color: var(--black); line-height: 1; letter-spacing: -0.01em; }
+    .stat-label { font-family: var(--sans); font-size: 10px; letter-spacing: 0.4em; color: var(--gold); margin-top: 10px; }
+
+    /* EXPERTISE */
+    .expertise { background: var(--black); border-top: 0.5px solid var(--gold-light); display: grid; grid-template-columns: repeat(4, 1fr); }
+    .expertise-item { padding: 56px 48px; border-right: 0.5px solid rgba(180,160,100,0.15); }
+    .expertise-item:last-child { border-right: none; }
+    .expertise-num { font-family: var(--sans); font-size: 9px; letter-spacing: 0.35em; color: var(--gold); margin-bottom: 20px; }
+    .expertise-rule { width: 32px; height: 0.5px; background: var(--gold); margin-bottom: 20px; }
+    .expertise-item h3 { font-family: var(--serif); font-size: 21px; font-weight: 300; color: var(--cream); letter-spacing: 0.04em; line-height: 1.3; }
+
+    /* BACKGROUND */
+    .background { padding: 88px 80px; display: grid; grid-template-columns: 1fr 2fr; gap: 80px; border-bottom: 0.5px solid var(--gold-light); }
+    .background-label { font-family: var(--sans); font-size: 10px; letter-spacing: 0.4em; color: var(--gold); padding-top: 6px; }
+    .background-content {}
+    .background-content p { font-family: var(--sans); font-size: 14px; line-height: 1.95; color: var(--text-body); margin-bottom: 20px; }
+    .background-content p:last-child { margin-bottom: 0; }
+
+    /* SECTORS */
+    .sectors { background: var(--cream-dark); padding: 72px 80px; border-bottom: 0.5px solid var(--gold-light); }
+    .sectors-label { font-family: var(--sans); font-size: 10px; letter-spacing: 0.4em; color: var(--gold); margin-bottom: 40px; }
+    .sectors-grid { display: flex; gap: 0; flex-wrap: wrap; }
+    .sector-tag { font-family: var(--sans); font-size: 11px; letter-spacing: 0.2em; color: var(--text-muted); padding: 12px 28px 12px 0; border-right: 0.5px solid var(--gold-light); margin-right: 28px; margin-bottom: 16px; white-space: nowrap; }
+    .sector-tag:last-child { border-right: none; }
+
+    /* CTA */
+    .principal-cta { padding: 88px 80px; display: flex; justify-content: space-between; align-items: center; gap: 40px; }
+    .cta-left h2 { font-family: var(--serif); font-size: clamp(32px, 3.5vw, 54px); font-weight: 300; color: var(--black); line-height: 1.15; letter-spacing: 0.02em; }
+    .cta-right { flex-shrink: 0; }
+    .cta { font-family: var(--sans); font-size: 11px; letter-spacing: 0.3em; color: var(--black); border-bottom: 0.5px solid var(--gold); padding-bottom: 3px; text-decoration: none; transition: color 0.2s ease; }
+    .cta:hover { color: var(--gold); }
+
+    /* FOOTER */
+    footer { padding: 36px 80px; border-top: 0.5px solid var(--gold-light); display: flex; justify-content: space-between; align-items: center; background: var(--cream); }
+    .footer-logo { font-family: var(--serif); font-size: 13px; font-weight: 400; letter-spacing: 0.22em; color: var(--text-body); }
+    .footer-detail { font-family: var(--sans); font-size: 10px; letter-spacing: 0.2em; color: var(--gold); }
+
+    /* TABLET */
+    @media (max-width: 1024px) {
+      nav { padding: 24px 40px; }
+      .principal-hero { padding: 56px 40px 52px; grid-template-columns: 1fr; gap: 40px; }
+      .expertise { grid-template-columns: 1fr 1fr; }
+      .expertise-item { border-bottom: 0.5px solid rgba(180,160,100,0.15); }
+      .expertise-item:nth-child(2n) { border-right: none; }
+      .expertise-item:nth-last-child(-n+2) { border-bottom: none; }
+      .background { padding: 64px 40px; grid-template-columns: 1fr; gap: 24px; }
+      .sectors { padding: 56px 40px; }
+      .principal-cta { padding: 64px 40px; flex-direction: column; align-items: flex-start; gap: 32px; }
+      footer { padding: 32px 40px; }
+    }
+
+    /* MOBILE */
+    @media (max-width: 600px) {
+      nav { padding: 20px 24px; flex-wrap: wrap; }
+      .logo { font-size: 18px; letter-spacing: 0.16em; width: 100%; margin-bottom: 12px; }
+      .nav-links { gap: 20px; width: 100%; }
+      .nav-links a { font-size: 10px; letter-spacing: 0.12em; }
+      .principal-hero { padding: 40px 24px 44px; gap: 28px; }
+      .expertise { grid-template-columns: 1fr; }
+      .expertise-item { border-right: none; border-bottom: 0.5px solid rgba(180,160,100,0.15); padding: 44px 24px; }
+      .expertise-item:last-child { border-bottom: none; }
+      .background { padding: 48px 24px; }
+      .sectors { padding: 44px 24px; }
+      .sectors-grid { flex-direction: column; }
+      .sector-tag { border-right: none; padding-right: 0; margin-right: 0; }
+      .principal-cta { padding: 52px 24px; }
+      footer { flex-direction: column; align-items: flex-start; gap: 10px; padding: 28px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index-11.html" class="logo">HUXLEY <span class="logo-amp">&amp;</span><span class="logo-co"> CO.</span></a>
+    <ul class="nav-links">
+      <li><a href="index-11.html#about">ABOUT</a></li>
+      <li><a href="index-11.html#advisory">ADVISORY</a></li>
+      <li><a href="about.html" class="active">PRINCIPAL</a></li>
+      <li><a href="index-11.html#contact">CONTACT</a></li>
+    </ul>
+  </nav>
+
+  <section class="principal-hero">
+    <div class="principal-left">
+      <p class="eyebrow">PRINCIPAL</p>
+      <h1 class="principal-name">Laura<br>Huxley</h1>
+      <p class="principal-title">FOUNDER &amp; PRINCIPAL · HUXLEY &amp; CO.</p>
+      <div class="gold-rule"></div>
+      <p class="principal-intro">Fifteen years advising on talent across some of the most demanding environments in the world, from large-scale global events to venture capital, family offices, and the design and architecture industries. Every engagement is led personally, from first conversation to close.</p>
+    </div>
+    <div class="principal-stat">
+      <p class="stat-number">15</p>
+      <p class="stat-label">YEARS IN TALENT GLOBALLY</p>
+    </div>
+  </section>
+
+  <div class="expertise">
+    <div class="expertise-item">
+      <p class="expertise-num">01</p>
+      <div class="expertise-rule"></div>
+      <h3>Executive Search</h3>
+    </div>
+    <div class="expertise-item">
+      <p class="expertise-num">02</p>
+      <div class="expertise-rule"></div>
+      <h3>Family Office Advisory</h3>
+    </div>
+    <div class="expertise-item">
+      <p class="expertise-num">03</p>
+      <div class="expertise-rule"></div>
+      <h3>Talent Strategy</h3>
+    </div>
+    <div class="expertise-item">
+      <p class="expertise-num">04</p>
+      <div class="expertise-rule"></div>
+      <h3>Private Events</h3>
+    </div>
+  </div>
+
+  <div class="background">
+    <p class="background-label">BACKGROUND</p>
+    <div class="background-content">
+      <p>Laura Huxley founded Huxley &amp; Co. after a career spanning talent advisory across four distinct industries, each defined by its own demands, discretion requirements, and calibre of principal.</p>
+      <p>Her work has taken her from the operational complexity of large-scale global events to the nuanced world of venture capital, where she has advised on the leadership structures that define a firm's culture and trajectory. In the family office and private individual space, she brings a depth of understanding that only comes from years of trusted, confidential work with UHNW clients.</p>
+      <p>Her background in design and architecture has shaped a precise aesthetic sensibility and an understanding of the creative industries that informs how she identifies and places exceptional talent.</p>
+      <p>Outside of work, Laura is a private pilot who travels widely and is dedicated to healthy living and her family.</p>
+    </div>
+  </div>
+
+  <div class="sectors">
+    <p class="sectors-label">SECTORS</p>
+    <div class="sectors-grid">
+      <span class="sector-tag">LARGE-SCALE EVENTS</span>
+      <span class="sector-tag">VENTURE CAPITAL</span>
+      <span class="sector-tag">FAMILY OFFICE</span>
+      <span class="sector-tag">PRIVATE INDIVIDUALS</span>
+      <span class="sector-tag">DESIGN &amp; ARCHITECTURE</span>
+    </div>
+  </div>
+
+  <div class="principal-cta">
+    <div class="cta-right">
+      <p class="contact-label">GET IN TOUCH</p>
+      <a id="cta-email" class="cta" href="#">BY APPOINTMENT ONLY</a>
+      <p class="contact-label" style="margin-top: 24px;">PHONE</p>
+      <a href="tel:+14242531320" style="font-family: var(--sans); font-size: 13px; letter-spacing: 0.2em; color: var(--black); text-decoration: none;">(424) 253-1320</a>
+    </div>
+  </div>
+
+  <footer>
+    <span class="footer-logo">HUXLEY &amp; CO.</span>
+    <span class="footer-detail">BEVERLY HILLS · LONDON · BY APPOINTMENT ONLY</span>
+    <span class="footer-detail">&copy; 2026</span>
+  </footer>
+
+  <script>
+    var el = document.getElementById('cta-email');
+    if (el) { el.href = 'mailto:' + 'hello' + '@' + 'huxleystudio.co'; }
+  </script>
+
+</body>
+</html>
