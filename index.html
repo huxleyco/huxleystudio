@@ -8,7 +8,183 @@
   <link rel="icon" type="image/png" href="data:image/png;base64,AAABAAEAEBAAAAAAIADoAQAAFgAAAIlQTkcNChoKAAAADUlIRFIAAAAQAAAAEAgGAAAAH/P/YQAAAa9JREFUeJyNk0tvE0EQhL+aHT9ih5BEiNjmKfkEF4jEhQOcEWcO3OHCj+LHcOcfICTgQHhYkYKRHXt3uznsrL12eLU0Gu1MV011d62Gw+EjyV8DY0Bp/S282vTJzF9pNDr6IIVb7u41WKrSUmY6BPc1iSSZ2WkEbYDNHE+ZIVSCSrOKSEpnyN1d0mFMkgTg7vR32mRZIAQxmy9xoL/TxcwpzZjNl0i1JjxsyE77syf3ePxgjLljpfHw/m2ePz0mCwF8nQsorIpyiFngy2TKbJ7z7fQnZ9NzprMFXydTzhcFn7//IGah2QvidntbMSBBr9tib7eLgH6vne4ynM2IW984UBTGjcE+x3euIeDm8ICytI0x/JFAQIyBdx8nvHn7njRR7o4Hv3VI3AYXRT0yyEJVTt20vLALHKsmSpCXxvDqHp125HC/x6Vem163xZWDXVox4/rRZfLSmlNAo9FgVZi70+20kCBILPMSd+i0I5bMNF/ktQ9WJTQsLOaLfO32lJjPFmvJYaMIjwm8IgnShWY1X2yCSUY6kerf57/DE2YazHjh7icN1n+Cq+UT8Je/APMZqTieYvrBAAAAAElFTkSuQmCC">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com"<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Huxley & Co.</title>
+  <meta name="description" content="Huxley & Co. advises founders, family offices, and private enterprises on organizational structure and the talent decisions that define it.">
+  <link rel="icon" type="image/png" href="data:image/png;base64,AAABAAEAEBAAAAAAIADoAQAAFgAAAIlQTkcNChoKAAAADUlIRFIAAAAQAAAAEAgGAAAAH/P/YQAAAa9JREFUeJyNk0tvE0EQhL+aHT9ih5BEiNjmKfkEF4jEhQOcEWcO3OHCj+LHcOcfICTgQHhYkYKRHXt3uznsrL12eLU0Gu1MV011d62Gw+EjyV8DY0Bp/S282vTJzF9pNDr6IIVb7u41WKrSUmY6BPc1iSSZ2WkEbYDNHE+ZIVSCSrOKSEpnyN1d0mFMkgTg7vR32mRZIAQxmy9xoL/TxcwpzZjNl0i1JjxsyE77syf3ePxgjLljpfHw/m2ePz0mCwF8nQsorIpyiFngy2TKbJ7z7fQnZ9NzprMFXydTzhcFn7//IGah2QvidntbMSBBr9tib7eLgH6vne4ynM2IW984UBTGjcE+x3euIeDm8ICytI0x/JFAQIyBdx8nvHn7njRR7o4Hv3VI3AYXRT0yyEJVTt20vLALHKsmSpCXxvDqHp125HC/x6Vem163xZWDXVox4/rRZfLSmlNAo9FgVZi70+20kCBILPMSd+i0I5bMNF/ktQ9WJTQsLOaLfO32lJjPFmvJYaMIjwm8IgnShWY1X2yCSUY6kerf57/DE2YazHjh7icN1n+Cq+UT8Je/APMZqTieYvrBAAAAAElFTkSuQmCC">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --cream: #F5F0E8;
+      --cream-dark: #EDE8DC;
+      --black: #1a1a18;
+      --gold: #9a8660;
+      --gold-light: rgba(180,160,100,0.25);
+      --text-body: #5a4e3a;
+      --text-muted: #6a5e48;
+      --text-dark: #8a7a5a;
+      --serif: 'Cormorant Garamond', Palatino, 'Palatino Linotype', Georgia, serif;
+      --sans: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--cream); font-family: var(--serif); color: var(--black); -webkit-font-smoothing: antialiased; }
+
+    /* NAV */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 28px 80px;
+      border-bottom: 0.5px solid var(--gold-light);
+      flex-wrap: nowrap;
+      gap: 16px;
+    }
+    .logo { font-family: var(--serif); font-size: 24px; font-weight: 500; letter-spacing: 0.2em; color: var(--black); text-decoration: none; white-space: nowrap; flex-shrink: 0; }
+    .logo-amp { font-size: 13px; font-weight: 400; font-style: italic; color: var(--text-dark); letter-spacing: 0.05em; }
+    .logo-co { font-size: 13px; font-weight: 400; color: var(--text-dark); letter-spacing: 0.28em; }
+    .nav-links { display: flex; gap: 40px; list-style: none; flex-shrink: 0; }
+    .nav-links a { font-family: var(--sans); font-size: 11px; letter-spacing: 0.18em; color: var(--text-body); text-decoration: none; transition: color 0.2s ease; white-space: nowrap; }
+    .nav-links a:hover { color: var(--black); }
+
+    /* HERO */
+    .hero { padding: 72px 80px 64px; display: grid; grid-template-columns: 5fr 3fr; gap: 80px; align-items: end; }
+    .hero-left {}
+    .eyebrow { font-family: var(--sans); font-size: 10px; letter-spacing: 0.45em; color: var(--gold); margin-bottom: 24px; }
+    h1 { font-size: clamp(44px, 4.8vw, 86px); font-weight: 300; line-height: 1.06; color: var(--black); letter-spacing: 0.01em; }
+    .hero-right { padding-bottom: 8px; }
+    .hero-body { font-family: var(--sans); font-size: 15px; line-height: 1.9; color: var(--text-body); margin-bottom: 36px; }
+    .cta { font-family: var(--sans); font-size: 11px; letter-spacing: 0.3em; color: var(--black); border-bottom: 0.5px solid var(--gold); padding-bottom: 3px; text-decoration: none; transition: color 0.2s ease; }
+    .cta:hover { color: var(--gold); }
+
+    /* SERVICES - dark contrasted background */
+    .services { display: grid; grid-template-columns: 1fr 1fr 1fr; background: var(--black); border-top: 0.5px solid var(--gold-light); }
+    .service { padding: 64px 56px; border-right: 0.5px solid rgba(180,160,100,0.15); }
+    .service:last-child { border-right: none; }
+    .service-num { font-family: var(--sans); font-size: 9px; letter-spacing: 0.35em; color: var(--gold); margin-bottom: 24px; }
+    .gold-rule { width: 32px; height: 0.5px; background: var(--gold); margin-bottom: 24px; }
+    .service h3 { font-family: var(--serif); font-size: 24px; font-weight: 300; color: var(--cream); margin-bottom: 18px; letter-spacing: 0.04em; line-height: 1.25; }
+    .service p { font-family: var(--sans); font-size: 13px; line-height: 1.85; color: rgba(245,240,232,0.55); }
+
+    /* CONTACT */
+    .contact-block { background: var(--cream-dark); padding: 90px 80px; display: flex; justify-content: space-between; align-items: flex-start; border-top: 0.5px solid var(--gold-light); gap: 40px; }
+    .contact-label { font-family: var(--sans); font-size: 10px; letter-spacing: 0.4em; color: var(--gold); margin-bottom: 20px; }
+    .contact-name { font-family: var(--serif); font-size: 42px; font-weight: 300; color: var(--black); letter-spacing: 0.06em; }
+    .contact-name-amp { font-style: italic; color: var(--gold); font-size: 24px; }
+    .contact-name-co { font-size: 22px; color: var(--gold); letter-spacing: 0.2em; }
+    .contact-address { font-family: var(--sans); font-size: 11px; line-height: 1.9; color: var(--text-muted); letter-spacing: 0.1em; margin-top: 18px; }
+    .contact-right { text-align: right; }
+    .contact-email { font-family: var(--sans); font-size: 13px; letter-spacing: 0.2em; color: var(--black); border-bottom: 0.5px solid var(--gold); padding-bottom: 3px; text-decoration: none; transition: opacity 0.2s ease; }
+    .contact-email:hover { opacity: 0.6; }
+
+    /* FOOTER */
+    footer { padding: 36px 80px; border-top: 0.5px solid var(--gold-light); display: flex; justify-content: space-between; align-items: center; background: var(--cream); }
+    .footer-logo { font-family: var(--serif); font-size: 13px; font-weight: 400; letter-spacing: 0.22em; color: var(--text-body); }
+    .footer-detail { font-family: var(--sans); font-size: 10px; letter-spacing: 0.2em; color: var(--gold); }
+
+    /* TABLET */
+    @media (max-width: 1024px) {
+      nav { padding: 24px 40px; }
+      .hero { padding: 56px 40px 52px; grid-template-columns: 1fr; gap: 32px; }
+      .services { grid-template-columns: 1fr; }
+      .service { border-right: none; border-bottom: 0.5px solid rgba(180,160,100,0.15); padding: 52px 40px; }
+      .service:last-child { border-bottom: none; }
+      .contact-block { padding: 72px 40px; }
+      footer { padding: 32px 40px; }
+    }
+
+    /* MOBILE */
+    @media (max-width: 600px) {
+      nav { padding: 20px 24px; flex-wrap: wrap; }
+      .logo { font-size: 18px; letter-spacing: 0.16em; width: 100%; margin-bottom: 12px; }
+      .nav-links { gap: 20px; width: 100%; }
+      .nav-links a { font-size: 10px; letter-spacing: 0.12em; }
+      .hero { padding: 40px 24px 44px; gap: 24px; }
+      .service { padding: 44px 24px; }
+      .contact-block { flex-direction: column; align-items: flex-start; gap: 36px; padding: 56px 24px; }
+      .contact-right { text-align: left; }
+      footer { flex-direction: column; align-items: flex-start; gap: 10px; padding: 28px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="/" class="logo">HUXLEY <span class="logo-amp">&amp;</span><span class="logo-co"> CO.</span></a>
+    <ul class="nav-links">
+      <li><a href="#about">ABOUT</a></li>
+      <li><a href="#advisory">ADVISORY</a></li>
+      <li><a href="about.html">PRINCIPAL</a></li>
+      <li><a href="#contact">CONTACT</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero" id="about">
+    <div class="hero-left">
+      <p class="eyebrow">BEVERLY HILLS · LONDON</p>
+      <h1>For those who<br>cannot afford<br>to get it wrong.</h1>
+    </div>
+    <div class="hero-right">
+      <p class="hero-body">Huxley &amp; Co. advises founders, family offices, and private enterprises on organizational structure and the talent decisions that define it. Principal-led.</p>
+      <a href="#contact" class="cta">BY APPOINTMENT ONLY</a>
+    </div>
+  </section>
+
+  <div class="services" id="advisory">
+    <div class="service">
+      <p class="service-num">01</p>
+      <div class="gold-rule"></div>
+      <h3>Advisory &amp; Search</h3>
+      <p>Retained counsel for founders and private offices seeking exceptional talent. Every engagement is principal-led.</p>
+    </div>
+    <div class="service">
+      <p class="service-num">02</p>
+      <div class="gold-rule"></div>
+      <h3>Family Office</h3>
+      <p>Trusted advisory for UHNW families and multi-family offices. Discretion is not a feature; it is the foundation.</p>
+    </div>
+    <div class="service">
+      <p class="service-num">03</p>
+      <div class="gold-rule"></div>
+      <h3>Private Events</h3>
+      <p>Curating exceptional talent for private experiences and productions at the highest level.</p>
+    </div>
+  </div>
+
+  <div class="contact-block" id="contact">
+    <div>
+      <p class="contact-label">INQUIRIES</p>
+      <p class="contact-name">Huxley <span class="contact-name-amp">&amp;</span> <span class="contact-name-co">Co.</span></p>
+      <p class="contact-address">9171 Wilshire Blvd, Suite 500<br>Beverly Hills, CA 90210</p>
+    </div>
+    <div class="contact-right">
+      <p class="contact-label">GET IN TOUCH</p>
+      <a id="contact-email" class="contact-email">hello&#64;huxleystudio&#46;co</a>
+      <p class="contact-address" style="margin-top: 16px;">(424) 253-1320</p>
+    </div>
+  </div>
+
+  <footer>
+    <span class="footer-logo">HUXLEY &amp; CO.</span>
+    <span class="footer-detail">BEVERLY HILLS · LONDON · BY APPOINTMENT ONLY</span>
+    <span class="footer-detail">&copy; 2026</span>
+  </footer>
+
+  <script>
+    var el = document.getElementById('contact-email');
+    if (el) { el.href = 'mailto:' + 'hello' + '@' + 'huxleystudio.co'; }
+  </script>
+
+</body>
+</html>
+ crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
