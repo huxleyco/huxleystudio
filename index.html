@@ -45,13 +45,19 @@
     .nav-links a:hover { color: var(--black); }
 
     /* HERO */
-    .hero { padding: 80px 80px 72px; display: grid; grid-template-columns: 5fr 3fr; gap: 64px; align-items: center; }
+    .hero {
+      padding: 96px 80px 88px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
     .hero-left {}
     .eyebrow { font-family: var(--sans); font-size: 10px; letter-spacing: 0.45em; color: var(--gold); margin-bottom: 28px; }
-    h1 { font-size: clamp(38px, 3.8vw, 66px); font-weight: 300; line-height: 1.1; color: var(--black); letter-spacing: 0.01em; }
-    .hero-right { padding-bottom: 8px; }
-    .hero-body { font-family: var(--sans); font-size: 15px; line-height: 1.9; color: var(--text-body); margin-bottom: 36px; }
-    .cta { font-family: var(--sans); font-size: 11px; letter-spacing: 0.3em; color: var(--black); border-bottom: 0.5px solid var(--gold); padding-bottom: 3px; text-decoration: none; transition: color 0.2s ease; }
+    h1 { font-size: clamp(36px, 3.4vw, 60px); font-weight: 300; line-height: 1.12; color: var(--black); letter-spacing: 0.015em; }
+    .hero-right {}
+    .hero-body { font-family: var(--sans); font-size: 14px; line-height: 2; color: var(--text-body); margin-bottom: 40px; }
+    .cta { font-family: var(--sans); font-size: 10px; letter-spacing: 0.35em; color: var(--black); border-bottom: 0.5px solid var(--gold); padding-bottom: 3px; text-decoration: none; transition: color 0.2s ease; display: inline-block; }
     .cta:hover { color: var(--gold); }
 
     /* SERVICES - dark contrasted background */
@@ -82,7 +88,8 @@
     /* TABLET */
     @media (max-width: 1024px) {
       nav { padding: 24px 40px; }
-      .hero { padding: 56px 40px 52px; grid-template-columns: 1fr; gap: 32px; }
+      .hero { padding: 64px 40px; min-height: auto; grid-template-columns: 1fr; gap: 36px; }
+      .hero-left, .hero-right { padding-top: 0; }
       .services { grid-template-columns: 1fr; }
       .service { border-right: none; border-bottom: 0.5px solid rgba(180,160,100,0.15); padding: 52px 40px; }
       .service:last-child { border-bottom: none; }
@@ -96,7 +103,7 @@
       .logo { font-size: 18px; letter-spacing: 0.16em; width: 100%; margin-bottom: 12px; }
       .nav-links { gap: 20px; width: 100%; }
       .nav-links a { font-size: 10px; letter-spacing: 0.12em; }
-      .hero { padding: 40px 24px 44px; gap: 24px; }
+      .hero { padding: 48px 24px; gap: 28px; min-height: auto; }
       .service { padding: 44px 24px; }
       .contact-block { flex-direction: column; align-items: flex-start; gap: 36px; padding: 56px 24px; }
       .contact-right { text-align: left; }
