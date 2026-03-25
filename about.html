@@ -5,7 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Team · Huxley & Co.</title>
   <meta name="description" content="Huxley & Co. is led by Laura Huxley and Chad Siwik, advising founders, family offices, and private enterprises on talent and organizational decisions.">
-  <link rel="icon" type="image/png" href="data:image/png;base64,AAABAAEAEBAAAAAAIADoAQAAFgAAAIlQTkcNChoKAAAADUlIRFIAAAAQAAAAEAgGAAAAH/P/YQAAAa9JREFUeJyNk0tvE0EQhL+aHT9ih5BEiNjmKfkEF4jEhQOcEWcO3OHCj+LHcOcfICTgQHhYkYKRHXt3uznsrL12eLU0Gu1MV011d62Gw+EjyV8DY0Bp/S282vTJzF9pNDr6IIVb7u41WKrSUmY6BPc1iSSZ2WkEbYDNHE+ZIVSCSrOKSEpnyN1d0mFMkgTg7vR32mRZIAQxmy9xoL/TxcwpzZjNl0i1JjxsyE77syf3ePxgjLljpfHw/m2ePz0mCwF8nQsorIpyiFngy2TKbJ7z7fQnZ9NzprMFXydTzhcFn7//IGah2QvidntbMSBBr9tib7eLgH6vne4ynM2IW984UBTGjcE+x3euIeDm8ICytI0x/JFAQIyBdx8nvHn7njRR7o4Hv3VI3AYXRT0yyEJVTt20vLALHKsmSpCXxvDqHp125HC/x6Vem163xZWDXVox4/rRZfLSmlNAo9FgVZi70+20kCBILPMSd+i0I5bMNF/ktQ9WJTQsLOaLfO32lJjPFmvJYaMIjwm8IgnShWY1X2yCSUY6kerf57/DE2YazHjh7icN1n+Cq+UT8Je/APMZqTieYvrBAAAAAElFTkSuQmCC">
+
+  <!-- OG / Social -->
+  <meta property="og:title" content="Team · Huxley & Co.">
+  <meta property="og:description" content="Meet the principals behind Huxley & Co. — talent advisory for founders, family offices, and private enterprises.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.huxleystudio.co/about.html">
+  <meta property="og:image" content="https://www.huxleystudio.co/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Team · Huxley & Co.">
+  <meta name="twitter:description" content="Meet the principals behind Huxley & Co.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+CiAgPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiBmaWxsPSIjMWExYTE4Ii8+CiAgPHRleHQgeD0iMTYiIHk9IjIyIiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIxOCIgZm9udC13ZWlnaHQ9IjQwMCIgZmlsbD0iIzlhODY2MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgbGV0dGVyLXNwYWNpbmc9IjEiPkg8L3RleHQ+Cjwvc3ZnPg==">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -53,8 +65,11 @@
     .eyebrow { font-family: var(--sans); font-size: 10px; letter-spacing: 0.45em; color: var(--gold); margin-bottom: 24px; }
     .page-title { font-size: clamp(44px, 4.8vw, 78px); font-weight: 300; line-height: 1.06; color: var(--black); letter-spacing: 0.01em; }
 
+    /* GOLD TRANSITION */
+    .gold-divider { height: 1px; background: linear-gradient(to right, transparent, var(--gold), transparent); opacity: 0.45; }
+
     /* TEAM GRID */
-    .team { display: grid; grid-template-columns: 1fr 1fr; border-bottom: 0.5px solid var(--gold-light); background: var(--black); }
+    .team { display: grid; grid-template-columns: 1fr 1fr; background: var(--black); border-bottom: 0.5px solid var(--gold-light); }
     .team-member { padding: 80px 80px; border-right: 0.5px solid rgba(180,160,100,0.15); }
     .team-member:last-child { border-right: none; }
     .member-name { font-size: clamp(32px, 3vw, 52px); font-weight: 300; line-height: 1.1; color: var(--cream); letter-spacing: 0.01em; margin-bottom: 16px; }
@@ -70,10 +85,14 @@
     .sector-tag:last-child { border-right: none; }
 
     /* CTA */
-    .principal-cta { padding: 88px 80px; display: flex; justify-content: flex-start; align-items: flex-start; gap: 40px; }
-    .contact-label { font-family: var(--sans); font-size: 10px; letter-spacing: 0.4em; color: var(--gold); margin-bottom: 16px; }
-    .cta { font-family: var(--sans); font-size: 11px; letter-spacing: 0.3em; color: var(--black); border-bottom: 0.5px solid var(--gold); padding-bottom: 3px; text-decoration: none; transition: color 0.2s ease; display: inline-block; }
-    .cta:hover { color: var(--gold); }
+    .principal-cta { padding: 88px 80px; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+    .cta-heading { font-family: var(--serif); font-size: clamp(28px, 2.8vw, 44px); font-weight: 300; color: var(--black); line-height: 1.2; letter-spacing: 0.02em; margin-bottom: 20px; }
+    .cta-subtext { font-family: var(--sans); font-size: 13px; line-height: 1.9; color: var(--text-body); max-width: 380px; }
+    .contact-label { font-family: var(--sans); font-size: 10px; letter-spacing: 0.4em; color: var(--gold); margin-bottom: 12px; margin-top: 32px; }
+    .contact-label:first-child { margin-top: 0; }
+    .cta-link { font-family: var(--sans); font-size: 13px; letter-spacing: 0.15em; color: var(--black); border-bottom: 0.5px solid var(--gold); padding-bottom: 3px; text-decoration: none; transition: opacity 0.2s ease; display: inline-block; }
+    .cta-link:hover { opacity: 0.6; }
+    .contact-phone { font-family: var(--sans); font-size: 13px; letter-spacing: 0.15em; color: var(--black); text-decoration: none; }
 
     /* FOOTER */
     footer { padding: 36px 80px; border-top: 0.5px solid var(--gold-light); display: flex; justify-content: space-between; align-items: center; background: var(--cream); }
@@ -85,10 +104,10 @@
       nav { padding: 24px 40px; }
       .page-header { padding: 56px 40px 52px; }
       .team { grid-template-columns: 1fr; }
-      .team-member { border-right: none; border-bottom: 0.5px solid var(--gold-light); padding: 64px 40px; }
+      .team-member { border-right: none; border-bottom: 0.5px solid rgba(180,160,100,0.15); padding: 64px 40px; }
       .team-member:last-child { border-bottom: none; }
       .sectors { padding: 56px 40px; }
-      .principal-cta { padding: 64px 40px; }
+      .principal-cta { padding: 64px 40px; grid-template-columns: 1fr; gap: 48px; }
       footer { padding: 32px 40px; }
     }
 
@@ -103,7 +122,7 @@
       .sectors { padding: 44px 24px; }
       .sectors-grid { flex-direction: column; }
       .sector-tag { border-right: none; padding-right: 0; margin-right: 0; }
-      .principal-cta { padding: 52px 24px; }
+      .principal-cta { padding: 52px 24px; gap: 40px; }
       footer { flex-direction: column; align-items: flex-start; gap: 10px; padding: 28px 24px; }
     }
   </style>
@@ -125,6 +144,8 @@
     <h1 class="page-title">Principal<br>Advisors</h1>
   </div>
 
+  <div class="gold-divider"></div>
+
   <div class="team">
     <div class="team-member">
       <h2 class="member-name">Laura<br>Huxley</h2>
@@ -136,7 +157,7 @@
       <h2 class="member-name">Chad<br>Siwik</h2>
       <p class="member-title">PRINCIPAL, ADVISORY &amp; STRATEGY</p>
       <div class="gold-rule"></div>
-      <p class="member-bio">Chad Siwik brings to Huxley &amp; Co. a rare fluency in high-stakes environments and complex institutional relationships. As a Program Manager on NASA's Artemis mission, he works directly with astronauts and senior government figures, navigating the demands of high-level talent relations within one of the most security-conscious organizations in the world. His expertise in strategic messaging and narrative development across multiple audiences has been shaped by years of operating where precision, discretion, and trust are not optional.</p>
+      <p class="member-bio">Chad Siwik offers a rare fluency in high-stakes environments and complex institutional relationships. As a Program Manager on NASA's Artemis mission, he works directly with astronauts and senior government figures, navigating the demands of high-level talent relations within one of the most security-conscious organizations in the world. His expertise in strategic messaging and narrative development across multiple audiences has been shaped by years of operating where precision, discretion, and trust are not optional.</p>
     </div>
   </div>
 
@@ -145,7 +166,7 @@
     <div class="sectors-grid">
       <span class="sector-tag">FOUNDERS</span>
       <span class="sector-tag">FAMILY OFFICE</span>
-      <span class="sector-tag">PRIVATE INDIVIDUALS</span>
+      <span class="sector-tag">PRIVATE CLIENTS</span>
       <span class="sector-tag">CREATIVE STUDIOS</span>
       <span class="sector-tag">PRIVATE EVENTS</span>
     </div>
@@ -153,16 +174,20 @@
 
   <div class="principal-cta">
     <div>
-      <p class="contact-label">GET IN TOUCH</p>
-      <a id="cta-email" class="cta" href="#">BY APPOINTMENT ONLY</a>
-      <p class="contact-label" style="margin-top: 28px;">PHONE</p>
-      <a href="tel:+14242531320" style="font-family: var(--sans); font-size: 13px; letter-spacing: 0.2em; color: var(--black); text-decoration: none;">(424) 253-1320</a>
+      <p class="cta-heading">The right conversation starts here.</p>
+      <p class="cta-subtext">We work by introduction and appointment. If you have been referred or would like to open a conversation, we welcome your inquiry and will respond personally.</p>
+    </div>
+    <div>
+      <p class="contact-label">EMAIL</p>
+      <a id="cta-email" class="cta-link" href="#">hello&#64;huxleystudio&#46;co</a>
+      <p class="contact-label">PHONE</p>
+      <a href="tel:+14242531320" class="contact-phone">(424) 253-1320</a>
     </div>
   </div>
 
   <footer>
     <span class="footer-logo">HUXLEY &amp; CO.</span>
-    <span class="footer-detail">BEVERLY HILLS · LONDON · BY APPOINTMENT ONLY</span>
+    <span class="footer-detail">BEVERLY HILLS · WORLDWIDE · BY APPOINTMENT ONLY</span>
     <span class="footer-detail">&copy; 2026</span>
   </footer>
 
