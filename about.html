@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Laura Huxley · Huxley & Co.</title>
-  <meta name="description" content="Laura Huxley is the principal of Huxley & Co., advising founders, family offices, and private enterprises on talent and organizational structure.">
+  <title>Team · Huxley & Co.</title>
+  <meta name="description" content="Huxley & Co. is led by Laura Huxley and Chad Siwik, advising founders, family offices, and private enterprises on talent and organizational decisions.">
   <link rel="icon" type="image/png" href="data:image/png;base64,AAABAAEAEBAAAAAAIADoAQAAFgAAAIlQTkcNChoKAAAADUlIRFIAAAAQAAAAEAgGAAAAH/P/YQAAAa9JREFUeJyNk0tvE0EQhL+aHT9ih5BEiNjmKfkEF4jEhQOcEWcO3OHCj+LHcOcfICTgQHhYkYKRHXt3uznsrL12eLU0Gu1MV011d62Gw+EjyV8DY0Bp/S282vTJzF9pNDr6IIVb7u41WKrSUmY6BPc1iSSZ2WkEbYDNHE+ZIVSCSrOKSEpnyN1d0mFMkgTg7vR32mRZIAQxmy9xoL/TxcwpzZjNl0i1JjxsyE77syf3ePxgjLljpfHw/m2ePz0mCwF8nQsorIpyiFngy2TKbJ7z7fQnZ9NzprMFXydTzhcFn7//IGah2QvidntbMSBBr9tib7eLgH6vne4ynM2IW984UBTGjcE+x3euIeDm8ICytI0x/JFAQIyBdx8nvHn7njRR7o4Hv3VI3AYXRT0yyEJVTt20vLALHKsmSpCXxvDqHp125HC/x6Vem163xZWDXVox4/rRZfLSmlNAo9FgVZi70+20kCBILPMSd+i0I5bMNF/ktQ9WJTQsLOaLfO32lJjPFmvJYaMIjwm8IgnShWY1X2yCSUY6kerf57/DE2YazHjh7icN1n+Cq+UT8Je/APMZqTieYvrBAAAAAElFTkSuQmCC">
-  
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
@@ -45,40 +45,22 @@
     .nav-links a:hover { color: var(--black); }
     .nav-links a.active { color: var(--black); border-bottom: 0.5px solid var(--gold); padding-bottom: 2px; }
 
-    /* PRINCIPAL HERO */
-    .principal-hero {
+    /* PAGE HEADER */
+    .page-header {
       padding: 80px 80px 72px;
-      display: grid;
-      grid-template-columns: 5fr 3fr;
-      gap: 80px;
-      align-items: end;
       border-bottom: 0.5px solid var(--gold-light);
     }
     .eyebrow { font-family: var(--sans); font-size: 10px; letter-spacing: 0.45em; color: var(--gold); margin-bottom: 24px; }
-    .principal-name { font-size: clamp(44px, 4.8vw, 78px); font-weight: 300; line-height: 1.06; color: var(--black); letter-spacing: 0.01em; }
-    .principal-title { font-family: var(--sans); font-size: 11px; letter-spacing: 0.3em; color: var(--text-muted); margin-top: 20px; }
-    .gold-rule { width: 32px; height: 0.5px; background: var(--gold); margin: 28px 0; }
-    .principal-intro { font-family: var(--sans); font-size: 15px; line-height: 1.9; color: var(--text-body); }
+    .page-title { font-size: clamp(44px, 4.8vw, 78px); font-weight: 300; line-height: 1.06; color: var(--black); letter-spacing: 0.01em; }
 
-    /* EXPERIENCE STAT */
-    .principal-stat { padding-bottom: 8px; }
-    .stat-number { font-family: var(--serif); font-size: clamp(64px, 7vw, 108px); font-weight: 300; color: var(--black); line-height: 1; letter-spacing: -0.01em; }
-    .stat-label { font-family: var(--sans); font-size: 10px; letter-spacing: 0.4em; color: var(--gold); margin-top: 10px; }
-
-    /* EXPERTISE */
-    .expertise { background: var(--black); border-top: 0.5px solid var(--gold-light); display: grid; grid-template-columns: repeat(4, 1fr); }
-    .expertise-item { padding: 56px 48px; border-right: 0.5px solid rgba(180,160,100,0.15); }
-    .expertise-item:last-child { border-right: none; }
-    .expertise-num { font-family: var(--sans); font-size: 9px; letter-spacing: 0.35em; color: var(--gold); margin-bottom: 20px; }
-    .expertise-rule { width: 32px; height: 0.5px; background: var(--gold); margin-bottom: 20px; }
-    .expertise-item h3 { font-family: var(--serif); font-size: 21px; font-weight: 300; color: var(--cream); letter-spacing: 0.04em; line-height: 1.3; }
-
-    /* BACKGROUND */
-    .background { padding: 88px 80px; display: grid; grid-template-columns: 1fr 2fr; gap: 80px; border-bottom: 0.5px solid var(--gold-light); }
-    .background-label { font-family: var(--sans); font-size: 10px; letter-spacing: 0.4em; color: var(--gold); padding-top: 6px; }
-    .background-content {}
-    .background-content p { font-family: var(--sans); font-size: 14px; line-height: 1.95; color: var(--text-body); margin-bottom: 20px; }
-    .background-content p:last-child { margin-bottom: 0; }
+    /* TEAM GRID */
+    .team { display: grid; grid-template-columns: 1fr 1fr; border-bottom: 0.5px solid var(--gold-light); }
+    .team-member { padding: 80px 80px; border-right: 0.5px solid var(--gold-light); }
+    .team-member:last-child { border-right: none; }
+    .member-name { font-size: clamp(32px, 3vw, 52px); font-weight: 300; line-height: 1.1; color: var(--black); letter-spacing: 0.01em; margin-bottom: 16px; }
+    .member-title { font-family: var(--sans); font-size: 10px; letter-spacing: 0.3em; color: var(--text-muted); margin-bottom: 32px; }
+    .gold-rule { width: 32px; height: 0.5px; background: var(--gold); margin-bottom: 32px; }
+    .member-bio { font-family: var(--sans); font-size: 14px; line-height: 2; color: var(--text-body); }
 
     /* SECTORS */
     .sectors { background: var(--cream-dark); padding: 72px 80px; border-bottom: 0.5px solid var(--gold-light); }
@@ -88,10 +70,9 @@
     .sector-tag:last-child { border-right: none; }
 
     /* CTA */
-    .principal-cta { padding: 88px 80px; display: flex; justify-content: space-between; align-items: center; gap: 40px; }
-    .cta-left h2 { font-family: var(--serif); font-size: clamp(32px, 3.5vw, 54px); font-weight: 300; color: var(--black); line-height: 1.15; letter-spacing: 0.02em; }
-    .cta-right { flex-shrink: 0; }
-    .cta { font-family: var(--sans); font-size: 11px; letter-spacing: 0.3em; color: var(--black); border-bottom: 0.5px solid var(--gold); padding-bottom: 3px; text-decoration: none; transition: color 0.2s ease; }
+    .principal-cta { padding: 88px 80px; display: flex; justify-content: flex-start; align-items: flex-start; gap: 40px; }
+    .contact-label { font-family: var(--sans); font-size: 10px; letter-spacing: 0.4em; color: var(--gold); margin-bottom: 16px; }
+    .cta { font-family: var(--sans); font-size: 11px; letter-spacing: 0.3em; color: var(--black); border-bottom: 0.5px solid var(--gold); padding-bottom: 3px; text-decoration: none; transition: color 0.2s ease; display: inline-block; }
     .cta:hover { color: var(--gold); }
 
     /* FOOTER */
@@ -102,14 +83,12 @@
     /* TABLET */
     @media (max-width: 1024px) {
       nav { padding: 24px 40px; }
-      .principal-hero { padding: 56px 40px 52px; grid-template-columns: 1fr; gap: 40px; }
-      .expertise { grid-template-columns: 1fr 1fr; }
-      .expertise-item { border-bottom: 0.5px solid rgba(180,160,100,0.15); }
-      .expertise-item:nth-child(2n) { border-right: none; }
-      .expertise-item:nth-last-child(-n+2) { border-bottom: none; }
-      .background { padding: 64px 40px; grid-template-columns: 1fr; gap: 24px; }
+      .page-header { padding: 56px 40px 52px; }
+      .team { grid-template-columns: 1fr; }
+      .team-member { border-right: none; border-bottom: 0.5px solid var(--gold-light); padding: 64px 40px; }
+      .team-member:last-child { border-bottom: none; }
       .sectors { padding: 56px 40px; }
-      .principal-cta { padding: 64px 40px; flex-direction: column; align-items: flex-start; gap: 32px; }
+      .principal-cta { padding: 64px 40px; }
       footer { padding: 32px 40px; }
     }
 
@@ -119,11 +98,8 @@
       .logo { font-size: 18px; letter-spacing: 0.16em; width: 100%; margin-bottom: 12px; }
       .nav-links { gap: 20px; width: 100%; }
       .nav-links a { font-size: 10px; letter-spacing: 0.12em; }
-      .principal-hero { padding: 40px 24px 44px; gap: 28px; }
-      .expertise { grid-template-columns: 1fr; }
-      .expertise-item { border-right: none; border-bottom: 0.5px solid rgba(180,160,100,0.15); padding: 44px 24px; }
-      .expertise-item:last-child { border-bottom: none; }
-      .background { padding: 48px 24px; }
+      .page-header { padding: 40px 24px 44px; }
+      .team-member { padding: 48px 24px; }
       .sectors { padding: 44px 24px; }
       .sectors-grid { flex-direction: column; }
       .sector-tag { border-right: none; padding-right: 0; margin-right: 0; }
@@ -139,54 +115,28 @@
     <ul class="nav-links">
       <li><a href="/#about">ABOUT</a></li>
       <li><a href="/#advisory">ADVISORY</a></li>
-      <li><a href="about.html" class="active">PRINCIPAL</a></li>
+      <li><a href="about.html" class="active">TEAM</a></li>
       <li><a href="/#contact">CONTACT</a></li>
     </ul>
   </nav>
 
-  <section class="principal-hero">
-    <div class="principal-left">
-      <p class="eyebrow">PRINCIPAL</p>
-      <h1 class="principal-name">Laura<br>Huxley</h1>
-      <p class="principal-title">FOUNDER &amp; PRINCIPAL · HUXLEY &amp; CO.</p>
-      <div class="gold-rule"></div>
-      <p class="principal-intro">Fifteen years advising founders, family offices, and private clients on talent across venture capital, private events, and the creative industries. Every engagement is led personally, from first conversation to close.</p>
-    </div>
-    <div class="principal-stat">
-      <p class="stat-number">15</p>
-      <p class="stat-label">YEARS IN TALENT GLOBALLY</p>
-    </div>
-  </section>
-
-  <div class="expertise">
-    <div class="expertise-item">
-      <p class="expertise-num">01</p>
-      <div class="expertise-rule"></div>
-      <h3>Advisory &amp; Search</h3>
-    </div>
-    <div class="expertise-item">
-      <p class="expertise-num">02</p>
-      <div class="expertise-rule"></div>
-      <h3>Family Office Advisory</h3>
-    </div>
-    <div class="expertise-item">
-      <p class="expertise-num">03</p>
-      <div class="expertise-rule"></div>
-      <h3>Talent Strategy</h3>
-    </div>
-    <div class="expertise-item">
-      <p class="expertise-num">04</p>
-      <div class="expertise-rule"></div>
-      <h3>Private Events</h3>
-    </div>
+  <div class="page-header">
+    <p class="eyebrow">THE TEAM</p>
+    <h1 class="page-title">Principal<br>Advisors</h1>
   </div>
 
-  <div class="background">
-    <p class="background-label">BACKGROUND</p>
-    <div class="background-content">
-      <p>Laura Huxley founded Huxley &amp; Co. after a career spanning talent advisory across four distinct industries, each defined by its own demands, its own standards of discretion, and its own calibre of principal.</p>
-      <p>Her work has taken her from high-profile productions and private events to the nuanced world of venture capital, family offices, and the creative industries. In each, the work was the same: identify exceptional people, understand the environment they are entering, and get it right.</p>
-      <p>In the family office and private client space, she brings a depth of understanding that only comes from years of trusted, confidential work with principals who expect nothing less.</p>
+  <div class="team">
+    <div class="team-member">
+      <h2 class="member-name">Laura<br>Huxley</h2>
+      <p class="member-title">FOUNDER &amp; PRINCIPAL</p>
+      <div class="gold-rule"></div>
+      <p class="member-bio">Laura Huxley built her practice at the intersection of talent and trust. With a background spanning some of the world's largest and most high-profile productions, venture capital, and UHNW private client advisory, she founded Huxley &amp; Co. to bring that same rigor to the people side of exceptional organizations. Her work spans design, architecture, and the creative industries, with a particular focus on family offices and private clients who require both discretion and depth. A career spent across both sides of the Atlantic has shaped an advisory practice that understands how exceptional people operate, wherever they are in the world.</p>
+    </div>
+    <div class="team-member">
+      <h2 class="member-name">Chad<br>Siwik</h2>
+      <p class="member-title">PRINCIPAL, ADVISORY &amp; STRATEGY</p>
+      <div class="gold-rule"></div>
+      <p class="member-bio">Chad Siwik brings to Huxley &amp; Co. a rare fluency in high-stakes environments and complex institutional relationships. As a Program Manager on NASA's Artemis mission, he works directly with astronauts and senior government figures, navigating the demands of high-level talent relations within one of the most security-conscious organizations in the world. His expertise in strategic messaging and narrative development across multiple audiences has been shaped by years of operating where precision, discretion, and trust are not optional.</p>
     </div>
   </div>
 
@@ -202,10 +152,10 @@
   </div>
 
   <div class="principal-cta">
-    <div class="cta-right">
+    <div>
       <p class="contact-label">GET IN TOUCH</p>
       <a id="cta-email" class="cta" href="#">BY APPOINTMENT ONLY</a>
-      <p class="contact-label" style="margin-top: 24px;">PHONE</p>
+      <p class="contact-label" style="margin-top: 28px;">PHONE</p>
       <a href="tel:+14242531320" style="font-family: var(--sans); font-size: 13px; letter-spacing: 0.2em; color: var(--black); text-decoration: none;">(424) 253-1320</a>
     </div>
   </div>
