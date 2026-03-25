@@ -4,9 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Huxley & Co.</title>
-  <meta name="description" content="Huxley & Co. advises founders, family offices, and private enterprises on organizational structure and the talent decisions that define it.">
-  <link rel="icon" type="image/png" href="data:image/png;base64,AAABAAEAEBAAAAAAIADoAQAAFgAAAIlQTkcNChoKAAAADUlIRFIAAAAQAAAAEAgGAAAAH/P/YQAAAa9JREFUeJyNk0tvE0EQhL+aHT9ih5BEiNjmKfkEF4jEhQOcEWcO3OHCj+LHcOcfICTgQHhYkYKRHXt3uznsrL12eLU0Gu1MV011d62Gw+EjyV8DY0Bp/S282vTJzF9pNDr6IIVb7u41WKrSUmY6BPc1iSSZ2WkEbYDNHE+ZIVSCSrOKSEpnyN1d0mFMkgTg7vR32mRZIAQxmy9xoL/TxcwpzZjNl0i1JjxsyE77syf3ePxgjLljpfHw/m2ePz0mCwF8nQsorIpyiFngy2TKbJ7z7fQnZ9NzprMFXydTzhcFn7//IGah2QvidntbMSBBr9tib7eLgH6vne4ynM2IW984UBTGjcE+x3euIeDm8ICytI0x/JFAQIyBdx8nvHn7njRR7o4Hv3VI3AYXRT0yyEJVTt20vLALHKsmSpCXxvDqHp125HC/x6Vem163xZWDXVox4/rRZfLSmlNAo9FgVZi70+20kCBILPMSd+i0I5bMNF/ktQ9WJTQsLOaLfO32lJjPFmvJYaMIjwm8IgnShWY1X2yCSUY6kerf57/DE2YazHjh7icN1n+Cq+UT8Je/APMZqTieYvrBAAAAAElFTkSuQmCC">
-  
+  <meta name="description" content="Huxley & Co. advises founders, family offices, and private enterprises on the talent and organizational decisions that define them.">
+
+  <!-- OG / Social -->
+  <meta property="og:title" content="Huxley & Co.">
+  <meta property="og:description" content="Talent advisory for founders, family offices, and private enterprises. Discretion and rigor, in equal measure.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.huxleystudio.co">
+  <meta property="og:image" content="https://www.huxleystudio.co/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Huxley & Co.">
+  <meta name="twitter:description" content="Talent advisory for founders, family offices, and private enterprises. Discretion and rigor, in equal measure.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+CiAgPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiBmaWxsPSIjMWExYTE4Ii8+CiAgPHRleHQgeD0iMTYiIHk9IjIyIiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIxOCIgZm9udC13ZWlnaHQ9IjQwMCIgZmlsbD0iIzlhODY2MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgbGV0dGVyLXNwYWNpbmc9IjEiPkg8L3RleHQ+Cjwvc3ZnPg==">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
@@ -52,16 +64,17 @@
       gap: 80px;
       align-items: center;
     }
-    .hero-left {}
     .eyebrow { font-family: var(--sans); font-size: 10px; letter-spacing: 0.45em; color: var(--gold); margin-bottom: 28px; }
     h1 { font-size: clamp(36px, 3.4vw, 60px); font-weight: 300; line-height: 1.12; color: var(--black); letter-spacing: 0.015em; }
-    .hero-right {}
     .hero-body { font-family: var(--sans); font-size: 14px; line-height: 2; color: var(--text-body); margin-bottom: 40px; }
     .cta { font-family: var(--sans); font-size: 10px; letter-spacing: 0.35em; color: var(--black); border-bottom: 0.5px solid var(--gold); padding-bottom: 3px; text-decoration: none; transition: color 0.2s ease; display: inline-block; }
     .cta:hover { color: var(--gold); }
 
-    /* SERVICES - dark contrasted background */
-    .services { display: grid; grid-template-columns: 1fr 1fr 1fr; background: var(--black); border-top: 0.5px solid var(--gold-light); }
+    /* GOLD TRANSITION */
+    .gold-divider { height: 1px; background: linear-gradient(to right, transparent, var(--gold), transparent); opacity: 0.45; }
+
+    /* SERVICES */
+    .services { display: grid; grid-template-columns: 1fr 1fr 1fr; background: var(--black); }
     .service { padding: 64px 56px; border-right: 0.5px solid rgba(180,160,100,0.15); }
     .service:last-child { border-right: none; }
     .service-num { font-family: var(--sans); font-size: 9px; letter-spacing: 0.35em; color: var(--gold); margin-bottom: 24px; }
@@ -70,15 +83,16 @@
     .service p { font-family: var(--sans); font-size: 13px; line-height: 1.85; color: rgba(245,240,232,0.55); }
 
     /* CONTACT */
-    .contact-block { background: var(--cream-dark); padding: 90px 80px; display: flex; justify-content: space-between; align-items: flex-start; border-top: 0.5px solid var(--gold-light); gap: 40px; }
+    .contact-block { background: var(--cream-dark); padding: 90px 80px; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; border-top: 0.5px solid var(--gold-light); }
     .contact-label { font-family: var(--sans); font-size: 10px; letter-spacing: 0.4em; color: var(--gold); margin-bottom: 20px; }
-    .contact-name { font-family: var(--serif); font-size: 42px; font-weight: 300; color: var(--black); letter-spacing: 0.06em; }
-    .contact-name-amp { font-style: italic; color: var(--gold); font-size: 24px; }
-    .contact-name-co { font-size: 22px; color: var(--gold); letter-spacing: 0.2em; }
-    .contact-address { font-family: var(--sans); font-size: 11px; line-height: 1.9; color: var(--text-muted); letter-spacing: 0.1em; margin-top: 18px; }
-    .contact-right { text-align: right; }
-    .contact-email { font-family: var(--sans); font-size: 13px; letter-spacing: 0.2em; color: var(--black); border-bottom: 0.5px solid var(--gold); padding-bottom: 3px; text-decoration: none; transition: opacity 0.2s ease; }
+    .contact-intro { font-family: var(--serif); font-size: clamp(28px, 2.8vw, 44px); font-weight: 300; color: var(--black); line-height: 1.2; letter-spacing: 0.02em; margin-bottom: 20px; }
+    .contact-subtext { font-family: var(--sans); font-size: 13px; line-height: 1.9; color: var(--text-body); max-width: 380px; }
+    .contact-detail-label { font-family: var(--sans); font-size: 10px; letter-spacing: 0.4em; color: var(--gold); margin-bottom: 12px; margin-top: 32px; }
+    .contact-detail-label:first-child { margin-top: 0; }
+    .contact-email { font-family: var(--sans); font-size: 13px; letter-spacing: 0.15em; color: var(--black); border-bottom: 0.5px solid var(--gold); padding-bottom: 3px; text-decoration: none; transition: opacity 0.2s ease; display: inline-block; }
     .contact-email:hover { opacity: 0.6; }
+    .contact-phone { font-family: var(--sans); font-size: 13px; letter-spacing: 0.15em; color: var(--black); text-decoration: none; }
+    .contact-address-text { font-family: var(--sans); font-size: 12px; line-height: 1.9; color: var(--text-muted); letter-spacing: 0.08em; }
 
     /* FOOTER */
     footer { padding: 36px 80px; border-top: 0.5px solid var(--gold-light); display: flex; justify-content: space-between; align-items: center; background: var(--cream); }
@@ -88,12 +102,11 @@
     /* TABLET */
     @media (max-width: 1024px) {
       nav { padding: 24px 40px; }
-      .hero { padding: 64px 40px; min-height: auto; grid-template-columns: 1fr; gap: 36px; }
-      .hero-left, .hero-right { padding-top: 0; }
+      .hero { padding: 64px 40px; grid-template-columns: 1fr; gap: 36px; }
       .services { grid-template-columns: 1fr; }
       .service { border-right: none; border-bottom: 0.5px solid rgba(180,160,100,0.15); padding: 52px 40px; }
       .service:last-child { border-bottom: none; }
-      .contact-block { padding: 72px 40px; }
+      .contact-block { padding: 72px 40px; grid-template-columns: 1fr; gap: 48px; }
       footer { padding: 32px 40px; }
     }
 
@@ -103,10 +116,9 @@
       .logo { font-size: 18px; letter-spacing: 0.16em; width: 100%; margin-bottom: 12px; }
       .nav-links { gap: 20px; width: 100%; }
       .nav-links a { font-size: 10px; letter-spacing: 0.12em; }
-      .hero { padding: 48px 24px; gap: 28px; min-height: auto; }
+      .hero { padding: 48px 24px; gap: 28px; }
       .service { padding: 44px 24px; }
-      .contact-block { flex-direction: column; align-items: flex-start; gap: 36px; padding: 56px 24px; }
-      .contact-right { text-align: left; }
+      .contact-block { padding: 56px 24px; gap: 40px; }
       footer { flex-direction: column; align-items: flex-start; gap: 10px; padding: 28px 24px; }
     }
   </style>
@@ -125,7 +137,7 @@
 
   <section class="hero" id="about">
     <div class="hero-left">
-      <p class="eyebrow">BEVERLY HILLS · LONDON</p>
+      <p class="eyebrow">BEVERLY HILLS · WORLDWIDE</p>
       <h1>The introduction matters.</h1>
     </div>
     <div class="hero-right">
@@ -133,6 +145,8 @@
       <a href="#contact" class="cta">BY APPOINTMENT ONLY</a>
     </div>
   </section>
+
+  <div class="gold-divider"></div>
 
   <div class="services" id="advisory">
     <div class="service">
@@ -156,21 +170,24 @@
   </div>
 
   <div class="contact-block" id="contact">
-    <div>
+    <div class="contact-left">
       <p class="contact-label">INQUIRIES</p>
-      <p class="contact-name">Huxley <span class="contact-name-amp">&amp;</span> <span class="contact-name-co">Co.</span></p>
-      <p class="contact-address">9171 Wilshire Blvd, Suite 500<br>Beverly Hills, CA 90210</p>
+      <p class="contact-intro">Every engagement begins with a conversation.</p>
+      <p class="contact-subtext">We work by introduction and appointment. If you have been referred or would like to open a conversation, we welcome your inquiry and will respond personally.</p>
     </div>
     <div class="contact-right">
-      <p class="contact-label">GET IN TOUCH</p>
+      <p class="contact-detail-label">EMAIL</p>
       <a id="contact-email" class="contact-email">hello&#64;huxleystudio&#46;co</a>
-      <p class="contact-address" style="margin-top: 16px;">(424) 253-1320</p>
+      <p class="contact-detail-label">PHONE</p>
+      <a href="tel:+14242531320" class="contact-phone">(424) 253-1320</a>
+      <p class="contact-detail-label">ADDRESS</p>
+      <p class="contact-address-text">9171 Wilshire Blvd, Suite 500<br>Beverly Hills, CA 90210</p>
     </div>
   </div>
 
   <footer>
     <span class="footer-logo">HUXLEY &amp; CO.</span>
-    <span class="footer-detail">BEVERLY HILLS · LONDON · BY APPOINTMENT ONLY</span>
+    <span class="footer-detail">BEVERLY HILLS · WORLDWIDE · BY APPOINTMENT ONLY</span>
     <span class="footer-detail">&copy; 2026</span>
   </footer>
 
