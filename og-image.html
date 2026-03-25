@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1200px;
+      height: 630px;
+      overflow: hidden;
+      background: #1a1a18;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    .frame {
+      width: 1200px;
+      height: 630px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 64px 80px;
+    }
+
+    /* Subtle grain texture */
+    .frame::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      opacity: 0.35;
+      pointer-events: none;
+    }
+
+    /* Gold border frame */
+    .border-top    { position: absolute; top: 32px; left: 64px; right: 64px; height: 0.5px; background: rgba(154,134,96,0.4); }
+    .border-bottom { position: absolute; bottom: 32px; left: 64px; right: 64px; height: 0.5px; background: rgba(154,134,96,0.4); }
+    .border-left   { position: absolute; top: 32px; bottom: 32px; left: 64px; width: 0.5px; background: rgba(154,134,96,0.4); }
+    .border-right  { position: absolute; top: 32px; bottom: 32px; right: 64px; width: 0.5px; background: rgba(154,134,96,0.4); }
+
+    .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    .logo {
+      font-size: 22px;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      color: #F5F0E8;
+    }
+    .logo-amp { font-size: 13px; font-style: italic; color: #9a8660; letter-spacing: 0.05em; }
+    .logo-co  { font-size: 13px; color: #9a8660; letter-spacing: 0.28em; }
+
+    .location {
+      font-family: -apple-system, 'Helvetica Neue', Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.4em;
+      color: #9a8660;
+      padding-top: 6px;
+    }
+
+    .middle {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 40px 0 20px;
+    }
+    .tagline {
+      font-size: 72px;
+      font-weight: 300;
+      line-height: 1.08;
+      color: #F5F0E8;
+      letter-spacing: 0.01em;
+      margin-bottom: 32px;
+    }
+    .gold-rule {
+      width: 48px;
+      height: 0.5px;
+      background: #9a8660;
+      margin-bottom: 28px;
+    }
+    .descriptor {
+      font-family: -apple-system, 'Helvetica Neue', Arial, sans-serif;
+      font-size: 14px;
+      letter-spacing: 0.2em;
+      color: rgba(245,240,232,0.5);
+      max-width: 560px;
+      line-height: 1.8;
+    }
+
+    .bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+    .appt {
+      font-family: -apple-system, 'Helvetica Neue', Arial, sans-serif;
+      font-size: 10px;
+      letter-spacing: 0.4em;
+      color: #9a8660;
+      border-bottom: 0.5px solid rgba(154,134,96,0.5);
+      padding-bottom: 3px;
+    }
+    .url {
+      font-family: -apple-system, 'Helvetica Neue', Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      color: rgba(245,240,232,0.3);
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="frame">
+    <div class="border-top"></div>
+    <div class="border-bottom"></div>
+    <div class="border-left"></div>
+    <div class="border-right"></div>
+
+    <div class="top">
+      <div class="logo">HUXLEY <span class="logo-amp">&amp;</span><span class="logo-co"> CO.</span></div>
+      <div class="location">BEVERLY HILLS · WORLDWIDE</div>
+    </div>
+
+    <div class="middle">
+      <div class="tagline">The introduction<br>matters.</div>
+      <div class="gold-rule"></div>
+      <div class="descriptor">Talent advisory for founders, family offices,<br>and private enterprises.</div>
+    </div>
+
+    <div class="bottom">
+      <div class="appt">BY APPOINTMENT ONLY</div>
+      <div class="url">huxleystudio.co</div>
+    </div>
+  </div>
+</body>
+</html>
