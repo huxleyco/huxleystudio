@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Huxley & Co.</title>
   <meta name="description" content="Huxley & Co. advises founders, family offices, and private enterprises on the talent and organizational decisions that define them.">
+  <link rel="canonical" href="https://www.huxleystudio.co">
 
   <!-- OG / Social -->
   <meta property="og:title" content="Huxley & Co.">
@@ -18,6 +19,7 @@
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -84,11 +86,11 @@
 
     /* CONTACT */
     .contact-block { background: var(--cream-dark); padding: 90px 80px; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; border-top: 0.5px solid var(--gold-light); }
-    .contact-label { font-family: var(--sans); font-size: 10px; letter-spacing: 0.4em; color: var(--gold); margin-bottom: 20px; }
+    .contact-eyebrow { font-family: var(--sans); font-size: 10px; letter-spacing: 0.4em; color: var(--gold); margin-bottom: 20px; }
     .contact-intro { font-family: var(--serif); font-size: clamp(28px, 2.8vw, 44px); font-weight: 300; color: var(--black); line-height: 1.2; letter-spacing: 0.02em; margin-bottom: 20px; }
     .contact-subtext { font-family: var(--sans); font-size: 13px; line-height: 1.9; color: var(--text-body); max-width: 380px; }
     .contact-detail-label { font-family: var(--sans); font-size: 10px; letter-spacing: 0.4em; color: var(--gold); margin-bottom: 12px; margin-top: 32px; }
-    .contact-detail-label:first-child { margin-top: 0; }
+    .contact-detail-label.first { margin-top: 0; }
     .contact-email { font-family: var(--sans); font-size: 13px; letter-spacing: 0.15em; color: var(--black); border-bottom: 0.5px solid var(--gold); padding-bottom: 3px; text-decoration: none; transition: opacity 0.2s ease; display: inline-block; }
     .contact-email:hover { opacity: 0.6; }
     .contact-phone { font-family: var(--sans); font-size: 13px; letter-spacing: 0.15em; color: var(--black); text-decoration: none; }
@@ -159,24 +161,24 @@
       <p class="service-num">02</p>
       <div class="gold-rule"></div>
       <h3>Family Office</h3>
-      <p>Trusted advisory for UHNW families and multi-family offices. Discretion is not a feature; it is the foundation.</p>
+      <p>Trusted advisory for ultra-high-net-worth families and multi-family offices. Discretion is not a feature; it is the foundation.</p>
     </div>
     <div class="service">
       <p class="service-num">03</p>
       <div class="gold-rule"></div>
       <h3>Private Events</h3>
-      <p>Curating exceptional talent for private experiences and productions at the highest level.</p>
+      <p>Advising on exceptional talent for private experiences and productions at the highest level.</p>
     </div>
   </div>
 
   <div class="contact-block" id="contact">
     <div class="contact-left">
-      <p class="contact-label">INQUIRIES</p>
+      <p class="contact-eyebrow">INQUIRIES</p>
       <p class="contact-intro">Every engagement begins with a conversation.</p>
       <p class="contact-subtext">We work by introduction and appointment. If you have been referred or would like to open a conversation, we welcome your inquiry and will respond personally.</p>
     </div>
     <div class="contact-right">
-      <p class="contact-detail-label">EMAIL</p>
+      <p class="contact-detail-label first">EMAIL</p>
       <a id="contact-email" class="contact-email">hello&#64;huxleystudio&#46;co</a>
       <p class="contact-detail-label">PHONE</p>
       <a href="tel:+14242531320" class="contact-phone">(424) 253-1320</a>
