@@ -3,292 +3,273 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Huxley & Co.</title>
-  <meta name="description" content="Huxley & Co. advises founders, family offices, and private enterprises on the talent and organizational decisions that define them.">
-  <link rel="canonical" href="https://www.thehuxleycompany.com">
-
-  <!-- OG / Social -->
-  <meta property="og:title" content="Huxley & Co.">
-  <meta property="og:description" content="Talent advisory for founders, family offices, and private enterprises. Discretion and rigor, in equal measure.">
+  <title>Huxley &amp; Co. — Executive Search &amp; Private Advisory</title>
+  <meta name="description" content="Huxley &amp; Co. advises founders, family offices, and private enterprises on the talent and organizational decisions that define them. By appointment only.">
+  <meta property="og:title" content="Huxley &amp; Co.">
+  <meta property="og:description" content="Retained talent advisory, family office counsel, and private productions. We operate where reputation is everything.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.thehuxleycompany.com">
-  <meta property="og:image" content="https://www.thehuxleycompany.com/og-image.jpg">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Huxley & Co.">
-  <meta name="twitter:description" content="Talent advisory for founders, family offices, and private enterprises. Discretion and rigor, in equal measure.">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="apple-touch-icon" href="favicon.png">
-
+  <meta property="og:url" content="https://thehuxleycompany.com">
+  <link rel="canonical" href="https://thehuxleycompany.com">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Cormorant:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
     :root {
       --cream: #F5F0E8;
-      --cream-dark: #EDE8DC;
-      --black: #1a1a18;
-      --gold: #9a8660;
-      --gold-light: rgba(180,160,100,0.25);
-      --text-body: #5a4e3a;
-      --text-muted: #6a5e48;
-      --text-dark: #8a7a5a;
-      --serif: 'Cormorant Garamond', Palatino, 'Palatino Linotype', Georgia, serif;
-      --sans: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+      --black: #1A1A18;
+      --gold: #9A8660;
+      --body-text: #5A4E3A;
+      --warm-grey: #8A7A5A;
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     }
-    html { scroll-behavior: smooth; }
-    body { background: var(--cream); font-family: var(--serif); color: var(--black); -webkit-font-smoothing: antialiased; }
 
-    /* NAV */
+    html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; scroll-behavior: smooth; }
+
+    body { background: var(--cream); color: var(--black); font-family: var(--font-sans); overflow-x: hidden; }
+
+    /* ─── NAV ─── */
     nav {
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      z-index: 10;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 36px 80px;
-      flex-wrap: nowrap;
-      gap: 16px;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 32px 64px; position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: var(--cream); transition: padding 0.4s ease, border-color 0.4s ease;
+      border-bottom: 0.5px solid transparent;
     }
-    .logo { font-family: var(--serif); font-size: 22px; font-weight: 500; letter-spacing: 0.22em; color: #F5F0E8; text-decoration: none; white-space: nowrap; flex-shrink: 0; }
-    .logo-amp { font-size: 12px; font-weight: 400; font-style: italic; color: rgba(245,240,232,0.6); letter-spacing: 0.05em; }
-    .logo-co { font-size: 12px; font-weight: 400; color: rgba(245,240,232,0.6); letter-spacing: 0.28em; }
-    .nav-links { display: flex; gap: 44px; list-style: none; flex-shrink: 0; }
-    .nav-links a { font-family: var(--sans); font-size: 10px; letter-spacing: 0.2em; color: rgba(245,240,232,0.7); text-decoration: none; transition: color 0.2s ease; white-space: nowrap; }
-    .nav-links a:hover { color: #F5F0E8; }
+    nav.scrolled { padding: 20px 64px; border-bottom-color: rgba(26,26,24,0.06); }
+    .logo { display: flex; align-items: baseline; gap: 7px; text-decoration: none; }
+    .logo-main { font-family: var(--font-serif); font-size: 21px; font-weight: 500; letter-spacing: 0.14em; color: var(--black); text-transform: uppercase; }
+    .logo-accent { font-family: var(--font-serif); font-size: 12px; font-style: italic; color: var(--gold); letter-spacing: 0.04em; }
+    .nav-links { display: flex; gap: 44px; list-style: none; }
+    .nav-links a { font-size: 8.5px; letter-spacing: 0.4em; color: rgba(26,26,24,0.35); text-decoration: none; text-transform: uppercase; transition: color 0.25s ease; }
+    .nav-links a:hover { color: var(--black); }
+    .nav-links a:focus-visible { outline: 1px solid var(--gold); outline-offset: 4px; }
+    .nav-toggle { display: none; flex-direction: column; gap: 6px; cursor: pointer; padding: 4px; background: none; border: none; }
+    .nav-toggle:focus-visible { outline: 1px solid var(--gold); outline-offset: 4px; }
+    .nav-toggle span { display: block; width: 20px; height: 0.5px; background: var(--black); }
 
-    /* HERO — full bleed with architectural overlay */
-    .hero-wrap {
-      position: relative;
-      min-height: 92vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      background-color: #1a1a18;
-      overflow: hidden;
-    }
-    .hero-bg {
-      position: absolute;
-      inset: 0;
-      background:
-        linear-gradient(to bottom, rgba(26,26,24,0.38) 0%, rgba(26,26,24,0.62) 60%, rgba(26,26,24,0.92) 100%),
-        repeating-linear-gradient(
-          90deg,
-          transparent,
-          transparent 120px,
-          rgba(154,134,96,0.04) 120px,
-          rgba(154,134,96,0.04) 121px
-        ),
-        repeating-linear-gradient(
-          0deg,
-          transparent,
-          transparent 120px,
-          rgba(154,134,96,0.04) 120px,
-          rgba(154,134,96,0.04) 121px
-        ),
-        linear-gradient(160deg, #2a2520 0%, #1a1a18 40%, #111210 100%);
-    }
-    /* Subtle architectural arc */
-    .hero-bg::after {
-      content: '';
-      position: absolute;
-      bottom: -10%;
-      right: -5%;
-      width: 65%;
-      height: 130%;
-      border-radius: 50% 0 0 50%;
-      border-left: 0.5px solid rgba(154,134,96,0.12);
-      border-top: 0.5px solid rgba(154,134,96,0.06);
-      pointer-events: none;
-    }
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      padding: 0 80px 80px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-items: end;
-    }
-    .eyebrow { font-family: var(--sans); font-size: 10px; letter-spacing: 0.5em; color: var(--gold); margin-bottom: 32px; opacity: 0.9; }
-    h1 {
-      font-family: var(--serif);
-      font-size: clamp(48px, 5.5vw, 88px);
-      font-weight: 300;
-      line-height: 1.06;
-      color: #F5F0E8;
-      letter-spacing: 0.01em;
-      font-style: italic;
-    }
-    .hero-body { font-family: var(--sans); font-size: 14px; line-height: 2.1; color: rgba(245,240,232,0.65); margin-bottom: 48px; max-width: 420px; }
-    .cta { font-family: var(--sans); font-size: 10px; letter-spacing: 0.38em; color: rgba(245,240,232,0.9); border-bottom: 0.5px solid var(--gold); padding-bottom: 4px; text-decoration: none; transition: all 0.25s ease; display: inline-block; }
-    .cta:hover { color: var(--gold); letter-spacing: 0.44em; }
+    /* ─── HERO ─── */
+    .hero { padding: 160px 64px 0; min-height: 88vh; display: flex; flex-direction: column; justify-content: flex-end; }
+    .hero-hl { font-family: var(--font-serif); font-size: clamp(56px, 8.5vw, 112px); font-weight: 300; line-height: 0.93; letter-spacing: -0.025em; }
+    .hero-sub { padding: 36px 0 72px; }
+    .hero-body { font-family: var(--font-serif); font-size: 16px; font-weight: 300; line-height: 1.8; color: var(--body-text); max-width: 380px; }
 
-    /* SCROLL INDICATOR */
-    .scroll-hint {
-      position: absolute;
-      bottom: 36px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 2;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 8px;
-    }
-    .scroll-hint span { font-family: var(--sans); font-size: 9px; letter-spacing: 0.4em; color: rgba(245,240,232,0.3); }
-    .scroll-line { width: 0.5px; height: 40px; background: linear-gradient(to bottom, rgba(154,134,96,0.5), transparent); animation: scrollPulse 2.5s ease-in-out infinite; }
-    @keyframes scrollPulse { 0%, 100% { opacity: 0.4; transform: scaleY(1); } 50% { opacity: 1; transform: scaleY(1.15); } }
+    /* ─── CTA ─── */
+    .cta-wrap { padding: 22px 64px 52px; }
+    .cta { font-size: 8.5px; letter-spacing: 0.4em; text-transform: uppercase; color: rgba(26,26,24,0.28); border-bottom: 0.5px solid rgba(154,134,96,0.35); padding-bottom: 3px; text-decoration: none; display: inline-block; transition: color 0.25s ease, border-color 0.25s ease; }
+    .cta:hover { color: var(--black); border-color: rgba(154,134,96,0.7); }
+    .cta:focus-visible { outline: 1px solid var(--gold); outline-offset: 4px; }
 
-    /* GOLD TRANSITION */
-    .gold-divider { height: 1px; background: linear-gradient(to right, transparent, var(--gold), transparent); opacity: 0.5; display: block; }
+    /* ─── SERVICES ─── */
+    .services-wrap { background: var(--cream); }
+    .services-spacer { height: 40px; }
+    .services { padding: 0 64px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 56px; }
+    .service { padding: 0 0 72px; display: flex; flex-direction: column; }
+    .svc-num { font-size: 8.5px; letter-spacing: 0.32em; color: var(--gold); margin-bottom: 22px; opacity: 0.8; }
+    .svc-title { font-family: var(--font-serif); font-size: 27px; font-weight: 300; color: var(--black); line-height: 1.12; margin-bottom: 18px; }
+    .svc-body { font-size: 11px; line-height: 1.95; color: var(--warm-grey); letter-spacing: 0.01em; }
 
-    /* SERVICES — 2 column now Private Events removed */
-    .services { display: grid; grid-template-columns: 1fr 1fr; background: var(--black); }
-    .service { padding: 80px 72px; border-right: 0.5px solid rgba(180,160,100,0.12); }
-    .service:last-child { border-right: none; }
-    .service-num { font-family: var(--sans); font-size: 9px; letter-spacing: 0.38em; color: var(--gold); margin-bottom: 28px; opacity: 0.8; }
-    .gold-rule { width: 28px; height: 0.5px; background: var(--gold); margin-bottom: 28px; opacity: 0.7; }
-    .service h3 { font-family: var(--serif); font-size: clamp(22px, 2vw, 30px); font-weight: 300; color: var(--cream); margin-bottom: 20px; letter-spacing: 0.04em; line-height: 1.2; font-style: italic; }
-    .service p { font-family: var(--sans); font-size: 13px; line-height: 2; color: rgba(245,240,232,0.45); max-width: 340px; }
+    /* ─── CONTACT ─── */
+    .contact { background: var(--black); padding: 56px 64px 88px; border-top: 0.5px solid rgba(26,26,24,0.15); }
+    .contact-hl { font-family: var(--font-serif); font-size: clamp(34px, 4.5vw, 52px); font-weight: 300; font-style: italic; line-height: 1.18; color: rgba(245,240,232,0.92); margin-bottom: 64px; letter-spacing: -0.01em; }
+    .contact-grid { display: grid; grid-template-columns: auto auto 1fr; gap: 80px; align-items: start; }
+    .contact-left { display: flex; flex-direction: column; gap: 36px; }
+    .contact-item .contact-label { font-size: 8.5px; letter-spacing: 0.4em; color: var(--gold); display: block; margin-bottom: 10px; text-transform: uppercase; opacity: 0.9; }
+    .contact-item p, .contact-item a { font-family: var(--font-serif); font-size: 16px; font-weight: 300; color: rgba(245,240,232,0.48); line-height: 1.65; text-decoration: none; transition: color 0.25s ease; }
+    .contact-item a:hover { color: rgba(245,240,232,0.85); }
+    .contact-item a:focus-visible { outline: 1px solid var(--gold); outline-offset: 4px; }
 
-    /* CONTACT */
-    .contact-block { background: var(--cream-dark); padding: 112px 80px; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; border-top: 0.5px solid var(--gold-light); }
-    .contact-eyebrow { font-family: var(--sans); font-size: 10px; letter-spacing: 0.45em; color: var(--gold); margin-bottom: 24px; }
-    .contact-intro { font-family: var(--serif); font-size: clamp(32px, 3.2vw, 52px); font-weight: 300; color: var(--black); line-height: 1.15; letter-spacing: 0.01em; margin-bottom: 20px; font-style: italic; }
-    .contact-subtext { font-family: var(--sans); font-size: 13px; line-height: 1.9; color: var(--text-body); max-width: 380px; }
-    .contact-detail-label { font-family: var(--sans); font-size: 10px; letter-spacing: 0.4em; color: var(--gold); margin-bottom: 12px; margin-top: 36px; }
-    .contact-detail-label.first { margin-top: 0; }
-    .contact-email { font-family: var(--sans); font-size: 13px; letter-spacing: 0.15em; color: var(--black); border-bottom: 0.5px solid var(--gold); padding-bottom: 3px; text-decoration: none; transition: opacity 0.2s ease; display: inline-block; }
-    .contact-email:hover { opacity: 0.5; }
-    .contact-phone { font-family: var(--sans); font-size: 13px; letter-spacing: 0.15em; color: var(--black); text-decoration: none; }
-    .contact-address-text { font-family: var(--sans); font-size: 12px; line-height: 2; color: var(--text-muted); letter-spacing: 0.08em; }
+    /* ─── FOOTER ─── */
+    footer { background: var(--black); border-top: 0.5px solid rgba(245,240,232,0.06); padding: 28px 64px; display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 40px; }
+    .footer-logo { display: flex; align-items: baseline; gap: 6px; text-decoration: none; }
+    .footer-logo:focus-visible { outline: 1px solid var(--gold); outline-offset: 4px; }
+    .footer-logo-main { font-family: var(--font-serif); font-size: 14px; font-weight: 500; letter-spacing: 0.14em; color: rgba(245,240,232,0.55); text-transform: uppercase; }
+    .footer-logo-accent { font-family: var(--font-serif); font-size: 9px; font-style: italic; color: var(--gold); opacity: 0.8; }
+    .footer-tagline { font-family: var(--font-serif); font-size: 12px; font-weight: 300; font-style: italic; color: rgba(245,240,232,0.35); text-align: center; }
+    .footer-links { display: flex; gap: 24px; align-items: center; justify-content: flex-end; list-style: none; }
+    .footer-links a { font-size: 7.5px; letter-spacing: 0.24em; color: rgba(245,240,232,0.4); text-decoration: none; text-transform: uppercase; transition: color 0.25s ease; }
+    .footer-links a:hover { color: rgba(245,240,232,0.75); }
+    .footer-links a:focus-visible { outline: 1px solid var(--gold); outline-offset: 4px; }
+    .footer-copy { font-size: 7.5px; letter-spacing: 0.2em; color: rgba(245,240,232,0.28); text-transform: uppercase; }
 
-    /* FOOTER */
-    footer { padding: 40px 80px; border-top: 0.5px solid var(--gold-light); display: flex; justify-content: space-between; align-items: center; background: var(--cream); }
-    .footer-logo { font-family: var(--serif); font-size: 13px; font-weight: 400; letter-spacing: 0.24em; color: var(--text-body); }
-    .footer-detail { font-family: var(--sans); font-size: 10px; letter-spacing: 0.2em; color: var(--gold); opacity: 0.8; }
+    /* ─── MOBILE MENU ─── */
+    .mobile-menu { display: none; position: fixed; inset: 0; background: var(--black); z-index: 200; flex-direction: column; justify-content: center; align-items: center; gap: 44px; }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { font-family: var(--font-serif); font-size: 28px; font-weight: 300; color: rgba(245,240,232,0.45); text-decoration: none; letter-spacing: 0.06em; transition: color 0.25s ease; }
+    .mobile-menu a:hover { color: rgba(245,240,232,0.9); }
+    .mobile-menu a:focus-visible { outline: 1px solid var(--gold); outline-offset: 4px; }
+    .mobile-close { position: absolute; top: 32px; right: 64px; font-size: 8.5px; letter-spacing: 0.32em; color: rgba(245,240,232,0.3); text-transform: uppercase; cursor: pointer; font-family: var(--font-sans); background: none; border: none; transition: color 0.25s ease; }
+    .mobile-close:hover { color: rgba(245,240,232,0.7); }
+    .mobile-close:focus-visible { outline: 1px solid var(--gold); outline-offset: 4px; }
 
-    /* TABLET */
-    @media (max-width: 1024px) {
-      nav { padding: 28px 40px; }
-      .hero-content { padding: 0 40px 72px; grid-template-columns: 1fr; gap: 40px; }
-      .hero-wrap { min-height: 85vh; }
-      .services { grid-template-columns: 1fr; }
-      .service { border-right: none; border-bottom: 0.5px solid rgba(180,160,100,0.12); padding: 64px 40px; }
-      .service:last-child { border-bottom: none; }
-      .contact-block { padding: 80px 40px; grid-template-columns: 1fr; gap: 52px; }
-      footer { padding: 32px 40px; }
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 960px) {
+      nav, nav.scrolled { padding: 24px 40px; }
+      .nav-links { display: none; }
+      .nav-toggle { display: flex; }
+      .hero { padding: 130px 40px 0; min-height: 80vh; }
+      .hero-body { font-size: 15px; max-width: 260px; }
+      .cta-wrap { padding: 22px 40px 44px; }
+      .services { padding: 0 40px; grid-template-columns: 1fr 1fr 1fr; gap: 32px; }
+      .service { padding: 0 0 48px; }
+      .svc-title { font-size: 22px; }
+      .contact { padding: 56px 40px 72px; }
+      .contact-grid { grid-template-columns: 1fr; gap: 36px; }
+      footer { padding: 24px 40px; grid-template-columns: 1fr; gap: 14px; text-align: center; }
+      .footer-logo { justify-content: center; }
+      .footer-links { justify-content: center; }
+      .mobile-close { right: 40px; }
     }
 
-    /* MOBILE */
-    @media (max-width: 600px) {
-      nav { padding: 24px 24px; flex-wrap: wrap; }
-      .logo { font-size: 17px; letter-spacing: 0.16em; width: 100%; margin-bottom: 12px; }
-      .nav-links { gap: 20px; width: 100%; }
-      .nav-links a { font-size: 10px; letter-spacing: 0.12em; }
-      .hero-wrap { min-height: 90vh; }
-      .hero-content { padding: 0 24px 60px; gap: 28px; }
-      h1 { font-size: clamp(40px, 10vw, 56px); }
-      .service { padding: 52px 24px; }
-      .contact-block { padding: 64px 24px; gap: 44px; }
-      footer { flex-direction: column; align-items: flex-start; gap: 10px; padding: 28px 24px; }
-      .scroll-hint { display: none; }
+    @media (max-width: 700px) {
+      .services { grid-template-columns: 1fr; gap: 0; }
+      .service { padding: 32px 0; border-top: 0.5px solid rgba(26,26,24,0.07); }
+      .service:first-child { border-top: none; }
+      .svc-title { font-size: 26px; }
+    }
+
+    @media (max-width: 560px) {
+      nav, nav.scrolled { padding: 20px 28px; }
+      .logo-main { font-size: 18px; }
+      .hero { padding: 120px 28px 0; min-height: 75vh; }
+      .hero-sub { padding: 28px 0 56px; }
+      .hero-body { font-size: 14px; max-width: 100%; }
+      .cta-wrap { padding: 18px 28px 36px; }
+      .services { padding: 0 28px; }
+      .contact { padding: 48px 28px 56px; }
+      footer { padding: 18px 28px; }
+      .mobile-close { right: 28px; top: 20px; }
     }
   </style>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QG1JSWDXJ5"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-QG1JSWDXJ5');
-  </script>
 </head>
 <body>
 
-  <!-- Full-bleed hero with nav overlaid -->
-  <div class="hero-wrap" id="about">
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+    <button class="mobile-close" onclick="toggleMenu()" aria-label="Close menu">CLOSE</button>
+    <a href="#overview" onclick="toggleMenu()">Overview</a>
+    <a href="#advisory" onclick="toggleMenu()">Advisory</a>
+    <a href="#team" onclick="toggleMenu()">Team</a>
+    <a href="#contact" onclick="toggleMenu()">Contact</a>
+  </div>
 
-    <nav>
-      <a href="/" class="logo">HUXLEY <span class="logo-amp">&amp;</span><span class="logo-co"> CO.</span></a>
-      <ul class="nav-links">
-        <li><a href="#about">ABOUT</a></li>
-        <li><a href="#advisory">ADVISORY</a></li>
-        <li><a href="about.html">TEAM</a></li>
-        <li><a href="#contact">CONTACT</a></li>
-      </ul>
-    </nav>
+  <!-- NAV -->
+  <nav id="mainNav" role="navigation" aria-label="Main navigation">
+    <a href="/" class="logo" aria-label="Huxley &amp; Co. — Home">
+      <span class="logo-main">Huxley</span>
+      <span class="logo-accent">& co.</span>
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="#overview">OVERVIEW</a></li>
+      <li><a href="#advisory">ADVISORY</a></li>
+      <li><a href="#team">TEAM</a></li>
+      <li><a href="#contact">CONTACT</a></li>
+    </ul>
+    <button class="nav-toggle" onclick="toggleMenu()" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
 
-    <div class="hero-bg"></div>
+  <!-- HERO -->
+  <section id="overview" class="hero" aria-label="Introduction">
+    <h1 class="hero-hl">The introduction<br>matters.</h1>
+    <div class="hero-sub">
+      <p class="hero-body">Huxley &amp; Co. advises founders, family offices, and private enterprises on the talent and organizational decisions that define them. Discretion and rigor, in equal measure.</p>
+    </div>
+  </section>
 
-    <div class="hero-content">
-      <div class="hero-left">
-        <p class="eyebrow">BEVERLY HILLS · WORLDWIDE</p>
-        <h1>The introduction<br>matters.</h1>
+  <!-- CTA -->
+  <div class="cta-wrap">
+    <a href="#contact" class="cta">BY APPOINTMENT ONLY</a>
+  </div>
+
+  <!-- SERVICES -->
+  <div class="services-wrap">
+    <section id="advisory" class="services" aria-label="Services">
+      <div class="service">
+        <div class="svc-num" aria-hidden="true">01</div>
+        <h2 class="svc-title">Advisory &amp; Search</h2>
+        <p class="svc-body">Retained counsel for founders and private offices seeking exceptional talent. Every engagement is principal-led.</p>
       </div>
-      <div class="hero-right">
-        <p class="hero-body">Huxley &amp; Co. advises founders, family offices, and private enterprises on the talent and organizational decisions that define them. Discretion and rigor, in equal measure.</p>
-        <a href="#contact" class="cta">BY APPOINTMENT ONLY</a>
+      <div class="service">
+        <div class="svc-num" aria-hidden="true">02</div>
+        <h2 class="svc-title">Family Office</h2>
+        <p class="svc-body">Trusted advisory for private families and multi-family offices. Discretion is not a feature; it is the foundation.</p>
+      </div>
+      <div class="service">
+        <div class="svc-num" aria-hidden="true">03</div>
+        <h2 class="svc-title">Private Events &amp; Productions</h2>
+        <p class="svc-body">Trusted production and event counsel for private clients and creative enterprises. Every detail handled with the same discretion.</p>
+      </div>
+    </section>
+    <div class="services-spacer" aria-hidden="true"></div>
+  </div>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact" aria-label="Contact">
+    <h2 class="contact-hl">We operate where<br>reputation is everything.</h2>
+    <div class="contact-grid">
+      <div class="contact-left">
+        <div class="contact-item">
+          <span class="contact-label">EMAIL</span>
+          <a href="mailto:hello@thehuxleycompany.com">hello@thehuxleycompany.com</a>
+        </div>
+        <div class="contact-item">
+          <span class="contact-label">PHONE</span>
+          <a href="tel:+14242531320">(424) 253-1320</a>
+        </div>
+      </div>
+      <div class="contact-item">
+        <span class="contact-label">ADDRESS</span>
+        <p>9171 Wilshire Blvd, Suite 500<br>Beverly Hills, CA 90210</p>
       </div>
     </div>
+  </section>
 
-    <div class="scroll-hint">
-      <div class="scroll-line"></div>
-    </div>
-
-  </div>
-
-  <div class="gold-divider"></div>
-
-  <div class="services" id="advisory">
-    <div class="service">
-      <p class="service-num">01</p>
-      <div class="gold-rule"></div>
-      <h3>Advisory &amp; Search</h3>
-      <p>Retained counsel for founders and private offices seeking exceptional talent. Every engagement is principal-led.</p>
-    </div>
-    <div class="service">
-      <p class="service-num">02</p>
-      <div class="gold-rule"></div>
-      <h3>Family Office</h3>
-      <p>Trusted advisory for private families and multi-family offices. Discretion is not a feature; it is the foundation.</p>
-    </div>
-  </div>
-
-  <div class="contact-block" id="contact">
-    <div class="contact-left">
-      <p class="contact-eyebrow">INQUIRIES</p>
-      <p class="contact-intro">The right people know each other. We know them both.</p>
-
-    </div>
-    <div class="contact-right">
-      <p class="contact-detail-label first">EMAIL</p>
-      <a id="contact-email" class="contact-email">hello&#64;thehuxleycompany&#46;com</a>
-      <p class="contact-detail-label">PHONE</p>
-      <a href="tel:+14242531320" class="contact-phone">(424) 253-1320</a>
-      <p class="contact-detail-label">ADDRESS</p>
-      <p class="contact-address-text">9171 Wilshire Blvd, Suite 500<br>Beverly Hills, CA 90210</p>
-    </div>
-  </div>
-
-  <footer>
-    <span class="footer-logo">HUXLEY &amp; CO.</span>
-    <span class="footer-detail">BEVERLY HILLS · WORLDWIDE · BY APPOINTMENT ONLY</span>
-    <div style="display:flex;align-items:center;gap:32px;">
-      <a href="https://www.linkedin.com/company/huxley-co" target="_blank" rel="noopener" style="font-family:var(--sans);font-size:10px;letter-spacing:0.2em;color:var(--gold);text-decoration:none;transition:opacity 0.2s ease;" onmouseover="this.style.opacity='0.6'" onmouseout="this.style.opacity='1'">LINKEDIN</a>
-      <a href="privacy.html" style="font-family:var(--sans);font-size:10px;letter-spacing:0.2em;color:var(--gold);text-decoration:none;transition:opacity 0.2s ease;" onmouseover="this.style.opacity='0.6'" onmouseout="this.style.opacity='1'">PRIVACY</a>
-      <a href="terms.html" style="font-family:var(--sans);font-size:10px;letter-spacing:0.2em;color:var(--gold);text-decoration:none;transition:opacity 0.2s ease;" onmouseover="this.style.opacity='0.6'" onmouseout="this.style.opacity='1'">TERMS</a>
-      <span class="footer-detail">&copy; 2026</span>
-    </div>
+  <!-- FOOTER -->
+  <footer role="contentinfo">
+    <a href="/" class="footer-logo" aria-label="Huxley &amp; Co. — Home">
+      <span class="footer-logo-main">Huxley</span>
+      <span class="footer-logo-accent">& co.</span>
+    </a>
+    <p class="footer-tagline">We operate where reputation is everything.</p>
+    <ul class="footer-links" role="list">
+      <li><a href="https://www.linkedin.com/company/huxley-co" target="_blank" rel="noopener noreferrer">LINKEDIN</a></li>
+      <li><a href="/privacy.html">PRIVACY</a></li>
+      <li><a href="/terms.html">TERMS</a></li>
+      <li><span class="footer-copy">© 2026</span></li>
+    </ul>
   </footer>
 
   <script>
-    var el = document.getElementById('contact-email');
-    if (el) { el.href = 'mailto:' + 'hello' + '@' + 'thehuxleycompany.com'; }
+    // Mobile menu toggle
+    const mobileMenu = document.getElementById('mobileMenu');
+    const navToggle = document.querySelector('.nav-toggle');
+
+    function toggleMenu() {
+      const isOpen = mobileMenu.classList.toggle('open');
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+      navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    }
+
+    // Close on Escape key
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
+        mobileMenu.classList.remove('open');
+        document.body.style.overflow = '';
+        navToggle.setAttribute('aria-expanded', 'false');
+        navToggle.focus();
+      }
+    });
+
+    // Nav shrinks on scroll
+    const mainNav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => {
+      mainNav.classList.toggle('scrolled', window.scrollY > 40);
+    }, { passive: true });
   </script>
 
 </body>
