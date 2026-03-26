@@ -51,12 +51,12 @@
     .nav-toggle span { display: block; width: 20px; height: 0.5px; background: var(--black); }
 
     /* PAGE HEADER */
-    .page-header { padding: 152px 64px 72px; }
+    .page-header { padding: 152px 64px 48px; }
     .page-label { font-size: 8.5px; letter-spacing: 0.4em; color: var(--gold); text-transform: uppercase; margin-bottom: 40px; opacity: 0.8; }
     .page-title { font-family: var(--font-serif); font-size: clamp(40px, 5vw, 64px); font-weight: 300; line-height: 1.0; letter-spacing: -0.02em; }
 
     /* TEAM GRID */
-    .team { padding: 0 64px 96px; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; border-top: 0.5px solid rgba(26,26,24,0.08); padding-top: 64px; }
+    .team { padding: 0 64px 96px; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; padding-top: 48px; }
 
     .member-role { font-size: 8.5px; letter-spacing: 0.4em; color: var(--gold); text-transform: uppercase; margin-bottom: 24px; opacity: 0.8; }
 
@@ -67,14 +67,14 @@
     .member-bio { font-family: var(--font-serif); font-size: 17px; font-weight: 300; line-height: 1.85; color: var(--body-text); }
 
     /* SECTORS */
-    .sectors { background: var(--black); padding: 72px 64px 80px; border-top: 0.5px solid rgba(26,26,24,0.15); }
-    .sectors-label { font-size: 8.5px; letter-spacing: 0.4em; color: var(--gold); text-transform: uppercase; margin-bottom: 48px; opacity: 0.8; }
-    .sectors-grid { display: flex; gap: 64px; flex-wrap: wrap; }
-    .sector { font-family: var(--font-serif); font-size: 22px; font-weight: 300; color: rgba(245,240,232,0.45); letter-spacing: 0.01em; transition: color 0.25s ease; }
-    .sector:hover { color: rgba(245,240,232,0.85); }
+    .sectors { background: #EDE8DC; padding: 56px 64px; }
+    .sectors-label { font-size: 8.5px; letter-spacing: 0.4em; color: var(--gold); text-transform: uppercase; margin-bottom: 32px; opacity: 0.8; }
+    .sectors-grid { display: flex; gap: 72px; flex-wrap: wrap; }
+    .sector { font-family: var(--font-serif); font-size: 26px; font-weight: 300; color: rgba(26,26,24,0.48); letter-spacing: 0.01em; transition: color 0.25s ease; cursor: default; }
+    .sector:hover { color: rgba(26,26,24,0.85); }
 
     /* CONTACT */
-    .contact { background: var(--black); padding: 0 64px 88px; }
+    .contact { background: var(--black); padding: 56px 64px 88px; border-top: 0.5px solid rgba(26,26,24,0.15); }
     .contact-hl { font-family: var(--font-serif); font-size: clamp(34px, 4.5vw, 52px); font-weight: 300; font-style: italic; line-height: 1.18; color: rgba(245,240,232,0.92); margin-bottom: 64px; letter-spacing: -0.01em; }
     .contact-grid { display: grid; grid-template-columns: auto auto 1fr; gap: 80px; align-items: start; }
     .contact-left { display: flex; flex-direction: column; gap: 36px; }
@@ -113,7 +113,7 @@
       .nav-toggle { display: flex; }
       .page-header { padding: 120px 40px 56px; }
       .team { padding: 48px 40px 80px; grid-template-columns: 1fr; gap: 64px; }
-      .sectors { padding: 56px 40px 64px; }
+      .sectors { padding: 48px 40px; }
       .sectors-grid { gap: 40px; }
       .contact { padding: 0 40px 72px; }
       .contact-grid { grid-template-columns: 1fr; gap: 36px; }
@@ -128,7 +128,7 @@
       .logo-main { font-size: 18px; }
       .page-header { padding: 104px 28px 48px; }
       .team { padding: 40px 28px 72px; }
-      .sectors { padding: 48px 28px 56px; }
+      .sectors { padding: 40px 28px; }
       .sectors-grid { gap: 28px; flex-direction: column; }
       .contact { padding: 0 28px 56px; }
       footer { padding: 18px 28px; }
@@ -140,22 +140,22 @@
 
   <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Navigation menu">
     <button class="mobile-close" onclick="toggleMenu()" aria-label="Close menu">CLOSE</button>
-    <a href="/" onclick="toggleMenu()">Overview</a>
-    <a href="/#advisory" onclick="toggleMenu()">Advisory</a>
-    <a href="/about.html" onclick="toggleMenu()">Team</a>
-    <a href="/#contact" onclick="toggleMenu()">Contact</a>
+    <a href="index.html" onclick="toggleMenu()">Overview</a>
+    <a href="index.html#advisory" onclick="toggleMenu()">Advisory</a>
+    <a href="about.html" onclick="toggleMenu()">Team</a>
+    <a href="index.html#contact" onclick="toggleMenu()">Contact</a>
   </div>
 
   <nav id="mainNav" role="navigation" aria-label="Main navigation">
-    <a href="/" class="logo" aria-label="Huxley &amp; Co. — Home">
+    <a href="index.html" class="logo" aria-label="Huxley &amp; Co. — Home">
       <span class="logo-main">Huxley</span>
       <span class="logo-accent">& co.</span>
     </a>
     <ul class="nav-links" role="list">
-      <li><a href="/">OVERVIEW</a></li>
-      <li><a href="/#advisory">ADVISORY</a></li>
-      <li><a href="/about.html" class="active" aria-current="page">TEAM</a></li>
-      <li><a href="/#contact">CONTACT</a></li>
+      <li><a href="index.html">OVERVIEW</a></li>
+      <li><a href="index.html#advisory">ADVISORY</a></li>
+      <li><a href="about.html" class="active" aria-current="page">TEAM</a></li>
+      <li><a href="index.html#contact">CONTACT</a></li>
     </ul>
     <button class="nav-toggle" onclick="toggleMenu()" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu">
       <span></span>
@@ -223,15 +223,15 @@
 
   <!-- FOOTER -->
   <footer role="contentinfo">
-    <a href="/" class="footer-logo" aria-label="Huxley &amp; Co. — Home">
+    <a href="index.html" class="footer-logo" aria-label="Huxley &amp; Co. — Home">
       <span class="footer-logo-main">Huxley</span>
       <span class="footer-logo-accent">& co.</span>
     </a>
     <p class="footer-tagline">We operate where reputation is everything.</p>
     <ul class="footer-links" role="list">
       <li><a href="https://www.linkedin.com/company/huxley-co" target="_blank" rel="noopener noreferrer">LINKEDIN</a></li>
-      <li><a href="/privacy.html">PRIVACY</a></li>
-      <li><a href="/terms.html">TERMS</a></li>
+      <li><a href="privacy.html">PRIVACY</a></li>
+      <li><a href="terms.html">TERMS</a></li>
       <li><span class="footer-copy">© 2026</span></li>
     </ul>
   </footer>
