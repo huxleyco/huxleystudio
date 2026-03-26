@@ -51,7 +51,7 @@
     .nav-toggle span { display: block; width: 20px; height: 0.5px; background: var(--black); }
 
     /* ─── HERO ─── */
-    .hero { padding: 160px 64px 0; min-height: 88vh; display: flex; flex-direction: column; justify-content: flex-end; }
+    .hero { padding: 160px 64px 0; min-height: 88vh; display: flex; flex-direction: column; justify-content: flex-end; scroll-margin-top: 100px; }
     .hero-hl { font-family: var(--font-serif); font-size: clamp(56px, 8.5vw, 112px); font-weight: 300; line-height: 0.93; letter-spacing: -0.025em; }
     .hero-sub { padding: 36px 0 72px; }
     .hero-body { font-family: var(--font-serif); font-size: 16px; font-weight: 300; line-height: 1.8; color: var(--body-text); max-width: 380px; }
@@ -65,14 +65,14 @@
     /* ─── SERVICES ─── */
     .services-wrap { background: var(--cream); }
     .services-spacer { height: 40px; }
-    .services { padding: 0 64px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 56px; }
+    .services { padding: 0 64px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 56px; scroll-margin-top: 100px; }
     .service { padding: 0 0 72px; display: flex; flex-direction: column; }
     .svc-num { font-size: 8.5px; letter-spacing: 0.32em; color: var(--gold); margin-bottom: 22px; opacity: 0.8; }
     .svc-title { font-family: var(--font-serif); font-size: 27px; font-weight: 300; color: var(--black); line-height: 1.12; margin-bottom: 18px; }
     .svc-body { font-size: 11px; line-height: 1.95; color: var(--warm-grey); letter-spacing: 0.01em; }
 
     /* ─── CONTACT ─── */
-    .contact { background: var(--black); padding: 56px 64px 88px; border-top: 0.5px solid rgba(26,26,24,0.15); }
+    .contact { background: var(--black); padding: 56px 64px 88px; border-top: 0.5px solid rgba(26,26,24,0.15); scroll-margin-top: 100px; }
     .contact-hl { font-family: var(--font-serif); font-size: clamp(34px, 4.5vw, 52px); font-weight: 300; font-style: italic; line-height: 1.18; color: rgba(245,240,232,0.92); margin-bottom: 64px; letter-spacing: -0.01em; }
     .contact-grid { display: grid; grid-template-columns: auto auto 1fr; gap: 80px; align-items: start; }
     .contact-left { display: flex; flex-direction: column; gap: 36px; }
@@ -151,7 +151,7 @@
     <button class="mobile-close" onclick="toggleMenu()" aria-label="Close menu">CLOSE</button>
     <a href="#overview" onclick="toggleMenu()">Overview</a>
     <a href="#advisory" onclick="toggleMenu()">Advisory</a>
-    <a href="/about.html" onclick="toggleMenu()">Team</a>
+    <a href="about.html" onclick="toggleMenu()">Team</a>
     <a href="#contact" onclick="toggleMenu()">Contact</a>
   </div>
 
@@ -164,7 +164,7 @@
     <ul class="nav-links" role="list">
       <li><a href="#overview">OVERVIEW</a></li>
       <li><a href="#advisory">ADVISORY</a></li>
-      <li><a href="/about.html">TEAM</a></li>
+      <li><a href="about.html">TEAM</a></li>
       <li><a href="#contact">CONTACT</a></li>
     </ul>
     <button class="nav-toggle" onclick="toggleMenu()" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu">
@@ -238,8 +238,8 @@
     <p class="footer-tagline">We operate where reputation is everything.</p>
     <ul class="footer-links" role="list">
       <li><a href="https://www.linkedin.com/company/huxley-co" target="_blank" rel="noopener noreferrer">LINKEDIN</a></li>
-      <li><a href="/privacy.html">PRIVACY</a></li>
-      <li><a href="/terms.html">TERMS</a></li>
+      <li><a href="privacy.html">PRIVACY</a></li>
+      <li><a href="terms.html">TERMS</a></li>
       <li><span class="footer-copy">© 2026</span></li>
     </ul>
   </footer>
