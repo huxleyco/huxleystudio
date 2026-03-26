@@ -114,22 +114,22 @@
 
   <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Navigation menu">
     <button class="mobile-close" onclick="toggleMenu()" aria-label="Close menu">CLOSE</button>
-    <a href="/" onclick="toggleMenu()">Overview</a>
-    <a href="/#advisory" onclick="toggleMenu()">Advisory</a>
-    <a href="/about.html" onclick="toggleMenu()">Team</a>
-    <a href="/#contact" onclick="toggleMenu()">Contact</a>
+    <a href="index.html" onclick="toggleMenu()">Overview</a>
+    <a href="index.html#advisory" onclick="toggleMenu()">Advisory</a>
+    <a href="about.html" onclick="toggleMenu()">Team</a>
+    <a href="index.html#contact" onclick="toggleMenu()">Contact</a>
   </div>
 
   <nav id="mainNav" role="navigation" aria-label="Main navigation">
-    <a href="/" class="logo" aria-label="Huxley &amp; Co. — Home">
+    <a href="index.html" class="logo" aria-label="Huxley &amp; Co. — Home">
       <span class="logo-main">Huxley</span>
       <span class="logo-accent">& co.</span>
     </a>
     <ul class="nav-links" role="list">
-      <li><a href="/">OVERVIEW</a></li>
-      <li><a href="/#advisory">ADVISORY</a></li>
-      <li><a href="/about.html">TEAM</a></li>
-      <li><a href="/#contact">CONTACT</a></li>
+      <li><a href="index.html">OVERVIEW</a></li>
+      <li><a href="index.html#advisory">ADVISORY</a></li>
+      <li><a href="about.html">TEAM</a></li>
+      <li><a href="index.html#contact">CONTACT</a></li>
     </ul>
     <button class="nav-toggle" onclick="toggleMenu()" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu">
       <span></span>
@@ -190,20 +190,20 @@
     <div class="policy-section">
       <h2>Contact</h2>
       <p>If you have any questions regarding these terms, please contact us directly.</p>
-      <p>Huxley &amp; Co.<br>9171 Wilshire Blvd, Suite 500<br>Beverly Hills, CA 90210<br><a href="mailto:hello@thehuxleycompany.com">hello@thehuxleycompany.com</a></p>
+      <p>Huxley &amp; Co.<br>9171 Wilshire Blvd, Suite 500<br>Beverly Hills, CA 90210<br><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#101;&#108;&#108;&#111;&#64;&#116;&#104;&#101;&#104;&#117;&#120;&#108;&#101;&#121;&#99;&#111;&#109;&#112;&#97;&#110;&#121;&#46;&#99;&#111;&#109;">&#104;&#101;&#108;&#108;&#111;&#64;&#116;&#104;&#101;&#104;&#117;&#120;&#108;&#101;&#121;&#99;&#111;&#109;&#112;&#97;&#110;&#121;&#46;&#99;&#111;&#109;</a></p>
     </div>
   </main>
 
   <footer role="contentinfo">
-    <a href="/" class="footer-logo" aria-label="Huxley &amp; Co. — Home">
+    <a href="index.html" class="footer-logo" aria-label="Huxley &amp; Co. — Home">
       <span class="footer-logo-main">Huxley</span>
       <span class="footer-logo-accent">& co.</span>
     </a>
     <p class="footer-tagline">We operate where reputation is everything.</p>
     <ul class="footer-links" role="list">
       <li><a href="https://www.linkedin.com/company/huxley-co" target="_blank" rel="noopener noreferrer">LINKEDIN</a></li>
-      <li><a href="/privacy.html">PRIVACY</a></li>
-      <li><a href="/terms.html" aria-current="page">TERMS</a></li>
+      <li><a href="privacy.html">PRIVACY</a></li>
+      <li><a href="terms.html" aria-current="page">TERMS</a></li>
       <li><span class="footer-copy">© 2026</span></li>
     </ul>
   </footer>
@@ -223,15 +223,4 @@
         mobileMenu.classList.remove('open');
         document.body.style.overflow = '';
         navToggle.setAttribute('aria-expanded', 'false');
-        navToggle.focus();
-      }
-    });
-
-    const mainNav = document.getElementById('mainNav');
-    window.addEventListener('scroll', () => {
-      mainNav.classList.toggle('scrolled', window.scrollY > 40);
-    }, { passive: true });
-  </script>
-
-</body>
-</html>
+        na
