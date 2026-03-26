@@ -151,7 +151,7 @@
     <button class="mobile-close" onclick="toggleMenu()" aria-label="Close menu">CLOSE</button>
     <a href="#overview" onclick="toggleMenu()">Overview</a>
     <a href="#advisory" onclick="toggleMenu()">Advisory</a>
-    <a href="#team" onclick="toggleMenu()">Team</a>
+    <a href="/about.html" onclick="toggleMenu()">Team</a>
     <a href="#contact" onclick="toggleMenu()">Contact</a>
   </div>
 
@@ -164,7 +164,7 @@
     <ul class="nav-links" role="list">
       <li><a href="#overview">OVERVIEW</a></li>
       <li><a href="#advisory">ADVISORY</a></li>
-      <li><a href="#team">TEAM</a></li>
+      <li><a href="/about.html">TEAM</a></li>
       <li><a href="#contact">CONTACT</a></li>
     </ul>
     <button class="nav-toggle" onclick="toggleMenu()" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu">
@@ -215,7 +215,7 @@
       <div class="contact-left">
         <div class="contact-item">
           <span class="contact-label">EMAIL</span>
-          <a href="mailto:hello@thehuxleycompany.com">hello@thehuxleycompany.com</a>
+          <a href="/cdn-cgi/l/email-protection#29414c454546695d414c415c51454c504a464459484750074a4644"><span class="__cf_email__" data-cfemail="335b565f5f5c73475b565b464b5f564a505c5e43525d4a1d505c5e">[email&#160;protected]</span></a>
         </div>
         <div class="contact-item">
           <span class="contact-label">PHONE</span>
@@ -244,7 +244,7 @@
     </ul>
   </footer>
 
-  <script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     // Mobile menu toggle
     const mobileMenu = document.getElementById('mobileMenu');
     const navToggle = document.querySelector('.nav-toggle');
@@ -263,14 +263,4 @@
         navToggle.setAttribute('aria-expanded', 'false');
         navToggle.focus();
       }
-    });
-
-    // Nav shrinks on scroll
-    const mainNav = document.getElementById('mainNav');
-    window.addEventListener('scroll', () => {
-      mainNav.classList.toggle('scrolled', window.scrollY > 40);
-    }, { passive: true });
-  </script>
-
-</body>
-</html>
+    
