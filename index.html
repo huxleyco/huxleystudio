@@ -263,4 +263,14 @@
         navToggle.setAttribute('aria-expanded', 'false');
         navToggle.focus();
       }
-    
+    });
+
+    // Nav shrinks on scroll
+    const mainNav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => {
+      mainNav.classList.toggle('scrolled', window.scrollY > 40);
+    }, { passive: true });
+  </script>
+
+</body>
+</html>
