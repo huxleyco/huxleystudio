@@ -3,212 +3,262 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Team · Huxley & Co.</title>
-  <meta name="description" content="Huxley & Co. is led by Laura Huxley and Chad Siwik, advising founders, family offices, and private enterprises on talent and organizational decisions.">
-  <link rel="canonical" href="https://www.thehuxleycompany.com/about.html">
-
-  <!-- OG / Social -->
-  <meta property="og:title" content="Team · Huxley & Co.">
-  <meta property="og:description" content="Meet the principals behind Huxley & Co. Talent advisory for founders, family offices, and private enterprises.">
+  <title>Team — Huxley &amp; Co.</title>
+  <meta name="description" content="Meet the principal advisors at Huxley &amp; Co. — Laura Huxley and Chad Siwik. Retained talent advisory and private counsel, led personally.">
+  <meta property="og:title" content="Team — Huxley &amp; Co.">
+  <meta property="og:description" content="Principal advisors at Huxley &amp; Co. Every engagement is led personally, never delegated.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.thehuxleycompany.com/about.html">
-  <meta property="og:image" content="https://www.thehuxleycompany.com/og-image.jpg">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Team · Huxley & Co.">
-  <meta name="twitter:description" content="Meet the principals behind Huxley & Co. Talent advisory for founders, family offices, and private enterprises.">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="apple-touch-icon" href="favicon.png">
-
+  <meta property="og:url" content="https://thehuxleycompany.com/about.html">
+  <link rel="canonical" href="https://thehuxleycompany.com/about.html">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
     :root {
       --cream: #F5F0E8;
-      --cream-dark: #EDE8DC;
-      --black: #1a1a18;
-      --gold: #9a8660;
-      --gold-light: rgba(180,160,100,0.25);
-      --text-body: #5a4e3a;
-      --text-muted: #6a5e48;
-      --text-dark: #8a7a5a;
-      --serif: 'Cormorant Garamond', Palatino, 'Palatino Linotype', Georgia, serif;
-      --sans: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+      --black: #1A1A18;
+      --gold: #9A8660;
+      --body-text: #5A4E3A;
+      --warm-grey: #8A7A5A;
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     }
-    html { scroll-behavior: smooth; }
-    body { background: var(--cream); font-family: var(--serif); color: var(--black); -webkit-font-smoothing: antialiased; }
+
+    html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; scroll-behavior: smooth; }
+    body { background: var(--cream); color: var(--black); font-family: var(--font-sans); overflow-x: hidden; }
 
     /* NAV */
     nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 28px 80px;
-      border-bottom: 0.5px solid var(--gold-light);
-      flex-wrap: nowrap;
-      gap: 16px;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 32px 64px; position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: var(--cream); transition: padding 0.4s ease, border-color 0.4s ease;
+      border-bottom: 0.5px solid transparent;
     }
-    .logo { font-family: var(--serif); font-size: 24px; font-weight: 500; letter-spacing: 0.2em; color: var(--black); text-decoration: none; white-space: nowrap; flex-shrink: 0; }
-    .logo-amp { font-size: 13px; font-weight: 400; font-style: italic; color: var(--text-dark); letter-spacing: 0.05em; }
-    .logo-co { font-size: 13px; font-weight: 400; color: var(--text-dark); letter-spacing: 0.28em; }
-    .nav-links { display: flex; gap: 40px; list-style: none; flex-shrink: 0; }
-    .nav-links a { font-family: var(--sans); font-size: 11px; letter-spacing: 0.18em; color: var(--text-body); text-decoration: none; transition: color 0.2s ease; white-space: nowrap; }
+    nav.scrolled { padding: 20px 64px; border-bottom-color: rgba(26,26,24,0.06); }
+    .logo { display: flex; align-items: baseline; gap: 7px; text-decoration: none; }
+    .logo-main { font-family: var(--font-serif); font-size: 21px; font-weight: 500; letter-spacing: 0.14em; color: var(--black); text-transform: uppercase; }
+    .logo-accent { font-family: var(--font-serif); font-size: 12px; font-style: italic; color: var(--gold); letter-spacing: 0.04em; }
+    .nav-links { display: flex; gap: 44px; list-style: none; }
+    .nav-links a { font-size: 8.5px; letter-spacing: 0.4em; color: rgba(26,26,24,0.35); text-decoration: none; text-transform: uppercase; transition: color 0.25s ease; }
     .nav-links a:hover { color: var(--black); }
-    .nav-links a.active { color: var(--black); border-bottom: 0.5px solid var(--gold); padding-bottom: 2px; }
+    .nav-links a.active { color: var(--black); }
+    .nav-links a:focus-visible { outline: 1px solid var(--gold); outline-offset: 4px; }
+    .nav-toggle { display: none; flex-direction: column; gap: 6px; cursor: pointer; padding: 4px; background: none; border: none; }
+    .nav-toggle:focus-visible { outline: 1px solid var(--gold); outline-offset: 4px; }
+    .nav-toggle span { display: block; width: 20px; height: 0.5px; background: var(--black); }
 
     /* PAGE HEADER */
-    .page-header {
-      padding: 80px 80px 72px;
-      border-bottom: 0.5px solid var(--gold-light);
-    }
-    .eyebrow { font-family: var(--sans); font-size: 10px; letter-spacing: 0.45em; color: var(--gold); margin-bottom: 24px; }
-    .page-title { font-size: clamp(44px, 4.8vw, 78px); font-weight: 300; line-height: 1.06; color: var(--black); letter-spacing: 0.01em; }
-
-    /* GOLD TRANSITION */
-    .gold-divider { height: 1px; background: linear-gradient(to right, transparent, var(--gold), transparent); opacity: 0.45; }
+    .page-header { padding: 152px 64px 72px; }
+    .page-label { font-size: 8.5px; letter-spacing: 0.4em; color: var(--gold); text-transform: uppercase; margin-bottom: 40px; opacity: 0.8; }
+    .page-title { font-family: var(--font-serif); font-size: clamp(40px, 5vw, 64px); font-weight: 300; line-height: 1.0; letter-spacing: -0.02em; }
 
     /* TEAM GRID */
-    .team { display: grid; grid-template-columns: 1fr 1fr; background: var(--black); border-bottom: 0.5px solid var(--gold-light); }
-    .team-member { padding: 80px 80px; border-right: 0.5px solid rgba(180,160,100,0.15); }
-    .team-member:last-child { border-right: none; }
-    .member-name { font-size: clamp(32px, 3vw, 52px); font-weight: 300; line-height: 1.1; color: var(--cream); letter-spacing: 0.01em; margin-bottom: 16px; }
-    .member-title { font-family: var(--sans); font-size: 10px; letter-spacing: 0.3em; color: var(--gold); margin-bottom: 32px; }
-    .gold-rule { width: 32px; height: 0.5px; background: var(--gold); margin-bottom: 32px; }
-    .member-bio { font-family: var(--sans); font-size: 14px; line-height: 2; color: rgba(245,240,232,0.55); }
+    .team { padding: 0 64px 96px; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; border-top: 0.5px solid rgba(26,26,24,0.08); padding-top: 64px; }
+
+    .member-role { font-size: 8.5px; letter-spacing: 0.4em; color: var(--gold); text-transform: uppercase; margin-bottom: 24px; opacity: 0.8; }
+
+    .member-name { font-family: var(--font-serif); font-size: clamp(32px, 3.5vw, 48px); font-weight: 300; line-height: 1.0; letter-spacing: -0.02em; margin-bottom: 12px; }
+
+    .member-title { font-size: 8.5px; letter-spacing: 0.32em; color: rgba(26,26,24,0.4); text-transform: uppercase; margin-bottom: 32px; }
+
+    .member-bio { font-family: var(--font-serif); font-size: 17px; font-weight: 300; line-height: 1.85; color: var(--body-text); }
 
     /* SECTORS */
-    .sectors { background: var(--cream-dark); padding: 72px 80px; border-bottom: 0.5px solid var(--gold-light); }
-    .sectors-label { font-family: var(--sans); font-size: 10px; letter-spacing: 0.4em; color: var(--gold); margin-bottom: 40px; }
-    .sectors-grid { display: flex; gap: 0; flex-wrap: wrap; }
-    .sector-tag { font-family: var(--sans); font-size: 11px; letter-spacing: 0.2em; color: var(--text-muted); padding: 12px 28px 12px 0; border-right: 0.5px solid var(--gold-light); margin-right: 28px; margin-bottom: 16px; white-space: nowrap; }
-    .sector-tag:last-child { border-right: none; }
+    .sectors { background: var(--black); padding: 72px 64px 80px; border-top: 0.5px solid rgba(26,26,24,0.15); }
+    .sectors-label { font-size: 8.5px; letter-spacing: 0.4em; color: var(--gold); text-transform: uppercase; margin-bottom: 48px; opacity: 0.8; }
+    .sectors-grid { display: flex; gap: 64px; flex-wrap: wrap; }
+    .sector { font-family: var(--font-serif); font-size: 22px; font-weight: 300; color: rgba(245,240,232,0.45); letter-spacing: 0.01em; transition: color 0.25s ease; }
+    .sector:hover { color: rgba(245,240,232,0.85); }
 
-    /* CTA */
-    .principal-cta { padding: 88px 80px; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
-    .cta-heading { font-family: var(--serif); font-size: clamp(28px, 2.8vw, 44px); font-weight: 300; color: var(--black); line-height: 1.2; letter-spacing: 0.02em; margin-bottom: 20px; }
-    .cta-subtext { font-family: var(--sans); font-size: 13px; line-height: 1.9; color: var(--text-body); max-width: 380px; }
-    .contact-detail-label { font-family: var(--sans); font-size: 10px; letter-spacing: 0.4em; color: var(--gold); margin-bottom: 12px; margin-top: 32px; }
-    .contact-detail-label.first { margin-top: 0; }
-    .cta-link { font-family: var(--sans); font-size: 13px; letter-spacing: 0.15em; color: var(--black); border-bottom: 0.5px solid var(--gold); padding-bottom: 3px; text-decoration: none; transition: opacity 0.2s ease; display: inline-block; }
-    .cta-link:hover { opacity: 0.6; }
-    .contact-phone { font-family: var(--sans); font-size: 13px; letter-spacing: 0.15em; color: var(--black); text-decoration: none; }
+    /* CONTACT */
+    .contact { background: var(--black); padding: 0 64px 88px; }
+    .contact-hl { font-family: var(--font-serif); font-size: clamp(34px, 4.5vw, 52px); font-weight: 300; font-style: italic; line-height: 1.18; color: rgba(245,240,232,0.92); margin-bottom: 64px; letter-spacing: -0.01em; }
+    .contact-grid { display: grid; grid-template-columns: auto auto 1fr; gap: 80px; align-items: start; }
+    .contact-left { display: flex; flex-direction: column; gap: 36px; }
+    .contact-item .contact-label { font-size: 8.5px; letter-spacing: 0.4em; color: var(--gold); display: block; margin-bottom: 10px; text-transform: uppercase; opacity: 0.9; }
+    .contact-item p, .contact-item a { font-family: var(--font-serif); font-size: 16px; font-weight: 300; color: rgba(245,240,232,0.48); line-height: 1.65; text-decoration: none; transition: color 0.25s ease; }
+    .contact-item a:hover { color: rgba(245,240,232,0.85); }
+    .contact-item a:focus-visible { outline: 1px solid var(--gold); outline-offset: 4px; }
 
     /* FOOTER */
-    footer { padding: 36px 80px; border-top: 0.5px solid var(--gold-light); display: flex; justify-content: space-between; align-items: center; background: var(--cream); }
-    .footer-logo { font-family: var(--serif); font-size: 13px; font-weight: 400; letter-spacing: 0.22em; color: var(--text-body); }
-    .footer-detail { font-family: var(--sans); font-size: 10px; letter-spacing: 0.2em; color: var(--gold); }
+    footer { background: var(--black); border-top: 0.5px solid rgba(245,240,232,0.06); padding: 28px 64px; display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 40px; }
+    .footer-logo { display: flex; align-items: baseline; gap: 6px; text-decoration: none; }
+    .footer-logo:focus-visible { outline: 1px solid var(--gold); outline-offset: 4px; }
+    .footer-logo-main { font-family: var(--font-serif); font-size: 14px; font-weight: 500; letter-spacing: 0.14em; color: rgba(245,240,232,0.55); text-transform: uppercase; }
+    .footer-logo-accent { font-family: var(--font-serif); font-size: 9px; font-style: italic; color: var(--gold); opacity: 0.8; }
+    .footer-tagline { font-family: var(--font-serif); font-size: 12px; font-weight: 300; font-style: italic; color: rgba(245,240,232,0.35); text-align: center; }
+    .footer-links { display: flex; gap: 24px; align-items: center; justify-content: flex-end; list-style: none; }
+    .footer-links a { font-size: 7.5px; letter-spacing: 0.24em; color: rgba(245,240,232,0.4); text-decoration: none; text-transform: uppercase; transition: color 0.25s ease; }
+    .footer-links a:hover { color: rgba(245,240,232,0.75); }
+    .footer-links a:focus-visible { outline: 1px solid var(--gold); outline-offset: 4px; }
+    .footer-copy { font-size: 7.5px; letter-spacing: 0.2em; color: rgba(245,240,232,0.28); text-transform: uppercase; }
 
-    /* TABLET */
-    @media (max-width: 1024px) {
-      nav { padding: 24px 40px; }
-      .page-header { padding: 56px 40px 52px; }
-      .team { grid-template-columns: 1fr; }
-      .team-member { border-right: none; border-bottom: 0.5px solid rgba(180,160,100,0.15); padding: 64px 40px; }
-      .team-member:last-child { border-bottom: none; }
-      .sectors { padding: 56px 40px; }
-      .principal-cta { padding: 64px 40px; grid-template-columns: 1fr; gap: 48px; }
-      footer { padding: 32px 40px; }
+    /* MOBILE MENU */
+    .mobile-menu { display: none; position: fixed; inset: 0; background: var(--black); z-index: 200; flex-direction: column; justify-content: center; align-items: center; gap: 44px; }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { font-family: var(--font-serif); font-size: 28px; font-weight: 300; color: rgba(245,240,232,0.45); text-decoration: none; letter-spacing: 0.06em; transition: color 0.25s ease; }
+    .mobile-menu a:hover { color: rgba(245,240,232,0.9); }
+    .mobile-menu a:focus-visible { outline: 1px solid var(--gold); outline-offset: 4px; }
+    .mobile-close { position: absolute; top: 32px; right: 64px; font-size: 8.5px; letter-spacing: 0.32em; color: rgba(245,240,232,0.3); text-transform: uppercase; cursor: pointer; font-family: var(--font-sans); background: none; border: none; transition: color 0.25s ease; }
+    .mobile-close:hover { color: rgba(245,240,232,0.7); }
+    .mobile-close:focus-visible { outline: 1px solid var(--gold); outline-offset: 4px; }
+
+    /* RESPONSIVE */
+    @media (max-width: 960px) {
+      nav, nav.scrolled { padding: 24px 40px; }
+      .nav-links { display: none; }
+      .nav-toggle { display: flex; }
+      .page-header { padding: 120px 40px 56px; }
+      .team { padding: 48px 40px 80px; grid-template-columns: 1fr; gap: 64px; }
+      .sectors { padding: 56px 40px 64px; }
+      .sectors-grid { gap: 40px; }
+      .contact { padding: 0 40px 72px; }
+      .contact-grid { grid-template-columns: 1fr; gap: 36px; }
+      footer { padding: 24px 40px; grid-template-columns: 1fr; gap: 14px; text-align: center; }
+      .footer-logo { justify-content: center; }
+      .footer-links { justify-content: center; }
+      .mobile-close { right: 40px; }
     }
 
-    /* MOBILE */
-    @media (max-width: 600px) {
-      nav { padding: 20px 24px; flex-wrap: wrap; }
-      .logo { font-size: 18px; letter-spacing: 0.16em; width: 100%; margin-bottom: 12px; }
-      .nav-links { gap: 20px; width: 100%; }
-      .nav-links a { font-size: 10px; letter-spacing: 0.12em; }
-      .page-header { padding: 40px 24px 44px; }
-      .team-member { padding: 48px 24px; }
-      .sectors { padding: 44px 24px; }
-      .sectors-grid { flex-direction: column; }
-      .sector-tag { border-right: none; padding-right: 0; margin-right: 0; }
-      .principal-cta { padding: 52px 24px; gap: 40px; }
-      footer { flex-direction: column; align-items: flex-start; gap: 10px; padding: 28px 24px; }
+    @media (max-width: 560px) {
+      nav, nav.scrolled { padding: 20px 28px; }
+      .logo-main { font-size: 18px; }
+      .page-header { padding: 104px 28px 48px; }
+      .team { padding: 40px 28px 72px; }
+      .sectors { padding: 48px 28px 56px; }
+      .sectors-grid { gap: 28px; flex-direction: column; }
+      .contact { padding: 0 28px 56px; }
+      footer { padding: 18px 28px; }
+      .mobile-close { right: 28px; top: 20px; }
     }
   </style>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QG1JSWDXJ5"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-QG1JSWDXJ5');
-  </script>
 </head>
 <body>
 
-  <nav>
-    <a href="/" class="logo">HUXLEY <span class="logo-amp">&amp;</span><span class="logo-co"> CO.</span></a>
-    <ul class="nav-links">
-      <li><a href="/#about">ABOUT</a></li>
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+    <button class="mobile-close" onclick="toggleMenu()" aria-label="Close menu">CLOSE</button>
+    <a href="/" onclick="toggleMenu()">Overview</a>
+    <a href="/#advisory" onclick="toggleMenu()">Advisory</a>
+    <a href="/about.html" onclick="toggleMenu()">Team</a>
+    <a href="/#contact" onclick="toggleMenu()">Contact</a>
+  </div>
+
+  <nav id="mainNav" role="navigation" aria-label="Main navigation">
+    <a href="/" class="logo" aria-label="Huxley &amp; Co. — Home">
+      <span class="logo-main">Huxley</span>
+      <span class="logo-accent">& co.</span>
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="/">OVERVIEW</a></li>
       <li><a href="/#advisory">ADVISORY</a></li>
-      <li><a href="about.html" class="active">TEAM</a></li>
+      <li><a href="/about.html" class="active" aria-current="page">TEAM</a></li>
       <li><a href="/#contact">CONTACT</a></li>
     </ul>
+    <button class="nav-toggle" onclick="toggleMenu()" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span>
+      <span></span>
+    </button>
   </nav>
 
-  <div class="page-header">
-    <p class="eyebrow">THE TEAM</p>
-    <h1 class="page-title">Principal<br>Advisors</h1>
-  </div>
+  <!-- PAGE HEADER -->
+  <header class="page-header">
+    <p class="page-label">The Team</p>
+    <h1 class="page-title">Principal Advisors</h1>
+  </header>
 
-  <div class="gold-divider"></div>
+  <!-- TEAM -->
+  <section class="team" aria-label="Team members">
 
-  <div class="team">
-    <div class="team-member">
-      <h2 class="member-name">Laura<br>Huxley</h2>
-      <p class="member-title">FOUNDER &amp; PRINCIPAL</p>
-      <div class="gold-rule"></div>
+    <article>
+      <p class="member-role">Founder</p>
+      <h2 class="member-name">Laura Huxley</h2>
+      <p class="member-title">Founder &amp; Principal</p>
       <p class="member-bio">Laura Huxley built her practice at the intersection of talent and trust. With a background spanning some of the world's largest and most high-profile productions, venture capital, and private client advisory, she founded Huxley &amp; Co. to bring that same rigor to the people side of exceptional organizations. Her work spans design, architecture, and the creative industries, with a particular focus on family offices and private clients who require both discretion and depth. A career spent across both sides of the Atlantic has shaped an advisory practice that understands how exceptional people operate, wherever they are in the world.</p>
-    </div>
-    <div class="team-member">
-      <h2 class="member-name">Chad<br>Siwik</h2>
-      <p class="member-title">PRINCIPAL, ADVISORY &amp; STRATEGY</p>
-      <div class="gold-rule"></div>
-      <p class="member-bio">Chad Siwik offers a rare fluency in high-stakes environments and complex institutional relationships. As a Program Manager on NASA's Artemis mission, he works directly with astronauts and senior government figures, navigating the demands of high-level talent relations within one of the most security-conscious organizations in the world. His expertise in strategic messaging and narrative development across multiple audiences has been shaped by years of operating where precision, discretion, and trust are not optional.</p>
-    </div>
-  </div>
+    </article>
 
+    <article>
+      <p class="member-role">Principal</p>
+      <h2 class="member-name">Chad Siwik</h2>
+      <p class="member-title">Principal, Advisory &amp; Strategy</p>
+      <p class="member-bio">Chad Siwik brings to Huxley &amp; Co. a rare understanding of what it means to operate where the stakes are real and discretion is non-negotiable. As a Program Manager on NASA's Artemis mission, he works directly with astronauts and senior government figures, navigating talent relations, institutional trust, and high-stakes communication within one of the most security-conscious organizations in the world. That experience translates directly into how he approaches advisory work: with precision, care, and an instinct for what matters most to the people in the room.</p>
+    </article>
+
+  </section>
+
+  <!-- SECTORS -->
   <div class="sectors">
-    <p class="sectors-label">SECTORS</p>
-    <div class="sectors-grid">
-      <span class="sector-tag">FOUNDERS</span>
-      <span class="sector-tag">FAMILY OFFICE</span>
-      <span class="sector-tag">PRIVATE CLIENTS</span>
-      <span class="sector-tag">CREATIVE STUDIOS</span>
-      <span class="sector-tag">PRIVATE EVENTS</span>
+    <p class="sectors-label">Sectors</p>
+    <div class="sectors-grid" role="list">
+      <span class="sector" role="listitem">Founders</span>
+      <span class="sector" role="listitem">Family Office</span>
+      <span class="sector" role="listitem">Private Clients</span>
+      <span class="sector" role="listitem">Creative Studios</span>
+      <span class="sector" role="listitem">Private Events</span>
     </div>
   </div>
 
-  <div class="principal-cta">
-    <div>
-      <p class="cta-heading">The right people know each other. We know them both.</p>
+  <!-- CONTACT -->
+  <section id="contact" class="contact" aria-label="Contact">
+    <h2 class="contact-hl">We operate where<br>reputation is everything.</h2>
+    <div class="contact-grid">
+      <div class="contact-left">
+        <div class="contact-item">
+          <span class="contact-label">EMAIL</span>
+          <a href="mailto:hello@thehuxleycompany.com">hello@thehuxleycompany.com</a>
+        </div>
+        <div class="contact-item">
+          <span class="contact-label">PHONE</span>
+          <a href="tel:+14242531320">(424) 253-1320</a>
+        </div>
+      </div>
+      <div class="contact-item">
+        <span class="contact-label">ADDRESS</span>
+        <p>9171 Wilshire Blvd, Suite 500<br>Beverly Hills, CA 90210</p>
+      </div>
+    </div>
+  </section>
 
-    </div>
-    <div>
-      <p class="contact-detail-label first">EMAIL</p>
-      <a id="cta-email" class="cta-link" href="#">hello&#64;thehuxleycompany&#46;com</a>
-      <p class="contact-detail-label">PHONE</p>
-      <a href="tel:+14242531320" class="contact-phone">(424) 253-1320</a>
-    </div>
-  </div>
-
-  <footer>
-    <span class="footer-logo">HUXLEY &amp; CO.</span>
-    <span class="footer-detail">BEVERLY HILLS · WORLDWIDE · BY APPOINTMENT ONLY</span>
-    <div style="display:flex;align-items:center;gap:32px;">
-      <a href="https://www.linkedin.com/company/huxley-co" target="_blank" rel="noopener" style="font-family:var(--sans);font-size:10px;letter-spacing:0.2em;color:var(--gold);text-decoration:none;transition:opacity 0.2s ease;" onmouseover="this.style.opacity='0.6'" onmouseout="this.style.opacity='1'">LINKEDIN</a>
-      <a href="privacy.html" style="font-family:var(--sans);font-size:10px;letter-spacing:0.2em;color:var(--gold);text-decoration:none;transition:opacity 0.2s ease;" onmouseover="this.style.opacity='0.6'" onmouseout="this.style.opacity='1'">PRIVACY</a>
-      <a href="terms.html" style="font-family:var(--sans);font-size:10px;letter-spacing:0.2em;color:var(--gold);text-decoration:none;transition:opacity 0.2s ease;" onmouseover="this.style.opacity='0.6'" onmouseout="this.style.opacity='1'">TERMS</a>
-      <span class="footer-detail">&copy; 2026</span>
-    </div>
+  <!-- FOOTER -->
+  <footer role="contentinfo">
+    <a href="/" class="footer-logo" aria-label="Huxley &amp; Co. — Home">
+      <span class="footer-logo-main">Huxley</span>
+      <span class="footer-logo-accent">& co.</span>
+    </a>
+    <p class="footer-tagline">We operate where reputation is everything.</p>
+    <ul class="footer-links" role="list">
+      <li><a href="https://www.linkedin.com/company/huxley-co" target="_blank" rel="noopener noreferrer">LINKEDIN</a></li>
+      <li><a href="/privacy.html">PRIVACY</a></li>
+      <li><a href="/terms.html">TERMS</a></li>
+      <li><span class="footer-copy">© 2026</span></li>
+    </ul>
   </footer>
 
   <script>
-    var el = document.getElementById('cta-email');
-    if (el) { el.href = 'mailto:' + 'hello' + '@' + 'thehuxleycompany.com'; }
+    const mobileMenu = document.getElementById('mobileMenu');
+    const navToggle = document.querySelector('.nav-toggle');
+
+    function toggleMenu() {
+      const isOpen = mobileMenu.classList.toggle('open');
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+      navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    }
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
+        mobileMenu.classList.remove('open');
+        document.body.style.overflow = '';
+        navToggle.setAttribute('aria-expanded', 'false');
+        navToggle.focus();
+      }
+    });
+
+    const mainNav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => {
+      mainNav.classList.toggle('scrolled', window.scrollY > 40);
+    }, { passive: true });
   </script>
 
 </body>
