@@ -3,182 +3,235 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Terms of Use · Huxley & Co.</title>
-  <meta name="description" content="Terms of Use for Huxley & Co.">
-  <link rel="canonical" href="https://www.thehuxleycompany.com/terms.html">
-  <meta name="robots" content="noindex">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="apple-touch-icon" href="favicon.png">
-
+  <title>Terms of Use — Huxley &amp; Co.</title>
+  <meta name="description" content="Terms of use for thehuxleycompany.com. By accessing this site you agree to be bound by these terms.">
+  <meta property="og:title" content="Terms of Use — Huxley &amp; Co.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://thehuxleycompany.com/terms.html">
+  <link rel="canonical" href="https://thehuxleycompany.com/terms.html">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
     :root {
       --cream: #F5F0E8;
-      --cream-dark: #EDE8DC;
-      --black: #1a1a18;
-      --gold: #9a8660;
-      --gold-light: rgba(180,160,100,0.25);
-      --text-body: #5a4e3a;
-      --text-muted: #6a5e48;
-      --text-dark: #8a7a5a;
-      --serif: 'Cormorant Garamond', Palatino, 'Palatino Linotype', Georgia, serif;
-      --sans: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+      --black: #1A1A18;
+      --gold: #9A8660;
+      --body-text: #5A4E3A;
+      --warm-grey: #8A7A5A;
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     }
-    html { scroll-behavior: smooth; }
-    body { background: var(--cream); font-family: var(--serif); color: var(--black); -webkit-font-smoothing: antialiased; }
 
+    html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; scroll-behavior: smooth; }
+    body { background: var(--cream); color: var(--black); font-family: var(--font-sans); overflow-x: hidden; }
+
+    /* NAV */
     nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 28px 80px;
-      border-bottom: 0.5px solid var(--gold-light);
-      flex-wrap: nowrap;
-      gap: 16px;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 32px 64px; position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: var(--cream); transition: padding 0.4s ease, border-color 0.4s ease;
+      border-bottom: 0.5px solid transparent;
     }
-    .logo { font-family: var(--serif); font-size: 24px; font-weight: 500; letter-spacing: 0.2em; color: var(--black); text-decoration: none; white-space: nowrap; flex-shrink: 0; }
-    .logo-amp { font-size: 13px; font-weight: 400; font-style: italic; color: var(--text-dark); letter-spacing: 0.05em; }
-    .logo-co { font-size: 13px; font-weight: 400; color: var(--text-dark); letter-spacing: 0.28em; }
-    .nav-links { display: flex; gap: 40px; list-style: none; flex-shrink: 0; }
-    .nav-links a { font-family: var(--sans); font-size: 11px; letter-spacing: 0.18em; color: var(--text-body); text-decoration: none; transition: color 0.2s ease; white-space: nowrap; }
+    nav.scrolled { padding: 20px 64px; border-bottom-color: rgba(26,26,24,0.06); }
+    .logo { display: flex; align-items: baseline; gap: 7px; text-decoration: none; }
+    .logo-main { font-family: var(--font-serif); font-size: 21px; font-weight: 500; letter-spacing: 0.14em; color: var(--black); text-transform: uppercase; }
+    .logo-accent { font-family: var(--font-serif); font-size: 12px; font-style: italic; color: var(--gold); letter-spacing: 0.04em; }
+    .nav-links { display: flex; gap: 44px; list-style: none; }
+    .nav-links a { font-size: 8.5px; letter-spacing: 0.4em; color: rgba(26,26,24,0.35); text-decoration: none; text-transform: uppercase; transition: color 0.25s ease; }
     .nav-links a:hover { color: var(--black); }
+    .nav-links a:focus-visible { outline: 1px solid var(--gold); outline-offset: 4px; }
+    .nav-toggle { display: none; flex-direction: column; gap: 6px; cursor: pointer; padding: 4px; background: none; border: none; }
+    .nav-toggle:focus-visible { outline: 1px solid var(--gold); outline-offset: 4px; }
+    .nav-toggle span { display: block; width: 20px; height: 0.5px; background: var(--black); }
 
-    .page-header { padding: 80px 80px 64px; border-bottom: 0.5px solid var(--gold-light); }
-    .eyebrow { font-family: var(--sans); font-size: 10px; letter-spacing: 0.45em; color: var(--gold); margin-bottom: 24px; }
-    .page-title { font-size: clamp(36px, 4vw, 64px); font-weight: 300; line-height: 1.06; color: var(--black); letter-spacing: 0.01em; }
+    /* PAGE */
+    .page { padding: 152px 64px 120px; max-width: 780px; }
 
-    .policy-content { padding: 80px 80px; max-width: 800px; }
-    .policy-section { margin-bottom: 56px; }
-    .policy-section:last-child { margin-bottom: 0; }
-    .section-label { font-family: var(--sans); font-size: 10px; letter-spacing: 0.4em; color: var(--gold); margin-bottom: 20px; }
-    .gold-rule { width: 32px; height: 0.5px; background: var(--gold); margin-bottom: 20px; }
-    .policy-section p { font-family: var(--sans); font-size: 14px; line-height: 2; color: var(--text-body); margin-bottom: 16px; }
+    .page-label { font-size: 8.5px; letter-spacing: 0.4em; color: var(--gold); text-transform: uppercase; margin-bottom: 40px; opacity: 0.8; }
+
+    .page-title { font-family: var(--font-serif); font-size: clamp(40px, 5vw, 64px); font-weight: 300; line-height: 1.0; letter-spacing: -0.02em; margin-bottom: 16px; }
+
+    .page-date { font-size: 8.5px; letter-spacing: 0.3em; color: rgba(26,26,24,0.35); text-transform: uppercase; margin-bottom: 72px; }
+
+    .policy-section { margin-bottom: 52px; }
+
+    .policy-section h2 { font-size: 8.5px; letter-spacing: 0.4em; color: var(--black); text-transform: uppercase; margin-bottom: 20px; }
+
+    .policy-section p { font-family: var(--font-serif); font-size: 17px; font-weight: 300; line-height: 1.8; color: var(--body-text); margin-bottom: 16px; }
+
     .policy-section p:last-child { margin-bottom: 0; }
-    .policy-section a { color: var(--black); border-bottom: 0.5px solid var(--gold); padding-bottom: 1px; text-decoration: none; }
-    .policy-section a:hover { opacity: 0.6; }
 
-    footer { padding: 36px 80px; border-top: 0.5px solid var(--gold-light); display: flex; justify-content: space-between; align-items: center; background: var(--cream); margin-top: 80px; }
-    .footer-logo { font-family: var(--serif); font-size: 13px; font-weight: 400; letter-spacing: 0.22em; color: var(--text-body); }
-    .footer-detail { font-family: var(--sans); font-size: 10px; letter-spacing: 0.2em; color: var(--gold); }
+    .policy-section a { color: var(--body-text); border-bottom: 0.5px solid rgba(154,134,96,0.4); text-decoration: none; transition: color 0.2s ease, border-color 0.2s ease; }
+    .policy-section a:hover { color: var(--black); border-color: var(--gold); }
 
-    @media (max-width: 1024px) {
-      nav { padding: 24px 40px; }
-      .page-header { padding: 56px 40px 52px; }
-      .policy-content { padding: 64px 40px; }
-      footer { padding: 32px 40px; }
+    /* FOOTER */
+    footer { background: var(--black); border-top: 0.5px solid rgba(26,26,24,0.15); padding: 28px 64px; display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 40px; }
+    .footer-logo { display: flex; align-items: baseline; gap: 6px; text-decoration: none; }
+    .footer-logo:focus-visible { outline: 1px solid var(--gold); outline-offset: 4px; }
+    .footer-logo-main { font-family: var(--font-serif); font-size: 14px; font-weight: 500; letter-spacing: 0.14em; color: rgba(245,240,232,0.55); text-transform: uppercase; }
+    .footer-logo-accent { font-family: var(--font-serif); font-size: 9px; font-style: italic; color: var(--gold); opacity: 0.8; }
+    .footer-tagline { font-family: var(--font-serif); font-size: 12px; font-weight: 300; font-style: italic; color: rgba(245,240,232,0.35); text-align: center; }
+    .footer-links { display: flex; gap: 24px; align-items: center; justify-content: flex-end; list-style: none; }
+    .footer-links a { font-size: 7.5px; letter-spacing: 0.24em; color: rgba(245,240,232,0.4); text-decoration: none; text-transform: uppercase; transition: color 0.25s ease; }
+    .footer-links a:hover { color: rgba(245,240,232,0.75); }
+    .footer-links a:focus-visible { outline: 1px solid var(--gold); outline-offset: 4px; }
+    .footer-copy { font-size: 7.5px; letter-spacing: 0.2em; color: rgba(245,240,232,0.28); text-transform: uppercase; }
+
+    /* MOBILE MENU */
+    .mobile-menu { display: none; position: fixed; inset: 0; background: var(--black); z-index: 200; flex-direction: column; justify-content: center; align-items: center; gap: 44px; }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { font-family: var(--font-serif); font-size: 28px; font-weight: 300; color: rgba(245,240,232,0.45); text-decoration: none; letter-spacing: 0.06em; transition: color 0.25s ease; }
+    .mobile-menu a:hover { color: rgba(245,240,232,0.9); }
+    .mobile-close { position: absolute; top: 32px; right: 64px; font-size: 8.5px; letter-spacing: 0.32em; color: rgba(245,240,232,0.3); text-transform: uppercase; cursor: pointer; font-family: var(--font-sans); background: none; border: none; transition: color 0.25s ease; }
+    .mobile-close:hover { color: rgba(245,240,232,0.7); }
+
+    /* RESPONSIVE */
+    @media (max-width: 960px) {
+      nav, nav.scrolled { padding: 24px 40px; }
+      .nav-links { display: none; }
+      .nav-toggle { display: flex; }
+      .page { padding: 120px 40px 96px; }
+      footer { padding: 24px 40px; grid-template-columns: 1fr; gap: 14px; text-align: center; }
+      .footer-logo { justify-content: center; }
+      .footer-links { justify-content: center; }
+      .mobile-close { right: 40px; }
     }
 
-    @media (max-width: 600px) {
-      nav { padding: 20px 24px; flex-wrap: wrap; }
-      .logo { font-size: 18px; letter-spacing: 0.16em; width: 100%; margin-bottom: 12px; }
-      .nav-links { gap: 20px; width: 100%; }
-      .nav-links a { font-size: 10px; letter-spacing: 0.12em; }
-      .page-header { padding: 40px 24px 44px; }
-      .policy-content { padding: 48px 24px; }
-      footer { flex-direction: column; align-items: flex-start; gap: 10px; padding: 28px 24px; }
+    @media (max-width: 560px) {
+      nav, nav.scrolled { padding: 20px 28px; }
+      .logo-main { font-size: 18px; }
+      .page { padding: 104px 28px 80px; }
+      footer { padding: 18px 28px; }
+      .mobile-close { right: 28px; top: 20px; }
     }
   </style>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QG1JSWDXJ5"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-QG1JSWDXJ5');
-  </script>
 </head>
 <body>
 
-  <nav>
-    <a href="/" class="logo">HUXLEY <span class="logo-amp">&amp;</span><span class="logo-co"> CO.</span></a>
-    <ul class="nav-links">
-      <li><a href="/#about">ABOUT</a></li>
-      <li><a href="/#advisory">ADVISORY</a></li>
-      <li><a href="about.html">TEAM</a></li>
-      <li><a href="/#contact">CONTACT</a></li>
-    </ul>
-  </nav>
-
-  <div class="page-header">
-    <p class="eyebrow">LEGAL</p>
-    <h1 class="page-title">Terms of Use</h1>
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+    <button class="mobile-close" onclick="toggleMenu()" aria-label="Close menu">CLOSE</button>
+    <a href="/" onclick="toggleMenu()">Overview</a>
+    <a href="/#advisory" onclick="toggleMenu()">Advisory</a>
+    <a href="/about.html" onclick="toggleMenu()">Team</a>
+    <a href="/#contact" onclick="toggleMenu()">Contact</a>
   </div>
 
-  <div class="policy-content">
+  <nav id="mainNav" role="navigation" aria-label="Main navigation">
+    <a href="/" class="logo" aria-label="Huxley &amp; Co. — Home">
+      <span class="logo-main">Huxley</span>
+      <span class="logo-accent">& co.</span>
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="/">OVERVIEW</a></li>
+      <li><a href="/#advisory">ADVISORY</a></li>
+      <li><a href="/about.html">TEAM</a></li>
+      <li><a href="/#contact">CONTACT</a></li>
+    </ul>
+    <button class="nav-toggle" onclick="toggleMenu()" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <main class="page" role="main">
+    <p class="page-label">Legal</p>
+    <h1 class="page-title">Terms of Use</h1>
+    <p class="page-date">Last updated: March 2026</p>
 
     <div class="policy-section">
-      <p class="section-label">LAST UPDATED: MARCH 2026</p>
-      <div class="gold-rule"></div>
       <p>By accessing or using this website, you agree to be bound by these Terms of Use. If you do not agree with any part of these terms, please do not use this site. These terms apply to all visitors and users of thehuxleycompany.com.</p>
     </div>
 
     <div class="policy-section">
-      <p class="section-label">USE OF THIS SITE</p>
-      <div class="gold-rule"></div>
+      <h2>Use of This Site</h2>
       <p>This website is provided for informational purposes only. Nothing contained on this site constitutes a formal advisory engagement, offer of services, or binding agreement of any kind. All formal engagements with Huxley &amp; Co. are conducted by separate written agreement.</p>
       <p>You agree to use this site only for lawful purposes and in a manner that does not infringe the rights of others or restrict their use and enjoyment of the site.</p>
     </div>
 
     <div class="policy-section">
-      <p class="section-label">NO PROFESSIONAL ADVICE</p>
-      <div class="gold-rule"></div>
+      <h2>No Professional Advice</h2>
       <p>The content on this website does not constitute legal, financial, employment, or any other form of professional advice. You should not act or refrain from acting on the basis of any information on this site without first seeking independent professional advice appropriate to your circumstances.</p>
     </div>
 
     <div class="policy-section">
-      <p class="section-label">INTELLECTUAL PROPERTY</p>
-      <div class="gold-rule"></div>
+      <h2>Intellectual Property</h2>
       <p>All content on this website, including text, design, graphics, and branding, is the property of Huxley &amp; Co. and is protected by applicable intellectual property laws. Nothing on this site grants any license or right to use any content without our prior written consent.</p>
     </div>
 
     <div class="policy-section">
-      <p class="section-label">LIMITATION OF LIABILITY</p>
-      <div class="gold-rule"></div>
+      <h2>Limitation of Liability</h2>
       <p>Huxley &amp; Co. makes no representations or warranties of any kind regarding the accuracy, completeness, or suitability of the information on this site. To the fullest extent permitted by law, we exclude all liability for any loss or damage arising from your use of or reliance on this website.</p>
     </div>
 
     <div class="policy-section">
-      <p class="section-label">EQUAL OPPORTUNITY</p>
-      <div class="gold-rule"></div>
-      <p>Huxley &amp; Co. is committed to equal opportunity in all aspects of our advisory work. We do not discriminate on the basis of race, color, religion, sex, national origin, age, disability, sexual orientation, gender identity, or any other characteristic protected by applicable law. This commitment applies to our clients, the individuals we work with, and all aspects of our business.</p>
+      <h2>Equal Opportunity</h2>
+      <p>Huxley &amp; Co. is committed to equal opportunity in all aspects of our advisory work. We do not discriminate on the basis of race, color, religion, sex, national origin, age, disability, sexual orientation, gender identity, or any other characteristic protected by applicable law.</p>
     </div>
 
     <div class="policy-section">
-      <p class="section-label">THIRD-PARTY LINKS</p>
-      <div class="gold-rule"></div>
+      <h2>Third-Party Links</h2>
       <p>This site may contain links to third-party websites, including our LinkedIn profile. These links are provided for convenience only. We have no control over the content of those sites and accept no responsibility for them or for any loss or damage that may arise from your use of them.</p>
     </div>
 
     <div class="policy-section">
-      <p class="section-label">GOVERNING LAW</p>
-      <div class="gold-rule"></div>
+      <h2>Governing Law</h2>
       <p>These Terms of Use are governed by and construed in accordance with the laws of the State of California, United States. Any disputes arising from these terms or your use of this site shall be subject to the exclusive jurisdiction of the courts of Los Angeles County, California.</p>
     </div>
 
     <div class="policy-section">
-      <p class="section-label">CHANGES TO THESE TERMS</p>
-      <div class="gold-rule"></div>
+      <h2>Changes to These Terms</h2>
       <p>We reserve the right to update these Terms of Use at any time. Changes will be posted on this page with an updated date. Continued use of the site following any changes constitutes your acceptance of the revised terms.</p>
     </div>
 
     <div class="policy-section">
-      <p class="section-label">CONTACT</p>
-      <div class="gold-rule"></div>
+      <h2>Contact</h2>
       <p>If you have any questions regarding these terms, please contact us directly.</p>
-      <p>Huxley &amp; Co.<br>9171 Wilshire Blvd, Suite 500<br>Beverly Hills, CA 90210<br><a href="mailto:hello@thehuxleycompany.com" style="color:var(--black);border-bottom:0.5px solid var(--gold);padding-bottom:1px;text-decoration:none;">hello@thehuxleycompany.com</a></p>
+      <p>Huxley &amp; Co.<br>9171 Wilshire Blvd, Suite 500<br>Beverly Hills, CA 90210<br><a href="mailto:hello@thehuxleycompany.com">hello@thehuxleycompany.com</a></p>
     </div>
+  </main>
 
-  </div>
+  <footer role="contentinfo">
+    <a href="/" class="footer-logo" aria-label="Huxley &amp; Co. — Home">
+      <span class="footer-logo-main">Huxley</span>
+      <span class="footer-logo-accent">& co.</span>
+    </a>
+    <p class="footer-tagline">We operate where reputation is everything.</p>
+    <ul class="footer-links" role="list">
+      <li><a href="https://www.linkedin.com/company/huxley-co" target="_blank" rel="noopener noreferrer">LINKEDIN</a></li>
+      <li><a href="/privacy.html">PRIVACY</a></li>
+      <li><a href="/terms.html" aria-current="page">TERMS</a></li>
+      <li><span class="footer-copy">© 2026</span></li>
+    </ul>
+  </footer>
 
-  <footer>
-    <span class="footer-logo">HUXLEY &amp; CO.</span>
-    <span class="footer-detail">BEVERLY HILLS · WORLDWIDE · BY APPOINTMENT ONLY</span>
-    <div style="display:flex;align-items:center;gap:32px;">
-      <a href="https://www.linkedin.com/company/huxley-co" target="_blank" rel="noopener" style="font-family:var(--sans);font-size:10px;letter-spacing:0.2em;color:var(--gold);text-decoration:none;" onmouseover="this.style.opacity='0.6'" onmouseout="this.style.opacity='1'">LINKEDIN</a>
-      <a href="privacy.html" style="font-family:var(--sans);font-size:10px;letter-spacing:0.2em;color:var(--gold);text-decoration:none;" onmouseover="this.style.opacity='0.6'" onmouseout="this.style.opacity='1'">PRIVACY</a>
-      <a href="terms.html" style="font-family:var(--sans);font-size:10px;letter-spacing:0.2em;color:var(--gold);text-decoration:none;" onmouseover="this.style.opacity='0.6'" 
+  <script>
+    const mobileMenu = document.getElementById('mobileMenu');
+    const navToggle = document.querySelector('.nav-toggle');
+
+    function toggleMenu() {
+      const isOpen = mobileMenu.classList.toggle('open');
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+      navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    }
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
+        mobileMenu.classList.remove('open');
+        document.body.style.overflow = '';
+        navToggle.setAttribute('aria-expanded', 'false');
+        navToggle.focus();
+      }
+    });
+
+    const mainNav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => {
+      mainNav.classList.toggle('scrolled', window.scrollY > 40);
+    }, { passive: true });
+  </script>
+
+</body>
+</html>
