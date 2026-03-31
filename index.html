@@ -295,6 +295,7 @@
     gap: 1px;
     background: var(--rule);
     border: 1px solid var(--rule);
+    align-items: stretch;
   }
 
   .service-card {
@@ -705,16 +706,58 @@
   @media (max-width: 900px) {
     nav { padding: 20px 24px; }
     .nav-links { display: none; }
-    section { padding: 72px 24px; }
+    .nav-logo { font-size: 15px; }
+
+    section { padding: 64px 24px; }
+    #contact { padding: 64px 24px !important; }
+
+    /* Hero */
     #hero { grid-template-columns: 1fr; min-height: auto; padding-top: 80px; }
-    .hero-left { padding: 60px 24px 40px; border-right: none; border-bottom: 1px solid var(--rule); }
-    .hero-right { padding: 40px 24px 60px; }
-    .services-grid, .process-steps, .team-grid { grid-template-columns: 1fr; }
-    .proof-grid, .proof-grid-bottom { grid-template-columns: 1fr; }
-    .contact-inner { grid-template-columns: 1fr; gap: 48px; }
+    .hero-left { padding: 52px 24px 36px; border-right: none; border-bottom: 1px solid var(--rule); }
+    .hero-right { padding: 36px 24px 52px; }
+    .hero-headline { font-size: 44px; }
+    .hero-stats { grid-template-columns: 1fr 1fr; }
+    .hero-actions { flex-direction: column; align-items: flex-start; gap: 20px; }
+
+    /* Sections */
+    .section-header { flex-direction: column; gap: 20px; }
+    .section-desc { max-width: 100%; }
+
+    /* Services */
+    .services-grid { grid-template-columns: 1fr; }
+    .service-card { padding: 36px 28px; }
+
+    /* Process */
+    .process-steps { grid-template-columns: 1fr; }
+    .process-coda { flex-direction: column; align-items: flex-start; gap: 28px; }
+    .process-step { padding: 40px 28px; }
+
+    /* Proof */
+    .proof-grid { grid-template-columns: 1fr; }
+    .proof-grid-bottom { grid-template-columns: 1fr 1fr; }
+
+    /* Team */
+    .team-grid { grid-template-columns: 1fr; }
+    .team-card { padding: 40px 28px; }
+
+    /* Contact */
+    .contact-inner { grid-template-columns: 1fr; gap: 0; }
+    .contact-left { padding: 48px 0 40px; }
+    .contact-right { padding: 0; }
     .form-row { grid-template-columns: 1fr; }
-    footer { flex-direction: column; gap: 20px; text-align: center; }
-    .section-header { flex-direction: column; }
+    .form-submit { flex-direction: column; align-items: flex-start; gap: 16px; }
+    .btn-submit { margin-top: 0; width: 100%; text-align: center; }
+
+    /* Footer */
+    footer { flex-direction: column; gap: 20px; text-align: center; padding: 32px 24px; }
+    .footer-links { flex-wrap: wrap; justify-content: center; gap: 20px; }
+  }
+
+  @media (max-width: 520px) {
+    .hero-stats { grid-template-columns: 1fr; }
+    .proof-grid-bottom { grid-template-columns: 1fr; }
+    .hero-headline { font-size: 38px; }
+    .nav-cta { padding: 8px 14px; font-size: 9px; }
   }
 </style>
 </head>
@@ -977,7 +1020,7 @@
         <p class="team-bio">
           Chad brings to Huxley &amp; Co. a rare understanding of what it means to operate where the stakes are real and <strong>discretion is non-negotiable</strong>. As a Program Manager on NASA's Artemis mission, he works directly with astronauts and senior government figures, navigating talent relations, institutional trust, and high-stakes communication within one of the most security-conscious organisations in the world.
           <br><br>
-          That experience translates directly into how he approaches advisory work: <strong>with precision, care, and an instinct for what matters most to the people in the room.</strong>
+          That experience — managing competing priorities, protecting sensitive information, and maintaining the trust of people operating under extraordinary pressure — translates directly into how he approaches advisory work. He brings to every engagement <strong>precision, care, and an instinct for what matters most to the people in the room.</strong>
         </p>
         <div class="team-details">
           <span class="tag">NASA Artemis</span>
@@ -1001,7 +1044,7 @@
       <div class="contact-details">
         <div>
           <div class="contact-detail-label">Email</div>
-          <a href="/cdn-cgi/l/email-protection#7c14191010133c0814191409041019051f13110c1d1205521f1311" class="contact-detail-value"><span class="__cf_email__" data-cfemail="94fcf1f8f8fbd4e0fcf1fce1ecf8f1edf7fbf9e4f5faedbaf7fbf9">[email&#160;protected]</span></a>
+          <a href="mailto:hello@thehuxleycompany.com" class="contact-detail-value">hello@thehuxleycompany.com</a>
         </div>
         <div>
           <div class="contact-detail-label">Phone</div>
@@ -1068,16 +1111,26 @@
   <span class="footer-copy">© 2026 Huxley &amp; Co. We operate where reputation is everything.</span>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-  // Nav scroll state
-  const navbar = document.getElementById('navbar');
-  window.addEventListener('scroll', () => {
-    navbar.classList.toggle('scrolled', window.scrollY > 40);
-  });
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Nav scroll state
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 40);
+    });
 
-  // Scroll reveal
-  const reveals = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
-      if (entry.isIntersecting) {
-  
+    // Scroll reveal — threshold 0 so elements in viewport on load fire immediately
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), 80);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0, rootMargin: '0px' });
+    reveals.forEach(el => observer.observe(el));
+  });
+</script>
+</body>
+</html>
