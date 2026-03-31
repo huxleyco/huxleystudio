@@ -37,8 +37,8 @@ nav {
 }
 nav.scrolled { padding: 20px 64px; border-bottom-color: rgba(26,26,24,0.06); }
 .logo { display: flex; align-items: baseline; gap: 7px; text-decoration: none; }
-.logo-main { font-family: var(--font-serif); font-size: 21px; font-weight: 500; letter-spacing: 0.14em; color: var(--black); text-transform: uppercase; }
-.logo-accent { font-family: var(--font-serif); font-size: 16px; font-style: italic; color: var(--gold); letter-spacing: 0.04em; }
+.logo-main { font-family: var(--font-serif); font-size: 26px; font-weight: 500; letter-spacing: 0.14em; color: var(--black); text-transform: uppercase; }
+.logo-accent { font-family: var(--font-serif); font-size: 18px; font-style: italic; color: var(--gold); letter-spacing: 0.04em; }
 .nav-links { display: flex; gap: 44px; list-style: none; }
 .nav-links a { font-size: 10px; letter-spacing: 0.35em; color: var(--black); text-decoration: none; text-transform: uppercase; font-weight: 500; transition: color 0.25s ease; }
 .nav-links a:hover { color: var(--gold); }
@@ -88,7 +88,7 @@ nav.scrolled { padding: 20px 64px; border-bottom-color: rgba(26,26,24,0.06); }
 .contact-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 80px; align-items: start; }
 .contact-left { display: flex; flex-direction: column; gap: 32px; }
 .contact-item .contact-label { font-size: 8.5px; letter-spacing: 0.4em; color: var(--gold); display: block; margin-bottom: 10px; text-transform: uppercase; opacity: 0.9; }
-.contact-item p, .contact-item a { font-family: var(--font-serif); font-size: 16px; font-weight: 300; color: rgba(245,240,232,0.48); line-height: 1.65; text-decoration: none; transition: color 0.25s ease; }
+.contact-item p, .contact-item a { font-family: var(--font-serif); font-size: 16px; font-weight: 300; color: rgba(245,240,232,0.72); line-height: 1.65; text-decoration: none; transition: color 0.25s ease; }
 .contact-item a:hover { color: rgba(245,240,232,0.85); }
 .contact-item a:focus-visible { outline: 1px solid var(--gold); outline-offset: 4px; }
 .contact-form { display: flex; flex-direction: column; gap: 12px; }
@@ -143,7 +143,8 @@ footer { background: var(--black); border-top: 0.5px solid rgba(245,240,232,0.06
 }
 @media (max-width: 560px) {
   nav, nav.scrolled { padding: 20px 28px; }
-  .logo-main { font-size: 18px; }
+  .logo-main { font-size: 20px; }
+  .logo-accent { font-size: 15px; }
   .logo-accent { font-size: 14px; }
   .page-header { padding: 104px 28px 48px; }
   .team { padding: 40px 28px 72px; }
