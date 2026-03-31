@@ -3,313 +3,755 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Team — Huxley &amp; Co.</title>
-<meta name="description" content="Meet the principal advisors at Huxley &amp; Co. — Laura Huxley and Chad Siwik. Retained talent advisory and private counsel, led personally.">
-<meta property="og:title" content="Team — Huxley &amp; Co.">
-<meta property="og:description" content="Principal advisors at Huxley &amp; Co. Every engagement is led personally, never delegated.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://thehuxleycompany.com/about.html">
-<link rel="canonical" href="https://thehuxleycompany.com/about.html">
-<link rel="icon" type="image/png" href="favicon.png">
+<title>The Team — Huxley & Co.</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Didact+Gothic&display=swap" rel="stylesheet">
 <style>
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-:root {
-  --cream: #F5F0E8;
-  --black: #1A1A18;
-  --gold: #9A8660;
-  --body-text: #5A4E3A;
-  --warm-grey: #8A7A5A;
-  --font-serif: 'Cormorant Garamond', Georgia, serif;
-  --font-sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; scroll-behavior: smooth; }
-body { background: var(--cream); color: var(--black); font-family: var(--font-sans); overflow-x: hidden; }
+  :root {
+    --ink: #0e0d0b;
+    --parchment: #f5f2ec;
+    --warm-white: #faf9f6;
+    --rule: #d4cfc6;
+    --muted: #888077;
+    --accent: #8b7355;
+    --accent-light: #c9b99a;
+  }
 
-/* NAV */
-nav {
-  display: flex; justify-content: space-between; align-items: center;
-  padding: 32px 64px; position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-  background: var(--cream); transition: padding 0.4s ease, border-color 0.4s ease;
-  border-bottom: 0.5px solid transparent;
-}
-nav.scrolled { padding: 20px 64px; border-bottom-color: rgba(26,26,24,0.06); }
-.logo { display: flex; align-items: baseline; gap: 7px; text-decoration: none; }
-.logo-main { font-family: var(--font-serif); font-size: 26px; font-weight: 500; letter-spacing: 0.14em; color: var(--black); text-transform: uppercase; }
-.logo-accent { font-family: var(--font-serif); font-size: 18px; font-style: italic; color: var(--gold); letter-spacing: 0.04em; }
-.nav-links { display: flex; gap: 44px; list-style: none; }
-.nav-links a { font-size: 10px; letter-spacing: 0.35em; color: var(--black); text-decoration: none; text-transform: uppercase; font-weight: 500; transition: color 0.25s ease; }
-.nav-links a:hover { color: var(--gold); }
-.nav-links a.active { color: var(--gold); }
-.nav-links a:focus-visible { outline: 1px solid var(--gold); outline-offset: 4px; }
-.nav-toggle { display: none; flex-direction: column; gap: 6px; cursor: pointer; padding: 4px; background: none; border: none; }
-.nav-toggle:focus-visible { outline: 1px solid var(--gold); outline-offset: 4px; }
-.nav-toggle span { display: block; width: 20px; height: 0.5px; background: var(--black); }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--warm-white);
+    color: var(--ink);
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
 
-/* PAGE HEADER */
-.page-header { padding: 152px 64px 48px; }
-.page-label { font-size: 11px; letter-spacing: 0.35em; color: var(--gold); text-transform: uppercase; margin-bottom: 40px; opacity: 0.9; }
-.page-title { font-family: var(--font-serif); font-size: clamp(40px, 5vw, 64px); font-weight: 300; line-height: 1.0; letter-spacing: -0.02em; }
+  /* ─── UTILITY ─── */
+  .serif { font-family: 'Cormorant Garamond', serif; }
+  .rule { width: 32px; height: 1px; background: var(--accent); display: block; }
+  .label {
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .tag {
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    border: 1px solid var(--rule);
+    padding: 5px 10px;
+  }
 
-/* TEAM GRID */
-.team { padding: 48px 64px 96px; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
-.member-role { font-size: 11px; letter-spacing: 0.35em; color: var(--gold); text-transform: uppercase; margin-bottom: 20px; opacity: 0.9; }
-.member-name { font-family: var(--font-serif); font-size: clamp(32px, 3.5vw, 48px); font-weight: 300; line-height: 1.0; letter-spacing: -0.02em; margin-bottom: 28px; }
-.member-bio { font-family: var(--font-serif); font-size: 17px; font-weight: 300; line-height: 1.85; color: rgba(26,26,24,0.75); }
+  /* ─── NAV ─── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 28px 48px;
+    background: rgba(250, 249, 246, 0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.4s ease;
+  }
+  nav.scrolled { border-bottom-color: var(--rule); }
 
-/* SECTORS */
-.sectors { background: #EDE8DC; padding: 56px 64px; }
-.sectors-label { font-size: 11px; letter-spacing: 0.35em; color: var(--gold); text-transform: uppercase; margin-bottom: 32px; opacity: 0.9; }
-.sectors-grid { display: flex; gap: 72px; flex-wrap: wrap; }
-.sector { font-family: var(--font-serif); font-size: 26px; font-weight: 300; color: rgba(26,26,24,0.48); letter-spacing: 0.01em; transition: color 0.25s ease; cursor: default; }
-.sector:hover { color: rgba(26,26,24,0.85); }
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    color: var(--ink);
+    line-height: 1.2;
+    text-align: center;
+  }
+  .nav-links {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+  }
+  .nav-links a {
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--muted);
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--ink); }
+  .nav-links a.active { color: var(--ink); }
 
-/* PROCESS */
-.process { background: var(--cream); padding: 0 64px; }
-.process-inner { border-top: 0.5px solid rgba(26,26,24,0.1); padding: 72px 0; }
-.process-label { font-size: 11px; letter-spacing: 0.35em; color: var(--gold); text-transform: uppercase; margin-bottom: 52px; opacity: 0.9; }
-.process-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 64px; position: relative; }
-.process-connector { position: absolute; top: 10px; left: calc(16.66% + 16px); right: calc(16.66% + 16px); height: 0.5px; background: rgba(26,26,24,0.12); }
-.process-step { }
-.process-step:nth-child(2) { }
-.process-step:nth-child(3) { }
-.process-marker { width: 20px; height: 20px; border: 0.5px solid rgba(154,134,96,0.5); display: flex; align-items: center; justify-content: center; margin-bottom: 28px; background: var(--cream); position: relative; z-index: 1; }
-.process-marker span { font-size: 9px; color: var(--gold); font-family: var(--font-sans); letter-spacing: 0.05em; }
-.process-title { font-family: var(--font-serif); font-size: 27px; font-weight: 300; color: var(--black); line-height: 1.12; margin-bottom: 18px; }
-.process-body { font-size: 13px; line-height: 1.9; color: rgba(26,26,24,0.72); letter-spacing: 0.01em; }
+  .nav-cta {
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--ink);
+    border: 1px solid var(--ink);
+    padding: 10px 20px;
+    transition: background 0.2s, color 0.2s;
+  }
+  .nav-cta:hover { background: var(--ink); color: var(--warm-white); }
 
-/* CONTACT */
-.contact { background: var(--black); padding: 72px 64px 88px; border-top: 0.5px solid rgba(245,240,232,0.06); scroll-margin-top: 100px; }
-.contact-hl { font-family: var(--font-serif); font-size: clamp(28px, 3.5vw, 42px); font-weight: 300; font-style: italic; line-height: 1.2; color: rgba(245,240,232,0.92); margin-bottom: 14px; letter-spacing: -0.01em; }
-.contact-who { font-family: var(--font-serif); font-size: 16px; font-weight: 300; color: rgba(245,240,232,0.72); line-height: 1.7; margin-bottom: 52px; max-width: 520px; }
-.contact-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 80px; align-items: start; }
-.contact-left { display: flex; flex-direction: column; gap: 32px; }
-.contact-item .contact-label { font-size: 8.5px; letter-spacing: 0.4em; color: var(--gold); display: block; margin-bottom: 10px; text-transform: uppercase; opacity: 0.9; }
-.contact-item p, .contact-item a { font-family: var(--font-serif); font-size: 16px; font-weight: 300; color: rgba(245,240,232,0.72); line-height: 1.65; text-decoration: none; transition: color 0.25s ease; }
-.contact-item a:hover { color: rgba(245,240,232,0.85); }
-.contact-item a:focus-visible { outline: 1px solid var(--gold); outline-offset: 4px; }
-.contact-form { display: flex; flex-direction: column; gap: 12px; }
-.contact-form input, .contact-form textarea { width: 100%; background: rgba(245,240,232,0.06); border: 0.5px solid rgba(245,240,232,0.16); color: rgba(245,240,232,0.85); font-family: var(--font-sans); font-size: 13px; padding: 13px 16px; outline: none; letter-spacing: 0.02em; transition: border-color 0.25s ease, background 0.25s ease; }
-.contact-form input::placeholder, .contact-form textarea::placeholder { color: rgba(245,240,232,0.28); }
-.contact-form input:focus, .contact-form textarea:focus { border-color: rgba(154,134,96,0.55); background: rgba(245,240,232,0.09); }
-.contact-form textarea { resize: none; height: 96px; line-height: 1.6; }
-.contact-form button { background: transparent; border: 0.5px solid rgba(154,134,96,0.45); color: rgba(245,240,232,0.6); font-family: var(--font-sans); font-size: 9px; letter-spacing: 0.38em; text-transform: uppercase; padding: 14px 24px; cursor: pointer; transition: color 0.25s ease, border-color 0.25s ease; margin-top: 4px; }
-.contact-form button:hover { color: rgba(245,240,232,0.9); border-color: rgba(154,134,96,0.75); }
-.contact-form button:focus-visible { outline: 1px solid var(--gold); outline-offset: 4px; }
+  /* ─── PAGE HERO ─── */
+  .page-hero {
+    padding-top: 96px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .page-hero-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 48px 72px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: end;
+  }
+  .page-hero-left {}
+  .page-hero-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 32px;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.2s forwards;
+  }
+  .page-hero-headline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(48px, 5vw, 72px);
+    font-weight: 300;
+    line-height: 1.08;
+    letter-spacing: -0.01em;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.35s forwards;
+  }
+  .page-hero-headline em { font-style: italic; color: var(--accent); }
 
-/* FOOTER */
-footer { background: var(--black); border-top: 0.5px solid rgba(245,240,232,0.06); padding: 28px 64px; display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 40px; }
-.footer-logo { display: flex; align-items: baseline; gap: 6px; text-decoration: none; }
-.footer-logo:focus-visible { outline: 1px solid var(--gold); outline-offset: 4px; }
-.footer-logo-main { font-family: var(--font-serif); font-size: 14px; font-weight: 500; letter-spacing: 0.14em; color: rgba(245,240,232,0.9); text-transform: uppercase; }
-.footer-logo-accent { font-family: var(--font-serif); font-size: 13px; font-style: italic; color: var(--gold); }
-.footer-links { display: flex; gap: 24px; align-items: center; justify-content: flex-end; list-style: none; }
-.footer-links a { font-size: 10px; letter-spacing: 0.22em; color: rgba(245,240,232,0.75); text-decoration: none; text-transform: uppercase; transition: color 0.25s ease; }
-.footer-links a:hover { color: rgba(245,240,232,0.95); }
-.footer-links a:focus-visible { outline: 1px solid var(--gold); outline-offset: 4px; }
-.footer-copy { font-size: 10px; letter-spacing: 0.2em; color: rgba(245,240,232,0.5); text-transform: uppercase; }
+  .page-hero-right {
+    opacity: 0;
+    animation: fadeUp 0.8s 0.5s forwards;
+  }
+  .page-hero-body {
+    font-size: 15px;
+    color: #4a4540;
+    line-height: 1.85;
+    border-left: 2px solid var(--accent-light);
+    padding-left: 24px;
+  }
 
-/* MOBILE MENU */
-.mobile-menu { display: none; position: fixed; inset: 0; background: var(--black); z-index: 200; flex-direction: column; justify-content: center; align-items: center; gap: 44px; }
-.mobile-menu.open { display: flex; }
-.mobile-menu a { font-family: var(--font-serif); font-size: 28px; font-weight: 300; color: rgba(245,240,232,0.65); text-decoration: none; letter-spacing: 0.06em; transition: color 0.25s ease; }
-.mobile-menu a:hover { color: rgba(245,240,232,0.9); }
-.mobile-menu a:focus-visible { outline: 1px solid var(--gold); outline-offset: 4px; }
-.mobile-close { position: absolute; top: 32px; right: 64px; font-size: 9px; letter-spacing: 0.32em; color: rgba(245,240,232,0.5); text-transform: uppercase; cursor: pointer; font-family: var(--font-sans); background: none; border: none; transition: color 0.25s ease; }
-.mobile-close:hover { color: rgba(245,240,232,0.85); }
-.mobile-close:focus-visible { outline: 1px solid var(--gold); outline-offset: 4px; }
+  /* ─── SECTION BASE ─── */
+  section { padding: 100px 48px; }
+  .section-inner { max-width: 1200px; margin: 0 auto; }
 
-/* RESPONSIVE */
-@media (max-width: 960px) {
-  nav, nav.scrolled { padding: 24px 40px; }
-  .nav-links { display: none; }
-  .nav-toggle { display: flex; }
-  .page-header { padding: 120px 40px 56px; }
-  .team { padding: 48px 40px 80px; grid-template-columns: 1fr; gap: 64px; }
-  .sectors { padding: 48px 40px; }
-  .sectors-grid { gap: 40px; }
-  .process { padding: 0 40px; }
-  .process-grid { grid-template-columns: 1fr; gap: 40px; }
-  .process-connector { display: none; }
-  .contact { padding: 56px 40px 72px; }
-  .contact-grid { grid-template-columns: 1fr; gap: 48px; }
-  footer { padding: 24px 40px; grid-template-columns: 1fr; gap: 14px; text-align: center; }
-  .footer-logo { justify-content: center; }
-  .footer-links { justify-content: center; }
-  .mobile-close { right: 40px; }
-}
-@media (max-width: 560px) {
-  nav, nav.scrolled { padding: 20px 28px; }
-  .logo-main { font-size: 20px; }
-  .logo-accent { font-size: 15px; }
-  .logo-accent { font-size: 14px; }
-  .page-header { padding: 104px 28px 48px; }
-  .team { padding: 40px 28px 72px; }
-  .sectors { padding: 40px 28px; }
-  .sectors-grid { gap: 28px; flex-direction: column; }
-  .process { padding: 0 28px; }
-  .contact { padding: 48px 28px 56px; }
-  footer { padding: 18px 28px; }
-  .mobile-close { right: 28px; top: 20px; }
-}
+  .section-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 64px;
+    gap: 40px;
+  }
+  .section-header-left { display: flex; align-items: center; gap: 16px; }
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(32px, 3vw, 48px);
+    font-weight: 300;
+    line-height: 1.1;
+    margin-top: 8px;
+  }
+  .section-title em { font-style: italic; color: var(--accent); }
+
+  /* ─── PRINCIPALS ─── */
+  #principals { background: var(--warm-white); }
+
+  .principal {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    margin-bottom: 1px;
+  }
+  .principal:last-of-type { margin-bottom: 0; }
+
+  .principal-left {
+    background: var(--parchment);
+    padding: 56px 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .principal-role {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 12px;
+  }
+  .principal-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 3.5vw, 52px);
+    font-weight: 300;
+    line-height: 1.05;
+    margin-bottom: 40px;
+  }
+  .principal-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .principal-right {
+    background: var(--warm-white);
+    padding: 56px 56px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .principal-bio {
+    font-size: 15px;
+    color: #4a4540;
+    line-height: 1.9;
+    margin-bottom: 32px;
+  }
+  .principal-bio strong { color: var(--ink); font-weight: 400; }
+  .principal-bio p + p { margin-top: 20px; }
+
+  .principal-detail {
+    display: flex;
+    gap: 40px;
+    padding-top: 32px;
+    border-top: 1px solid var(--rule);
+  }
+  .principal-detail-item {}
+  .principal-detail-label {
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 4px;
+  }
+  .principal-detail-value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
+    color: var(--ink);
+  }
+
+  /* ─── PROCESS ─── */
+  #process {
+    background: var(--ink);
+    color: var(--warm-white);
+  }
+
+  .process-steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+  .process-step {
+    padding: 52px 40px;
+    background: var(--ink);
+    transition: background 0.25s;
+  }
+  .process-step:hover { background: #1a1916; }
+  .step-roman {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 13px;
+    letter-spacing: 0.15em;
+    color: var(--accent-light);
+    margin-bottom: 28px;
+    display: block;
+  }
+  .step-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--warm-white);
+    margin-bottom: 16px;
+    line-height: 1.2;
+  }
+  .step-body {
+    font-size: 14px;
+    color: rgba(250,249,246,0.55);
+    line-height: 1.8;
+  }
+  .step-body strong {
+    color: rgba(250,249,246,0.85);
+    font-weight: 400;
+  }
+
+  .process-coda {
+    margin-top: 56px;
+    padding: 40px;
+    border: 1px solid rgba(255,255,255,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+  }
+  .process-coda-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-style: italic;
+    font-weight: 300;
+    color: rgba(250,249,246,0.75);
+    max-width: 600px;
+    line-height: 1.5;
+  }
+  .process-coda-text strong {
+    color: var(--warm-white);
+    font-style: normal;
+  }
+
+  /* ─── SECTORS ─── */
+  #sectors { background: var(--parchment); }
+
+  .sectors-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+  }
+  .sector-cell {
+    background: var(--parchment);
+    padding: 40px 32px;
+    transition: background 0.25s;
+  }
+  .sector-cell:hover { background: #ede9e0; }
+  .sector-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 300;
+    color: var(--accent-light);
+    margin-bottom: 16px;
+    line-height: 1;
+  }
+  .sector-name {
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink);
+    margin-bottom: 10px;
+  }
+  .sector-desc {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.65;
+  }
+
+  /* ─── CONTACT CTA ─── */
+  #cta {
+    background: var(--warm-white);
+    padding: 100px 48px;
+  }
+  .cta-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+  }
+  .cta-left {
+    background: var(--ink);
+    padding: 64px 56px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .cta-headline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 3.5vw, 52px);
+    font-weight: 300;
+    color: var(--warm-white);
+    line-height: 1.1;
+    margin-bottom: 24px;
+  }
+  .cta-headline em { font-style: italic; color: var(--accent-light); }
+  .cta-body {
+    font-size: 14.5px;
+    color: rgba(250,249,246,0.55);
+    line-height: 1.8;
+    max-width: 380px;
+    margin-bottom: 48px;
+  }
+  .btn-primary {
+    display: inline-block;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--warm-white);
+    background: var(--accent);
+    padding: 16px 32px;
+    transition: background 0.2s;
+    align-self: flex-start;
+  }
+  .btn-primary:hover { background: #7a6347; }
+
+  .cta-right {
+    background: var(--warm-white);
+    padding: 64px 56px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    justify-content: center;
+  }
+  .cta-detail-label {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 4px;
+  }
+  .cta-detail-value {
+    font-size: 15px;
+    color: var(--ink);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .cta-detail-value:hover { color: var(--accent); }
+
+  /* ─── FOOTER ─── */
+  footer {
+    padding: 32px 48px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    background: var(--ink);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15px;
+    letter-spacing: 0.1em;
+    color: rgba(250,249,246,0.4);
+    text-decoration: none;
+  }
+  .footer-links {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+  }
+  .footer-links a {
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: rgba(250,249,246,0.3);
+    transition: color 0.2s;
+  }
+  .footer-links a:hover { color: rgba(250,249,246,0.7); }
+  .footer-copy { font-size: 11px; color: rgba(250,249,246,0.25); }
+
+  /* ─── ANIMATIONS ─── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 900px) {
+    nav { padding: 20px 24px; }
+    .nav-links { display: none; }
+    .nav-logo { font-size: 15px; }
+    section { padding: 64px 24px; }
+    #cta { padding: 64px 24px; }
+
+    .page-hero-inner { grid-template-columns: 1fr; gap: 32px; padding: 52px 24px; }
+    .page-hero-headline { font-size: 44px; }
+
+    .principal { grid-template-columns: 1fr; }
+    .principal-left { padding: 40px 28px 32px; }
+    .principal-right { padding: 32px 28px 48px; }
+    .principal-detail { flex-direction: column; gap: 20px; }
+
+    .process-steps { grid-template-columns: 1fr; }
+    .process-coda { flex-direction: column; align-items: flex-start; gap: 28px; }
+
+    .sectors-grid { grid-template-columns: 1fr 1fr; }
+
+    .cta-inner { grid-template-columns: 1fr; }
+    .cta-left { padding: 48px 32px; }
+    .cta-right { padding: 40px 32px; }
+
+    footer { flex-direction: column; gap: 20px; text-align: center; padding: 32px 24px; }
+    .footer-links { flex-wrap: wrap; justify-content: center; gap: 20px; }
+  }
+
+  @media (max-width: 520px) {
+    .page-hero-headline { font-size: 38px; }
+    .sectors-grid { grid-template-columns: 1fr; }
+    .nav-cta { padding: 8px 14px; font-size: 9px; }
+  }
 </style>
 </head>
 <body>
 
-<!-- MOBILE MENU -->
-<div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Navigation menu">
-  <button class="mobile-close" onclick="toggleMenu()" aria-label="Close menu">CLOSE</button>
-  <a href="index.html" onclick="toggleMenu()">Overview</a>
-  <a href="index.html#advisory" onclick="toggleMenu()">Advisory</a>
-  <a href="about.html" onclick="toggleMenu()">Team</a>
-  <a href="index.html#contact" onclick="toggleMenu()">Contact</a>
-</div>
-
-<!-- NAV -->
-<nav id="mainNav" role="navigation" aria-label="Main navigation">
-  <a href="index.html" class="logo" aria-label="Huxley &amp; Co. — Home">
-    <span class="logo-main">Huxley</span>
-    <span class="logo-accent">& co.</span>
-  </a>
-  <ul class="nav-links" role="list">
-    <li><a href="index.html">OVERVIEW</a></li>
-    <li><a href="index.html#advisory">ADVISORY</a></li>
-    <li><a href="about.html" class="active" aria-current="page">TEAM</a></li>
-    <li><a href="index.html#contact">CONTACT</a></li>
+<!-- ─── NAV ─── -->
+<nav id="navbar">
+  <a href="index.html" class="nav-logo">Huxley<br>&amp; Co.</a>
+  <ul class="nav-links">
+    <li><a href="index.html#advisory">Advisory</a></li>
+    <li><a href="index.html#process">Process</a></li>
+    <li><a href="about.html" class="active">The Team</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
   </ul>
-  <button class="nav-toggle" onclick="toggleMenu()" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu">
-    <span></span>
-    <span></span>
-  </button>
+  <a href="index.html#contact" class="nav-cta">By Appointment</a>
 </nav>
 
-<!-- PAGE HEADER -->
-<header class="page-header">
-  <p class="page-label">The Team</p>
-  <h1 class="page-title">Principal Advisors</h1>
-</header>
-
-<!-- TEAM -->
-<section class="team" aria-label="Team members">
-  <article>
-    <p class="member-role">Founder</p>
-    <h2 class="member-name">Laura Huxley</h2>
-    <p class="member-bio">Laura Huxley grew up in Bristol and has spent her career at the intersection of exceptional work and the people who make it. She began in London in PR across art, music, events, and television, before moving into talent advisory in Los Angeles and Europe. For four years she was embedded within one of the world's leading multidisciplinary creative studios, advising on the people behind some of the largest productions globally. She also works with venture capital firms, family offices, and founders who hold themselves to an uncommon standard. A student of psychology and a trainee pilot, she founded Huxley &amp; Co. on the belief that understanding people, how they think, what they need, and where they thrive, is the only honest basis for placing them.</p>
-  </article>
-  <article>
-    <p class="member-role">Principal</p>
-    <h2 class="member-name">Chad Siwik</h2>
-    <p class="member-bio">Chad Siwik brings to Huxley &amp; Co. a rare understanding of what it means to operate where the stakes are real and discretion is non-negotiable. As a Program Manager on NASA's Artemis mission, he works directly with astronauts and senior government figures, navigating talent relations, institutional trust, and high-stakes communication within one of the most security-conscious organizations in the world. That experience translates directly into how he approaches advisory work: with precision, care, and an instinct for what matters most to the people in the room.</p>
-  </article>
-</section>
-
-<!-- SECTORS -->
-<div class="sectors">
-  <p class="sectors-label">Sectors</p>
-  <div class="sectors-grid" role="list">
-    <span class="sector" role="listitem">Founders</span>
-    <span class="sector" role="listitem">Family Office</span>
-    <span class="sector" role="listitem">Private Clients</span>
-    <span class="sector" role="listitem">Creative Studios</span>
-    <span class="sector" role="listitem">Private Events</span>
+<!-- ─── PAGE HERO ─── -->
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="page-hero-left">
+      <div class="page-hero-eyebrow">
+        <span class="rule"></span>
+        <span class="label">Principal Advisors</span>
+      </div>
+      <h1 class="page-hero-headline">The people<br>behind the<br><em>work.</em></h1>
+    </div>
+    <div class="page-hero-right">
+      <p class="page-hero-body">When you engage Huxley &amp; Co., you work directly with the people who founded it. There are no junior associates, no delegated searches, no handoffs. Every engagement is principal-led from the first conversation to the final placement.</p>
+    </div>
   </div>
 </div>
 
-<!-- PROCESS -->
-<section class="process" aria-label="Our process">
-  <div class="process-inner">
-    <p class="process-label">The process</p>
-    <div class="process-grid">
-      <div class="process-connector" aria-hidden="true"></div>
-      <div class="process-step">
-        <div class="process-marker" aria-hidden="true"><span>I</span></div>
-        <h3 class="process-title">Introductory conversation</h3>
-        <p class="process-body">Every engagement begins with a conversation. We take the time to understand not just the role, but the organization, the culture, and the standard you hold yourself to.</p>
+<!-- ─── PRINCIPALS ─── -->
+<section id="principals">
+  <div class="section-inner">
+
+    <!-- Laura -->
+    <div class="principal reveal">
+      <div class="principal-left">
+        <div>
+          <div class="principal-role">Founder</div>
+          <h2 class="principal-name serif">Laura<br>Huxley</h2>
+        </div>
+        <div class="principal-tags">
+          <span class="tag">London</span>
+          <span class="tag">Los Angeles</span>
+          <span class="tag">Psychology</span>
+          <span class="tag">Creative Studios</span>
+          <span class="tag">Family Office</span>
+        </div>
       </div>
-      <div class="process-step">
-        <div class="process-marker" aria-hidden="true"><span>II</span></div>
-        <h3 class="process-title">Principal-led search</h3>
-        <p class="process-body">We conduct every search personally, drawing on a private network built across both sides of the Atlantic over many years. No junior associates. Every candidate is sourced specifically for you.</p>
+      <div class="principal-right">
+        <div class="principal-bio">
+          <p>Laura grew up in Bristol and has spent her career at the intersection of exceptional work and the people who make it. She began in London in PR across art, music, events, and television, before moving into talent advisory in Los Angeles and Europe.</p>
+          <p>For four years she was embedded within one of the world's <strong>leading multidisciplinary creative studios</strong>, advising on the people behind some of the largest productions globally. She also works with <strong>venture capital firms, family offices, and founders</strong> who hold themselves to an uncommon standard.</p>
+          <p>A student of psychology and a trainee pilot, she founded Huxley &amp; Co. on the belief that understanding people, how they think, what they need, and where they thrive, is the only honest basis for placing them.</p>
+        </div>
+        <div class="principal-detail">
+          <div class="principal-detail-item">
+            <div class="principal-detail-label">Based</div>
+            <div class="principal-detail-value serif">Los Angeles</div>
+          </div>
+          <div class="principal-detail-item">
+            <div class="principal-detail-label">Background</div>
+            <div class="principal-detail-value serif">PR, Talent Advisory, Creative Studios</div>
+          </div>
+          <div class="principal-detail-item">
+            <div class="principal-detail-label">Network</div>
+            <div class="principal-detail-value serif">London &amp; Los Angeles</div>
+          </div>
+        </div>
       </div>
-      <div class="process-step">
-        <div class="process-marker" aria-hidden="true"><span>III</span></div>
-        <h3 class="process-title">Curated presentation</h3>
-        <p class="process-body">We present a small number of candidates we would stake our own reputation on, each interviewed in depth, thoroughly referenced, and considered against your specific brief.</p>
+    </div>
+
+    <!-- Chad -->
+    <div class="principal reveal">
+      <div class="principal-left">
+        <div>
+          <div class="principal-role">Principal</div>
+          <h2 class="principal-name serif">Chad<br>Siwik</h2>
+        </div>
+        <div class="principal-tags">
+          <span class="tag">NASA Artemis</span>
+          <span class="tag">Institutional Trust</span>
+          <span class="tag">High-Stakes Advisory</span>
+          <span class="tag">Government</span>
+        </div>
+      </div>
+      <div class="principal-right">
+        <div class="principal-bio">
+          <p>Chad brings to Huxley &amp; Co. a rare understanding of what it means to operate where the stakes are real and <strong>discretion is non-negotiable</strong>. As a Program Manager on NASA's Artemis mission, he works directly with astronauts and senior government figures, navigating talent relations, institutional trust, and high-stakes communication within one of the most security-conscious organisations in the world.</p>
+          <p>Managing competing priorities, protecting sensitive information, and maintaining the trust of people operating under extraordinary pressure, these are the conditions in which he has built his career. That experience translates directly into how he approaches advisory work: <strong>with precision, care, and an instinct for what matters most to the people in the room.</strong></p>
+        </div>
+        <div class="principal-detail">
+          <div class="principal-detail-item">
+            <div class="principal-detail-label">Based</div>
+            <div class="principal-detail-value serif">Los Angeles</div>
+          </div>
+          <div class="principal-detail-item">
+            <div class="principal-detail-label">Background</div>
+            <div class="principal-detail-value serif">NASA, Government, Programme Management</div>
+          </div>
+          <div class="principal-detail-item">
+            <div class="principal-detail-label">Speciality</div>
+            <div class="principal-detail-value serif">Institutional Trust &amp; Discretion</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ─── PROCESS ─── -->
+<section id="process">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div class="section-header-left">
+        <span class="rule" style="background:var(--accent-light)"></span>
+        <div>
+          <span class="label" style="color:var(--accent-light)">How We Work</span>
+          <h2 class="section-title" style="color:var(--warm-white)">The <em style="color:var(--accent-light)">Process</em></h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="process-steps">
+      <div class="process-step reveal">
+        <span class="step-roman">I</span>
+        <h3 class="step-title serif">Introductory Conversation</h3>
+        <p class="step-body">Every engagement begins with a conversation, not a questionnaire. We take the time to understand not just the role, but <strong>the organisation, the culture, and the standard you hold yourself to.</strong> We will ask questions that go beyond the brief. That is intentional.</p>
+      </div>
+      <div class="process-step reveal">
+        <span class="step-roman">II</span>
+        <h3 class="step-title serif">Principal-Led Search</h3>
+        <p class="step-body">We conduct every search personally. <strong>No junior associates. No delegated sourcing.</strong> We draw on a private network built across London and Los Angeles over many years, reaching candidates who are not looking, and who would not respond to anyone else.</p>
+      </div>
+      <div class="process-step reveal">
+        <span class="step-roman">III</span>
+        <h3 class="step-title serif">Curated Presentation</h3>
+        <p class="step-body">We present a small number of candidates, <strong>never a longlist designed to demonstrate effort.</strong> Each has been interviewed in depth, thoroughly referenced, and considered against your specific brief. We would stake our own reputation on every name we put forward.</p>
+      </div>
+    </div>
+
+    <div class="process-coda reveal">
+      <p class="process-coda-text">"Understanding people, how they think, what they need, and where they thrive, is <strong>the only honest basis for placing them.</strong>"</p>
+      <a href="index.html#contact" class="btn-primary" style="white-space:nowrap">Begin a Conversation</a>
+    </div>
+  </div>
+</section>
+
+<!-- ─── SECTORS ─── -->
+<section id="sectors">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div class="section-header-left">
+        <span class="rule"></span>
+        <div>
+          <span class="label">Where We Work</span>
+          <h2 class="section-title">Sectors &amp; <em>Clients</em></h2>
+        </div>
+      </div>
+    </div>
+    <div class="sectors-grid">
+      <div class="sector-cell reveal">
+        <div class="sector-num serif">I.</div>
+        <div class="sector-name">Founders</div>
+        <div class="sector-desc">Seed-stage through to pre-IPO. On both sides of the Atlantic.</div>
+      </div>
+      <div class="sector-cell reveal">
+        <div class="sector-num serif">II.</div>
+        <div class="sector-name">Family Offices</div>
+        <div class="sector-desc">Multi-generational families and single-family offices, managed with absolute confidentiality.</div>
+      </div>
+      <div class="sector-cell reveal">
+        <div class="sector-num serif">III.</div>
+        <div class="sector-name">Creative Studios</div>
+        <div class="sector-desc">Talent advisory for some of the largest productions globally, and the studios behind them.</div>
+      </div>
+      <div class="sector-cell reveal">
+        <div class="sector-num serif">IV.</div>
+        <div class="sector-name">Private Enterprises</div>
+        <div class="sector-desc">Privately held businesses where culture, discretion, and long-term fit matter most.</div>
+      </div>
+      <div class="sector-cell reveal">
+        <div class="sector-num serif">V.</div>
+        <div class="sector-name">Private Events</div>
+        <div class="sector-desc">Notable families and private clients requiring talent and production advisory.</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact" class="contact" aria-label="Contact">
-  <h2 class="contact-hl">We operate where<br>reputation is everything.</h2>
-  <p class="contact-who">We work with a small number of clients at any time: founders, family offices, private enterprises, and creative studios.</p>
-  <div class="contact-grid">
-    <div class="contact-left">
-      <div class="contact-item">
-        <span class="contact-label">EMAIL</span>
-        <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#101;&#108;&#108;&#111;&#64;&#116;&#104;&#101;&#104;&#117;&#120;&#108;&#101;&#121;&#99;&#111;&#109;&#112;&#97;&#110;&#121;&#46;&#99;&#111;&#109;">&#104;&#101;&#108;&#108;&#111;&#64;&#116;&#104;&#101;&#104;&#117;&#120;&#108;&#101;&#121;&#99;&#111;&#109;&#112;&#97;&#110;&#121;&#46;&#99;&#111;&#109;</a>
+<!-- ─── CTA ─── -->
+<div id="cta">
+  <div class="cta-inner">
+    <div class="cta-left reveal">
+      <div>
+        <h2 class="cta-headline">Every engagement<br>begins with a<br><em>conversation.</em></h2>
+        <p class="cta-body">We accept a limited number of new engagements each year. If you are considering a search or advisory relationship, we would welcome an introductory call, without obligation, and in complete confidence.</p>
       </div>
-      <div class="contact-item">
-        <span class="contact-label">PHONE</span>
-        <a href="tel:+14242531320">(424) 253-1320</a>
+      <a href="index.html#contact" class="btn-primary">Request a Conversation</a>
+    </div>
+    <div class="cta-right reveal">
+      <div>
+        <div class="cta-detail-label">Email</div>
+        <a href="mailto:hello@thehuxleycompany.com" class="cta-detail-value">hello@thehuxleycompany.com</a>
       </div>
-      <div class="contact-item">
-        <span class="contact-label">ADDRESS</span>
-        <p>9171 Wilshire Blvd, Suite 500<br>Beverly Hills, CA 90210</p>
+      <div>
+        <div class="cta-detail-label">Phone</div>
+        <a href="tel:+14242531320" class="cta-detail-value">(424) 253-1320</a>
+      </div>
+      <div>
+        <div class="cta-detail-label">Address</div>
+        <span class="cta-detail-value" style="cursor:default">9171 Wilshire Blvd, Suite 500<br>Beverly Hills, CA 90210</span>
       </div>
     </div>
-    <form class="contact-form" action="https://formspree.io/f/mzdkgqbg" method="POST">
-      <input type="text" name="name" placeholder="Your name" required />
-      <input type="text" name="organization" placeholder="Organization" />
-      <input type="email" name="email" placeholder="Email address" required />
-      <input type="tel" name="phone" placeholder="Phone number" />
-      <textarea name="message" placeholder="Brief description of what you are looking for"></textarea>
-      <button type="submit">Submit inquiry</button>
-    </form>
   </div>
-</section>
+</div>
 
-<!-- FOOTER -->
-<footer role="contentinfo">
-  <a href="index.html" class="footer-logo" aria-label="Huxley &amp; Co. — Home">
-    <span class="footer-logo-main">Huxley</span>
-    <span class="footer-logo-accent">& co.</span>
-  </a>
-  <ul class="footer-links" role="list">
-    <li><a href="https://www.linkedin.com/company/huxley-co" target="_blank" rel="noopener noreferrer">LINKEDIN</a></li>
-    <li><a href="privacy.html">PRIVACY</a></li>
-    <li><a href="terms.html">TERMS</a></li>
-    <li><span class="footer-copy">© 2026</span></li>
+<!-- ─── FOOTER ─── -->
+<footer>
+  <a href="index.html" class="footer-logo">Huxley &amp; Co.</a>
+  <ul class="footer-links">
+    <li><a href="https://www.linkedin.com/company/huxley-co" target="_blank">LinkedIn</a></li>
+    <li><a href="#">Privacy</a></li>
+    <li><a href="#">Terms</a></li>
   </ul>
+  <span class="footer-copy">© 2026 Huxley &amp; Co. We operate where reputation is everything.</span>
 </footer>
 
 <script>
-const mobileMenu = document.getElementById('mobileMenu');
-const navToggle = document.querySelector('.nav-toggle');
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 40);
+  });
 
-function toggleMenu() {
-  const isOpen = mobileMenu.classList.toggle('open');
-  document.body.style.overflow = isOpen ? 'hidden' : '';
-  navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-}
-
-document.addEventListener('keydown', e => {
-  if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
-    mobileMenu.classList.remove('open');
-    document.body.style.overflow = '';
-    navToggle.setAttribute('aria-expanded', 'false');
-    navToggle.focus();
-  }
-});
-
-const mainNav = document.getElementById('mainNav');
-window.addEventListener('scroll', () => {
-  mainNav.classList.toggle('scrolled', window.scrollY > 40);
-}, { passive: true });
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), 80);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  reveals.forEach(el => observer.observe(el));
 </script>
-
 </body>
 </html>
