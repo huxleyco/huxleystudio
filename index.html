@@ -67,8 +67,9 @@
     text-decoration: none;
     color: var(--ink);
     line-height: 1.2;
-    text-align: center;
+    white-space: nowrap;
   }
+  .nav-logo .co { color: #8b7355; font-style: italic; }
 
 
   .nav-links {
@@ -746,7 +747,8 @@
     .contact-right { padding: 0; }
     .form-row { grid-template-columns: 1fr; }
     .form-submit { flex-direction: column; align-items: flex-start; gap: 16px; }
-    .btn-submit { margin-top: 0; width: 100%; text-align: center; }
+    .btn-submit { margin-top: 0; width: 100%; white-space: nowrap;
+  }
 
     /* Footer */
     footer { flex-direction: column; gap: 20px; text-align: center; padding: 32px 24px; }
@@ -765,7 +767,7 @@
 
 <!-- ─── NAV ─── -->
 <nav id="navbar">
-  <a href="#" class="nav-logo">Huxley<br>&amp; Co.</a>
+  <a href="#" class="nav-logo">Huxley <span class="co">&amp; Co.</span></a>
   <ul class="nav-links">
     <li><a href="#advisory">Advisory</a></li>
     <li><a href="#process">Process</a></li>
@@ -1025,7 +1027,7 @@
       <div class="contact-details">
         <div>
           <div class="contact-detail-label">Email</div>
-          <a href="/cdn-cgi/l/email-protection#d6beb3babab996a2beb3bea3aebab3afb5b9bba6b7b8aff8b5b9bb" class="contact-detail-value"><span class="__cf_email__" data-cfemail="422a272e2e2d02362a272a373a2e273b212d2f32232c3b6c212d2f">[email&#160;protected]</span></a>
+          <a id="contact-email" href="#" class="contact-detail-value"></a>
         </div>
         <div>
           <div class="contact-detail-label">Phone</div>
@@ -1152,6 +1154,18 @@
     }
 
   });
+</script>
+
+<script>
+  (function() {
+    var u = 'hello', d = 'thehuxleycompany', t = 'com';
+    var addr = u + '@' + d + '.' + t;
+    var els = document.querySelectorAll('#contact-email');
+    els.forEach(function(el) {
+      el.href = 'mailto:' + addr;
+      el.textContent = addr;
+    });
+  })();
 </script>
 </body>
 </html>
