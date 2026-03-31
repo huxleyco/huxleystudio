@@ -1,265 +1,316 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Team — Huxley &amp; Co.</title>
-  <meta name="description" content="Meet the principal advisors at Huxley &amp; Co. — Laura Huxley and Chad Siwik. Retained talent advisory and private counsel, led personally.">
-  <meta property="og:title" content="Team — Huxley &amp; Co.">
-  <meta property="og:description" content="Principal advisors at Huxley &amp; Co. Every engagement is led personally, never delegated.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://thehuxleycompany.com/about.html">
-  <link rel="canonical" href="https://thehuxleycompany.com/about.html">
-  <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Team — Huxley &amp; Co.</title>
+<meta name="description" content="Meet the principal advisors at Huxley &amp; Co. — Laura Huxley and Chad Siwik. Retained talent advisory and private counsel, led personally.">
+<meta property="og:title" content="Team — Huxley &amp; Co.">
+<meta property="og:description" content="Principal advisors at Huxley &amp; Co. Every engagement is led personally, never delegated.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://thehuxleycompany.com/about.html">
+<link rel="canonical" href="https://thehuxleycompany.com/about.html">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --cream: #F5F0E8;
+  --black: #1A1A18;
+  --gold: #9A8660;
+  --body-text: #5A4E3A;
+  --warm-grey: #8A7A5A;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; scroll-behavior: smooth; }
+body { background: var(--cream); color: var(--black); font-family: var(--font-sans); overflow-x: hidden; }
 
-    :root {
-      --cream: #F5F0E8;
-      --black: #1A1A18;
-      --gold: #9A8660;
-      --body-text: #5A4E3A;
-      --warm-grey: #8A7A5A;
-      --font-serif: 'Cormorant Garamond', Georgia, serif;
-      --font-sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    }
+/* NAV */
+nav {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 32px 64px; position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: var(--cream); transition: padding 0.4s ease, border-color 0.4s ease;
+  border-bottom: 0.5px solid transparent;
+}
+nav.scrolled { padding: 20px 64px; border-bottom-color: rgba(26,26,24,0.06); }
+.logo { display: flex; align-items: baseline; gap: 7px; text-decoration: none; }
+.logo-main { font-family: var(--font-serif); font-size: 21px; font-weight: 500; letter-spacing: 0.14em; color: var(--black); text-transform: uppercase; }
+.logo-accent { font-family: var(--font-serif); font-size: 16px; font-style: italic; color: var(--gold); letter-spacing: 0.04em; }
+.nav-links { display: flex; gap: 44px; list-style: none; }
+.nav-links a { font-size: 10px; letter-spacing: 0.35em; color: var(--black); text-decoration: none; text-transform: uppercase; font-weight: 500; transition: color 0.25s ease; }
+.nav-links a:hover { color: var(--gold); }
+.nav-links a.active { color: var(--gold); }
+.nav-links a:focus-visible { outline: 1px solid var(--gold); outline-offset: 4px; }
+.nav-toggle { display: none; flex-direction: column; gap: 6px; cursor: pointer; padding: 4px; background: none; border: none; }
+.nav-toggle:focus-visible { outline: 1px solid var(--gold); outline-offset: 4px; }
+.nav-toggle span { display: block; width: 20px; height: 0.5px; background: var(--black); }
 
-    html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; scroll-behavior: smooth; }
-    body { background: var(--cream); color: var(--black); font-family: var(--font-sans); overflow-x: hidden; }
+/* PAGE HEADER */
+.page-header { padding: 152px 64px 48px; }
+.page-label { font-size: 8.5px; letter-spacing: 0.4em; color: var(--gold); text-transform: uppercase; margin-bottom: 40px; opacity: 0.8; }
+.page-title { font-family: var(--font-serif); font-size: clamp(40px, 5vw, 64px); font-weight: 300; line-height: 1.0; letter-spacing: -0.02em; }
 
-    /* NAV */
-    nav {
-      display: flex; justify-content: space-between; align-items: center;
-      padding: 32px 64px; position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      background: var(--cream); transition: padding 0.4s ease, border-color 0.4s ease;
-      border-bottom: 0.5px solid transparent;
-    }
-    nav.scrolled { padding: 20px 64px; border-bottom-color: rgba(26,26,24,0.06); }
-    .logo { display: flex; align-items: baseline; gap: 7px; text-decoration: none; }
-    .logo-main { font-family: var(--font-serif); font-size: 21px; font-weight: 500; letter-spacing: 0.14em; color: var(--black); text-transform: uppercase; }
-    .logo-accent { font-family: var(--font-serif); font-size: 12px; font-style: italic; color: var(--gold); letter-spacing: 0.04em; }
-    .nav-links { display: flex; gap: 44px; list-style: none; }
-    .nav-links a { font-size: 8.5px; letter-spacing: 0.4em; color: rgba(26,26,24,0.35); text-decoration: none; text-transform: uppercase; transition: color 0.25s ease; }
-    .nav-links a:hover { color: var(--black); }
-    .nav-links a.active { color: var(--gold); }
-    .nav-links a:focus-visible { outline: 1px solid var(--gold); outline-offset: 4px; }
-    .nav-toggle { display: none; flex-direction: column; gap: 6px; cursor: pointer; padding: 4px; background: none; border: none; }
-    .nav-toggle:focus-visible { outline: 1px solid var(--gold); outline-offset: 4px; }
-    .nav-toggle span { display: block; width: 20px; height: 0.5px; background: var(--black); }
+/* TEAM GRID */
+.team { padding: 48px 64px 96px; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+.member-role { font-size: 8.5px; letter-spacing: 0.4em; color: var(--gold); text-transform: uppercase; margin-bottom: 24px; opacity: 0.8; }
+.member-name { font-family: var(--font-serif); font-size: clamp(32px, 3.5vw, 48px); font-weight: 300; line-height: 1.0; letter-spacing: -0.02em; margin-bottom: 12px; }
+.member-title { font-size: 8.5px; letter-spacing: 0.32em; color: rgba(26,26,24,0.4); text-transform: uppercase; margin-bottom: 32px; }
+.member-bio { font-family: var(--font-serif); font-size: 17px; font-weight: 300; line-height: 1.85; color: rgba(26,26,24,0.75); }
 
-    /* PAGE HEADER */
-    .page-header { padding: 152px 64px 48px; }
-    .page-label { font-size: 8.5px; letter-spacing: 0.4em; color: var(--gold); text-transform: uppercase; margin-bottom: 40px; opacity: 0.8; }
-    .page-title { font-family: var(--font-serif); font-size: clamp(40px, 5vw, 64px); font-weight: 300; line-height: 1.0; letter-spacing: -0.02em; }
+/* SECTORS */
+.sectors { background: #EDE8DC; padding: 56px 64px; }
+.sectors-label { font-size: 8.5px; letter-spacing: 0.4em; color: var(--gold); text-transform: uppercase; margin-bottom: 32px; opacity: 0.8; }
+.sectors-grid { display: flex; gap: 72px; flex-wrap: wrap; }
+.sector { font-family: var(--font-serif); font-size: 26px; font-weight: 300; color: rgba(26,26,24,0.48); letter-spacing: 0.01em; transition: color 0.25s ease; cursor: default; }
+.sector:hover { color: rgba(26,26,24,0.85); }
 
-    /* TEAM GRID */
-    .team { padding: 0 64px 96px; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; padding-top: 48px; }
+/* PROCESS */
+.process { background: var(--black); padding: 64px 64px 72px; }
+.process-label { font-size: 8.5px; letter-spacing: 0.38em; color: var(--gold); text-transform: uppercase; margin-bottom: 52px; }
+.process-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; position: relative; }
+.process-connector { position: absolute; top: 10px; left: calc(16.66% + 16px); right: calc(16.66% + 16px); height: 0.5px; background: rgba(154,134,96,0.25); }
+.process-step { padding-right: 48px; }
+.process-step:nth-child(2) { padding: 0 24px; }
+.process-step:nth-child(3) { padding-right: 0; padding-left: 0; }
+.process-marker { width: 20px; height: 20px; border: 0.5px solid rgba(154,134,96,0.6); display: flex; align-items: center; justify-content: center; margin-bottom: 28px; background: var(--black); position: relative; z-index: 1; }
+.process-marker span { font-size: 9px; color: var(--gold); font-family: var(--font-sans); letter-spacing: 0.05em; }
+.process-title { font-family: var(--font-serif); font-size: 20px; font-weight: 300; color: rgba(245,240,232,0.9); line-height: 1.2; margin-bottom: 14px; }
+.process-body { font-size: 13px; line-height: 1.85; color: rgba(245,240,232,0.65); }
 
-    .member-role { font-size: 8.5px; letter-spacing: 0.4em; color: var(--gold); text-transform: uppercase; margin-bottom: 24px; opacity: 0.8; }
+/* CONTACT */
+.contact { background: var(--black); padding: 56px 64px 88px; border-top: 0.5px solid rgba(245,240,232,0.06); scroll-margin-top: 100px; }
+.contact-hl { font-family: var(--font-serif); font-size: clamp(34px, 4.5vw, 52px); font-weight: 300; font-style: italic; line-height: 1.18; color: rgba(245,240,232,0.92); margin-bottom: 20px; letter-spacing: -0.01em; }
+.contact-who { font-family: var(--font-serif); font-size: 17px; font-weight: 300; color: rgba(245,240,232,0.5); line-height: 1.7; margin-bottom: 52px; }
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: start; }
+.contact-left { display: flex; flex-direction: column; gap: 32px; }
+.contact-item .contact-label { font-size: 8.5px; letter-spacing: 0.4em; color: var(--gold); display: block; margin-bottom: 10px; text-transform: uppercase; opacity: 0.9; }
+.contact-item p, .contact-item a { font-family: var(--font-serif); font-size: 16px; font-weight: 300; color: rgba(245,240,232,0.48); line-height: 1.65; text-decoration: none; transition: color 0.25s ease; }
+.contact-item a:hover { color: rgba(245,240,232,0.85); }
+.contact-item a:focus-visible { outline: 1px solid var(--gold); outline-offset: 4px; }
+.contact-form { display: flex; flex-direction: column; gap: 12px; }
+.contact-form input, .contact-form textarea { width: 100%; background: rgba(245,240,232,0.06); border: 0.5px solid rgba(245,240,232,0.16); color: rgba(245,240,232,0.85); font-family: var(--font-sans); font-size: 13px; padding: 13px 16px; outline: none; letter-spacing: 0.02em; transition: border-color 0.25s ease, background 0.25s ease; }
+.contact-form input::placeholder, .contact-form textarea::placeholder { color: rgba(245,240,232,0.28); }
+.contact-form input:focus, .contact-form textarea:focus { border-color: rgba(154,134,96,0.55); background: rgba(245,240,232,0.09); }
+.contact-form textarea { resize: none; height: 96px; line-height: 1.6; }
+.contact-form button { background: transparent; border: 0.5px solid rgba(154,134,96,0.45); color: rgba(245,240,232,0.6); font-family: var(--font-sans); font-size: 9px; letter-spacing: 0.38em; text-transform: uppercase; padding: 14px 24px; cursor: pointer; transition: color 0.25s ease, border-color 0.25s ease; margin-top: 4px; }
+.contact-form button:hover { color: rgba(245,240,232,0.9); border-color: rgba(154,134,96,0.75); }
+.contact-form button:focus-visible { outline: 1px solid var(--gold); outline-offset: 4px; }
 
-    .member-name { font-family: var(--font-serif); font-size: clamp(32px, 3.5vw, 48px); font-weight: 300; line-height: 1.0; letter-spacing: -0.02em; margin-bottom: 12px; }
+/* FOOTER */
+footer { background: var(--black); border-top: 0.5px solid rgba(245,240,232,0.06); padding: 28px 64px; display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 40px; }
+.footer-logo { display: flex; align-items: baseline; gap: 6px; text-decoration: none; }
+.footer-logo:focus-visible { outline: 1px solid var(--gold); outline-offset: 4px; }
+.footer-logo-main { font-family: var(--font-serif); font-size: 14px; font-weight: 500; letter-spacing: 0.14em; color: rgba(245,240,232,0.9); text-transform: uppercase; }
+.footer-logo-accent { font-family: var(--font-serif); font-size: 13px; font-style: italic; color: var(--gold); }
+.footer-links { display: flex; gap: 24px; align-items: center; justify-content: flex-end; list-style: none; }
+.footer-links a { font-size: 10px; letter-spacing: 0.22em; color: rgba(245,240,232,0.75); text-decoration: none; text-transform: uppercase; transition: color 0.25s ease; }
+.footer-links a:hover { color: rgba(245,240,232,0.95); }
+.footer-links a:focus-visible { outline: 1px solid var(--gold); outline-offset: 4px; }
+.footer-copy { font-size: 10px; letter-spacing: 0.2em; color: rgba(245,240,232,0.5); text-transform: uppercase; }
 
-    .member-title { font-size: 8.5px; letter-spacing: 0.32em; color: rgba(26,26,24,0.4); text-transform: uppercase; margin-bottom: 32px; }
+/* MOBILE MENU */
+.mobile-menu { display: none; position: fixed; inset: 0; background: var(--black); z-index: 200; flex-direction: column; justify-content: center; align-items: center; gap: 44px; }
+.mobile-menu.open { display: flex; }
+.mobile-menu a { font-family: var(--font-serif); font-size: 28px; font-weight: 300; color: rgba(245,240,232,0.65); text-decoration: none; letter-spacing: 0.06em; transition: color 0.25s ease; }
+.mobile-menu a:hover { color: rgba(245,240,232,0.9); }
+.mobile-menu a:focus-visible { outline: 1px solid var(--gold); outline-offset: 4px; }
+.mobile-close { position: absolute; top: 32px; right: 64px; font-size: 9px; letter-spacing: 0.32em; color: rgba(245,240,232,0.5); text-transform: uppercase; cursor: pointer; font-family: var(--font-sans); background: none; border: none; transition: color 0.25s ease; }
+.mobile-close:hover { color: rgba(245,240,232,0.85); }
+.mobile-close:focus-visible { outline: 1px solid var(--gold); outline-offset: 4px; }
 
-    .member-bio { font-family: var(--font-serif); font-size: 17px; font-weight: 300; line-height: 1.85; color: var(--body-text); }
-
-    /* SECTORS */
-    .sectors { background: #EDE8DC; padding: 56px 64px; }
-    .sectors-label { font-size: 8.5px; letter-spacing: 0.4em; color: var(--gold); text-transform: uppercase; margin-bottom: 32px; opacity: 0.8; }
-    .sectors-grid { display: flex; gap: 72px; flex-wrap: wrap; }
-    .sector { font-family: var(--font-serif); font-size: 26px; font-weight: 300; color: rgba(26,26,24,0.48); letter-spacing: 0.01em; transition: color 0.25s ease; cursor: default; }
-    .sector:hover { color: rgba(26,26,24,0.85); }
-
-    /* CONTACT */
-    .contact { background: var(--black); padding: 56px 64px 88px; border-top: 0.5px solid rgba(26,26,24,0.15); }
-    .contact-hl { font-family: var(--font-serif); font-size: clamp(34px, 4.5vw, 52px); font-weight: 300; font-style: italic; line-height: 1.18; color: rgba(245,240,232,0.92); margin-bottom: 64px; letter-spacing: -0.01em; }
-    .contact-grid { display: grid; grid-template-columns: auto auto 1fr; gap: 80px; align-items: start; }
-    .contact-left { display: flex; flex-direction: column; gap: 36px; }
-    .contact-item .contact-label { font-size: 8.5px; letter-spacing: 0.4em; color: var(--gold); display: block; margin-bottom: 10px; text-transform: uppercase; opacity: 0.9; }
-    .contact-item p, .contact-item a { font-family: var(--font-serif); font-size: 16px; font-weight: 300; color: rgba(245,240,232,0.48); line-height: 1.65; text-decoration: none; transition: color 0.25s ease; }
-    .contact-item a:hover { color: rgba(245,240,232,0.85); }
-    .contact-item a:focus-visible { outline: 1px solid var(--gold); outline-offset: 4px; }
-
-    /* FOOTER */
-    footer { background: var(--black); border-top: 0.5px solid rgba(245,240,232,0.06); padding: 28px 64px; display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 40px; }
-    .footer-logo { display: flex; align-items: baseline; gap: 6px; text-decoration: none; }
-    .footer-logo:focus-visible { outline: 1px solid var(--gold); outline-offset: 4px; }
-    .footer-logo-main { font-family: var(--font-serif); font-size: 14px; font-weight: 500; letter-spacing: 0.14em; color: rgba(245,240,232,0.55); text-transform: uppercase; }
-    .footer-logo-accent { font-family: var(--font-serif); font-size: 9px; font-style: italic; color: var(--gold); opacity: 0.8; }
-    .footer-tagline { font-family: var(--font-serif); font-size: 12px; font-weight: 300; font-style: italic; color: rgba(245,240,232,0.35); text-align: center; }
-    .footer-links { display: flex; gap: 24px; align-items: center; justify-content: flex-end; list-style: none; }
-    .footer-links a { font-size: 7.5px; letter-spacing: 0.24em; color: rgba(245,240,232,0.4); text-decoration: none; text-transform: uppercase; transition: color 0.25s ease; }
-    .footer-links a:hover { color: rgba(245,240,232,0.75); }
-    .footer-links a:focus-visible { outline: 1px solid var(--gold); outline-offset: 4px; }
-    .footer-copy { font-size: 7.5px; letter-spacing: 0.2em; color: rgba(245,240,232,0.28); text-transform: uppercase; }
-
-    /* MOBILE MENU */
-    .mobile-menu { display: none; position: fixed; inset: 0; background: var(--black); z-index: 200; flex-direction: column; justify-content: center; align-items: center; gap: 44px; }
-    .mobile-menu.open { display: flex; }
-    .mobile-menu a { font-family: var(--font-serif); font-size: 28px; font-weight: 300; color: rgba(245,240,232,0.45); text-decoration: none; letter-spacing: 0.06em; transition: color 0.25s ease; }
-    .mobile-menu a:hover { color: rgba(245,240,232,0.9); }
-    .mobile-menu a:focus-visible { outline: 1px solid var(--gold); outline-offset: 4px; }
-    .mobile-close { position: absolute; top: 32px; right: 64px; font-size: 8.5px; letter-spacing: 0.32em; color: rgba(245,240,232,0.3); text-transform: uppercase; cursor: pointer; font-family: var(--font-sans); background: none; border: none; transition: color 0.25s ease; }
-    .mobile-close:hover { color: rgba(245,240,232,0.7); }
-    .mobile-close:focus-visible { outline: 1px solid var(--gold); outline-offset: 4px; }
-
-    /* RESPONSIVE */
-    @media (max-width: 960px) {
-      nav, nav.scrolled { padding: 24px 40px; }
-      .nav-links { display: none; }
-      .nav-toggle { display: flex; }
-      .page-header { padding: 120px 40px 56px; }
-      .team { padding: 48px 40px 80px; grid-template-columns: 1fr; gap: 64px; }
-      .sectors { padding: 48px 40px; }
-      .sectors-grid { gap: 40px; }
-      .contact { padding: 0 40px 72px; }
-      .contact-grid { grid-template-columns: 1fr; gap: 36px; }
-      footer { padding: 24px 40px; grid-template-columns: 1fr; gap: 14px; text-align: center; }
-      .footer-logo { justify-content: center; }
-      .footer-links { justify-content: center; }
-      .mobile-close { right: 40px; }
-    }
-
-    @media (max-width: 560px) {
-      nav, nav.scrolled { padding: 20px 28px; }
-      .logo-main { font-size: 18px; }
-      .page-header { padding: 104px 28px 48px; }
-      .team { padding: 40px 28px 72px; }
-      .sectors { padding: 40px 28px; }
-      .sectors-grid { gap: 28px; flex-direction: column; }
-      .contact { padding: 0 28px 56px; }
-      footer { padding: 18px 28px; }
-      .mobile-close { right: 28px; top: 20px; }
-    }
-  </style>
+/* RESPONSIVE */
+@media (max-width: 960px) {
+  nav, nav.scrolled { padding: 24px 40px; }
+  .nav-links { display: none; }
+  .nav-toggle { display: flex; }
+  .page-header { padding: 120px 40px 56px; }
+  .team { padding: 48px 40px 80px; grid-template-columns: 1fr; gap: 64px; }
+  .sectors { padding: 48px 40px; }
+  .sectors-grid { gap: 40px; }
+  .process { padding: 48px 40px 56px; }
+  .process-grid { grid-template-columns: 1fr; }
+  .process-connector { display: none; }
+  .process-step, .process-step:nth-child(2), .process-step:nth-child(3) { padding: 0 0 36px 0; }
+  .contact { padding: 56px 40px 72px; }
+  .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+  footer { padding: 24px 40px; grid-template-columns: 1fr; gap: 14px; text-align: center; }
+  .footer-logo { justify-content: center; }
+  .footer-links { justify-content: center; }
+  .mobile-close { right: 40px; }
+}
+@media (max-width: 560px) {
+  nav, nav.scrolled { padding: 20px 28px; }
+  .logo-main { font-size: 18px; }
+  .logo-accent { font-size: 14px; }
+  .page-header { padding: 104px 28px 48px; }
+  .team { padding: 40px 28px 72px; }
+  .sectors { padding: 40px 28px; }
+  .sectors-grid { gap: 28px; flex-direction: column; }
+  .process { padding: 40px 28px 48px; }
+  .contact { padding: 48px 28px 56px; }
+  footer { padding: 18px 28px; }
+  .mobile-close { right: 28px; top: 20px; }
+}
+</style>
 </head>
 <body>
 
-  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Navigation menu">
-    <button class="mobile-close" onclick="toggleMenu()" aria-label="Close menu">CLOSE</button>
-    <a href="index.html" onclick="toggleMenu()">Overview</a>
-    <a href="index.html#advisory" onclick="toggleMenu()">Advisory</a>
-    <a href="about.html" onclick="toggleMenu()">Team</a>
-    <a href="index.html#contact" onclick="toggleMenu()">Contact</a>
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+  <button class="mobile-close" onclick="toggleMenu()" aria-label="Close menu">CLOSE</button>
+  <a href="index.html" onclick="toggleMenu()">Overview</a>
+  <a href="index.html#advisory" onclick="toggleMenu()">Advisory</a>
+  <a href="about.html" onclick="toggleMenu()">Team</a>
+  <a href="index.html#contact" onclick="toggleMenu()">Contact</a>
+</div>
+
+<!-- NAV -->
+<nav id="mainNav" role="navigation" aria-label="Main navigation">
+  <a href="index.html" class="logo" aria-label="Huxley &amp; Co. — Home">
+    <span class="logo-main">Huxley</span>
+    <span class="logo-accent">& co.</span>
+  </a>
+  <ul class="nav-links" role="list">
+    <li><a href="index.html">OVERVIEW</a></li>
+    <li><a href="index.html#advisory">ADVISORY</a></li>
+    <li><a href="about.html" class="active" aria-current="page">TEAM</a></li>
+    <li><a href="index.html#contact">CONTACT</a></li>
+  </ul>
+  <button class="nav-toggle" onclick="toggleMenu()" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu">
+    <span></span>
+    <span></span>
+  </button>
+</nav>
+
+<!-- PAGE HEADER -->
+<header class="page-header">
+  <p class="page-label">The Team</p>
+  <h1 class="page-title">Principal Advisors</h1>
+</header>
+
+<!-- TEAM -->
+<section class="team" aria-label="Team members">
+  <article>
+    <p class="member-role">Founder</p>
+    <h2 class="member-name">Laura Huxley</h2>
+    <p class="member-title">Founder &amp; Principal</p>
+    <p class="member-bio">Laura Huxley built her practice at the intersection of talent and trust. With a background spanning some of the world's largest and most high-profile productions, venture capital, and private client advisory, she founded Huxley &amp; Co. to bring that same rigor to the people side of exceptional organizations. Her work spans design, architecture, and the creative industries, with a particular focus on family offices and private clients who require both discretion and depth. A career spent across both sides of the Atlantic has shaped an advisory practice that understands how exceptional people operate, wherever they are in the world.</p>
+  </article>
+  <article>
+    <p class="member-role">Principal</p>
+    <h2 class="member-name">Chad Siwik</h2>
+    <p class="member-title">Principal, Advisory &amp; Strategy</p>
+    <p class="member-bio">Chad Siwik brings to Huxley &amp; Co. a rare understanding of what it means to operate where the stakes are real and discretion is non-negotiable. As a Program Manager on NASA's Artemis mission, he works directly with astronauts and senior government figures, navigating talent relations, institutional trust, and high-stakes communication within one of the most security-conscious organizations in the world. That experience translates directly into how he approaches advisory work: with precision, care, and an instinct for what matters most to the people in the room.</p>
+  </article>
+</section>
+
+<!-- SECTORS -->
+<div class="sectors">
+  <p class="sectors-label">Sectors</p>
+  <div class="sectors-grid" role="list">
+    <span class="sector" role="listitem">Founders</span>
+    <span class="sector" role="listitem">Family Office</span>
+    <span class="sector" role="listitem">Private Clients</span>
+    <span class="sector" role="listitem">Creative Studios</span>
+    <span class="sector" role="listitem">Private Events</span>
   </div>
+</div>
 
-  <nav id="mainNav" role="navigation" aria-label="Main navigation">
-    <a href="index.html" class="logo" aria-label="Huxley &amp; Co. — Home">
-      <span class="logo-main">Huxley</span>
-      <span class="logo-accent">& co.</span>
-    </a>
-    <ul class="nav-links" role="list">
-      <li><a href="index.html">OVERVIEW</a></li>
-      <li><a href="index.html#advisory">ADVISORY</a></li>
-      <li><a href="about.html" class="active" aria-current="page">TEAM</a></li>
-      <li><a href="index.html#contact">CONTACT</a></li>
-    </ul>
-    <button class="nav-toggle" onclick="toggleMenu()" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu">
-      <span></span>
-      <span></span>
-    </button>
-  </nav>
-
-  <!-- PAGE HEADER -->
-  <header class="page-header">
-    <p class="page-label">The Team</p>
-    <h1 class="page-title">Principal Advisors</h1>
-  </header>
-
-  <!-- TEAM -->
-  <section class="team" aria-label="Team members">
-
-    <article>
-      <p class="member-role">Founder</p>
-      <h2 class="member-name">Laura Huxley</h2>
-      <p class="member-title">Founder &amp; Principal</p>
-      <p class="member-bio">Laura Huxley built her practice at the intersection of talent and trust. With a background spanning some of the world's largest and most high-profile productions, venture capital, and private client advisory, she founded Huxley &amp; Co. to bring that same rigor to the people side of exceptional organizations. Her work spans design, architecture, and the creative industries, with a particular focus on family offices and private clients who require both discretion and depth. A career spent across both sides of the Atlantic has shaped an advisory practice that understands how exceptional people operate, wherever they are in the world.</p>
-    </article>
-
-    <article>
-      <p class="member-role">Principal</p>
-      <h2 class="member-name">Chad Siwik</h2>
-      <p class="member-title">Principal, Advisory &amp; Strategy</p>
-      <p class="member-bio">Chad Siwik brings to Huxley &amp; Co. a rare understanding of what it means to operate where the stakes are real and discretion is non-negotiable. As a Program Manager on NASA's Artemis mission, he works directly with astronauts and senior government figures, navigating talent relations, institutional trust, and high-stakes communication within one of the most security-conscious organizations in the world. That experience translates directly into how he approaches advisory work: with precision, care, and an instinct for what matters most to the people in the room.</p>
-    </article>
-
-  </section>
-
-  <!-- SECTORS -->
-  <div class="sectors">
-    <p class="sectors-label">Sectors</p>
-    <div class="sectors-grid" role="list">
-      <span class="sector" role="listitem">Founders</span>
-      <span class="sector" role="listitem">Family Office</span>
-      <span class="sector" role="listitem">Private Clients</span>
-      <span class="sector" role="listitem">Creative Studios</span>
-      <span class="sector" role="listitem">Private Events</span>
+<!-- PROCESS -->
+<section class="process" aria-label="Our process">
+  <p class="process-label">The process</p>
+  <div class="process-grid">
+    <div class="process-connector" aria-hidden="true"></div>
+    <div class="process-step">
+      <div class="process-marker" aria-hidden="true"><span>I</span></div>
+      <h3 class="process-title">Introductory conversation</h3>
+      <p class="process-body">A confidential conversation to understand your organization, your standards, and precisely what you need.</p>
+    </div>
+    <div class="process-step">
+      <div class="process-marker" aria-hidden="true"><span>II</span></div>
+      <h3 class="process-title">Principal-led search</h3>
+      <p class="process-body">Every search conducted personally. We draw on a private network built over years across both sides of the Atlantic, not a database.</p>
+    </div>
+    <div class="process-step">
+      <div class="process-marker" aria-hidden="true"><span>III</span></div>
+      <h3 class="process-title">Curated presentation</h3>
+      <p class="process-body">A small number of exceptional candidates, each interviewed in depth and reference checked. Never a shortlist, always a recommendation.</p>
     </div>
   </div>
+</section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="contact" aria-label="Contact">
-    <h2 class="contact-hl">We operate where<br>reputation is everything.</h2>
-    <div class="contact-grid">
-      <div class="contact-left">
-        <div class="contact-item">
-          <span class="contact-label">EMAIL</span>
-          <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#101;&#108;&#108;&#111;&#64;&#116;&#104;&#101;&#104;&#117;&#120;&#108;&#101;&#121;&#99;&#111;&#109;&#112;&#97;&#110;&#121;&#46;&#99;&#111;&#109;">&#104;&#101;&#108;&#108;&#111;&#64;&#116;&#104;&#101;&#104;&#117;&#120;&#108;&#101;&#121;&#99;&#111;&#109;&#112;&#97;&#110;&#121;&#46;&#99;&#111;&#109;</a>
-        </div>
-        <div class="contact-item">
-          <span class="contact-label">PHONE</span>
-          <a href="tel:+14242531320">(424) 253-1320</a>
-        </div>
+<!-- CONTACT -->
+<section id="contact" class="contact" aria-label="Contact">
+  <h2 class="contact-hl">We operate where<br>reputation is everything.</h2>
+  <p class="contact-who">We work with a small number of clients at any time: founders, family offices, private enterprises, and creative studios.</p>
+  <div class="contact-grid">
+    <div class="contact-left">
+      <div class="contact-item">
+        <span class="contact-label">EMAIL</span>
+        <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#101;&#108;&#108;&#111;&#64;&#116;&#104;&#101;&#104;&#117;&#120;&#108;&#101;&#121;&#99;&#111;&#109;&#112;&#97;&#110;&#121;&#46;&#99;&#111;&#109;">&#104;&#101;&#108;&#108;&#111;&#64;&#116;&#104;&#101;&#104;&#117;&#120;&#108;&#101;&#121;&#99;&#111;&#109;&#112;&#97;&#110;&#121;&#46;&#99;&#111;&#109;</a>
+      </div>
+      <div class="contact-item">
+        <span class="contact-label">PHONE</span>
+        <a href="tel:+14242531320">(424) 253-1320</a>
       </div>
       <div class="contact-item">
         <span class="contact-label">ADDRESS</span>
         <p>9171 Wilshire Blvd, Suite 500<br>Beverly Hills, CA 90210</p>
       </div>
     </div>
-  </section>
+    <form class="contact-form" name="contact" netlify netlify-honeypot="bot-field" action="/thank-you">
+      <input type="hidden" name="form-name" value="contact" />
+      <input type="text" name="name" placeholder="Your name" required />
+      <input type="text" name="organization" placeholder="Organization" />
+      <input type="email" name="email" placeholder="Email address" required />
+      <input type="tel" name="phone" placeholder="Phone number" />
+      <textarea name="message" placeholder="Brief description of what you are looking for"></textarea>
+      <button type="submit">Submit inquiry</button>
+    </form>
+  </div>
+</section>
 
-  <!-- FOOTER -->
-  <footer role="contentinfo">
-    <a href="index.html" class="footer-logo" aria-label="Huxley &amp; Co. — Home">
-      <span class="footer-logo-main">Huxley</span>
-      <span class="footer-logo-accent">& co.</span>
-    </a>
-    <p class="footer-tagline">We operate where reputation is everything.</p>
-    <ul class="footer-links" role="list">
-      <li><a href="https://www.linkedin.com/company/huxley-co" target="_blank" rel="noopener noreferrer">LINKEDIN</a></li>
-      <li><a href="privacy.html">PRIVACY</a></li>
-      <li><a href="terms.html">TERMS</a></li>
-      <li><span class="footer-copy">© 2026</span></li>
-    </ul>
-  </footer>
+<!-- FOOTER -->
+<footer role="contentinfo">
+  <a href="index.html" class="footer-logo" aria-label="Huxley &amp; Co. — Home">
+    <span class="footer-logo-main">Huxley</span>
+    <span class="footer-logo-accent">& co.</span>
+  </a>
+  <ul class="footer-links" role="list">
+    <li><a href="https://www.linkedin.com/company/huxley-co" target="_blank" rel="noopener noreferrer">LINKEDIN</a></li>
+    <li><a href="privacy.html">PRIVACY</a></li>
+    <li><a href="terms.html">TERMS</a></li>
+    <li><span class="footer-copy">© 2026</span></li>
+  </ul>
+</footer>
 
-  <script>
-    const mobileMenu = document.getElementById('mobileMenu');
-    const navToggle = document.querySelector('.nav-toggle');
+<script>
+const mobileMenu = document.getElementById('mobileMenu');
+const navToggle = document.querySelector('.nav-toggle');
 
-    function toggleMenu() {
-      const isOpen = mobileMenu.classList.toggle('open');
-      document.body.style.overflow = isOpen ? 'hidden' : '';
-      navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-    }
+function toggleMenu() {
+  const isOpen = mobileMenu.classList.toggle('open');
+  document.body.style.overflow = isOpen ? 'hidden' : '';
+  navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+}
 
-    document.addEventListener('keydown', e => {
-      if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
-        mobileMenu.classList.remove('open');
-        document.body.style.overflow = '';
-        navToggle.setAttribute('aria-expanded', 'false');
-        navToggle.focus();
-      }
-    });
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
+    mobileMenu.classList.remove('open');
+    document.body.style.overflow = '';
+    navToggle.setAttribute('aria-expanded', 'false');
+    navToggle.focus();
+  }
+});
 
-    const mainNav = document.getElementById('mainNav');
-    window.addEventListener('scroll', () => {
-      mainNav.classList.toggle('scrolled', window.scrollY > 40);
-    }, { passive: true });
-  </script>
+const mainNav = document.getElementById('mainNav');
+window.addEventListener('scroll', () => {
+  mainNav.classList.toggle('scrolled', window.scrollY > 40);
+}, { passive: true });
+</script>
 
 </body>
 </html>
