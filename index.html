@@ -289,19 +289,6 @@
 
   /* ─── ADVISORY / SERVICES ─── */
   #advisory { background: var(--warm-white); }
-  #advisory .proof-grid-bottom {
-    grid-template-columns: repeat(3, 1fr);
-    width: 100%;
-    border: 1px solid var(--rule);
-    border-top: none;
-    margin-top: 0;
-  }
-  #advisory .proof-sector {
-    background: var(--warm-white);
-  }
-  #advisory .proof-sector:hover {
-    background: var(--parchment);
-  }
 
   .services-grid {
     display: grid;
@@ -358,6 +345,43 @@
     padding: 5px 10px;
   }
 
+
+  /* ─── SECTOR STRIP ─── */
+  .sector-strip {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    border-top: none;
+    width: 100%;
+  }
+  .sector-strip-cell {
+    background: var(--warm-white);
+    padding: 40px 40px;
+    transition: background 0.25s;
+  }
+  .sector-strip-cell:hover { background: var(--parchment); }
+  .sector-strip-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 300;
+    color: var(--accent-light);
+    margin-bottom: 16px;
+    line-height: 1;
+  }
+  .sector-strip-name {
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink);
+    margin-bottom: 10px;
+  }
+  .sector-strip-desc {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.65;
+  }
   /* ─── PROCESS ─── */
   #process {
     background: var(--ink);
@@ -739,6 +763,7 @@
 
     /* Services */
     .services-grid { grid-template-columns: 1fr; }
+    .sector-strip { grid-template-columns: 1fr 1fr; }
     .service-card { padding: 36px 28px; }
 
     /* Process */
@@ -907,22 +932,34 @@
         </div>
       </div>
 
-    <div class="proof-grid-bottom" style="margin-top:1px;">
-      <div class="proof-sector reveal">
-        <div class="proof-sector-icon serif">I.</div>
-        <div class="proof-sector-name">Founders &amp; Operators</div>
-        <div class="proof-sector-desc">Placements spanning seed-stage through to pre-IPO, across both continents.</div>
+    <div class="sector-strip">
+      <div class="sector-strip-cell reveal">
+        <div class="sector-strip-num serif">I.</div>
+        <div class="sector-strip-name">Founders</div>
+        <div class="sector-strip-desc">Seed-stage through to pre-IPO. On both sides of the Atlantic.</div>
       </div>
-      <div class="proof-sector reveal">
-        <div class="proof-sector-icon serif">II.</div>
-        <div class="proof-sector-name">Family Offices</div>
-        <div class="proof-sector-desc">Multi-generational families and single-family offices, managed with absolute confidentiality.</div>
+      <div class="sector-strip-cell reveal">
+        <div class="sector-strip-num serif">II.</div>
+        <div class="sector-strip-name">Family Offices</div>
+        <div class="sector-strip-desc">Multi-generational families and single-family offices, managed with absolute confidentiality.</div>
       </div>
-      <div class="proof-sector reveal">
-        <div class="proof-sector-icon serif">III.</div>
-        <div class="proof-sector-name">Creative Studios</div>
-        <div class="proof-sector-desc">Talent advisory for some of the largest productions globally, and the studios behind them.</div>
+      <div class="sector-strip-cell reveal">
+        <div class="sector-strip-num serif">III.</div>
+        <div class="sector-strip-name">Creative Studios</div>
+        <div class="sector-strip-desc">Talent advisory for some of the largest productions globally, and the studios behind them.</div>
       </div>
+      <div class="sector-strip-cell reveal">
+        <div class="sector-strip-num serif">IV.</div>
+        <div class="sector-strip-name">Private Enterprises</div>
+        <div class="sector-strip-desc">Privately held businesses where culture, discretion, and long-term fit matter most.</div>
+      </div>
+      <div class="sector-strip-cell reveal">
+        <div class="sector-strip-num serif">V.</div>
+        <div class="sector-strip-name">Private Events</div>
+        <div class="sector-strip-desc">Notable families and private clients requiring talent and production advisory.</div>
+      </div>
+    </div>
+    </div>
     </div>
   </div>
 </section>
