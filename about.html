@@ -68,23 +68,24 @@ nav.scrolled { padding: 20px 64px; border-bottom-color: rgba(26,26,24,0.06); }
 .sector:hover { color: rgba(26,26,24,0.85); }
 
 /* PROCESS */
-.process { background: var(--black); padding: 64px 64px 72px; }
-.process-label { font-size: 8.5px; letter-spacing: 0.38em; color: var(--gold); text-transform: uppercase; margin-bottom: 52px; }
+.process { background: var(--cream); padding: 0 64px; }
+.process-inner { border-top: 0.5px solid rgba(26,26,24,0.1); padding: 72px 0; }
+.process-label { font-size: 8.5px; letter-spacing: 0.38em; color: var(--gold); text-transform: uppercase; margin-bottom: 52px; opacity: 0.8; }
 .process-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 64px; position: relative; }
-.process-connector { position: absolute; top: 10px; left: calc(16.66% + 16px); right: calc(16.66% + 16px); height: 0.5px; background: rgba(154,134,96,0.25); }
+.process-connector { position: absolute; top: 10px; left: calc(16.66% + 16px); right: calc(16.66% + 16px); height: 0.5px; background: rgba(26,26,24,0.12); }
 .process-step { }
 .process-step:nth-child(2) { }
 .process-step:nth-child(3) { }
-.process-marker { width: 20px; height: 20px; border: 0.5px solid rgba(154,134,96,0.6); display: flex; align-items: center; justify-content: center; margin-bottom: 28px; background: var(--black); position: relative; z-index: 1; }
+.process-marker { width: 20px; height: 20px; border: 0.5px solid rgba(154,134,96,0.5); display: flex; align-items: center; justify-content: center; margin-bottom: 28px; background: var(--cream); position: relative; z-index: 1; }
 .process-marker span { font-size: 9px; color: var(--gold); font-family: var(--font-sans); letter-spacing: 0.05em; }
-.process-title { font-family: var(--font-serif); font-size: 20px; font-weight: 300; color: rgba(245,240,232,0.9); line-height: 1.2; margin-bottom: 14px; }
-.process-body { font-size: 13px; line-height: 1.85; color: rgba(245,240,232,0.65); }
+.process-title { font-family: var(--font-serif); font-size: 27px; font-weight: 300; color: var(--black); line-height: 1.12; margin-bottom: 18px; }
+.process-body { font-size: 13px; line-height: 1.9; color: rgba(26,26,24,0.72); letter-spacing: 0.01em; }
 
 /* CONTACT */
-.contact { background: var(--black); padding: 56px 64px 88px; border-top: 0.5px solid rgba(245,240,232,0.06); scroll-margin-top: 100px; }
-.contact-hl { font-family: var(--font-serif); font-size: clamp(34px, 4.5vw, 52px); font-weight: 300; font-style: italic; line-height: 1.18; color: rgba(245,240,232,0.92); margin-bottom: 20px; letter-spacing: -0.01em; }
-.contact-who { font-family: var(--font-serif); font-size: 17px; font-weight: 300; color: rgba(245,240,232,0.5); line-height: 1.7; margin-bottom: 52px; }
-.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: start; }
+.contact { background: var(--black); padding: 72px 64px 88px; border-top: 0.5px solid rgba(245,240,232,0.06); scroll-margin-top: 100px; }
+.contact-hl { font-family: var(--font-serif); font-size: clamp(28px, 3.5vw, 42px); font-weight: 300; font-style: italic; line-height: 1.2; color: rgba(245,240,232,0.92); margin-bottom: 14px; letter-spacing: -0.01em; }
+.contact-who { font-family: var(--font-serif); font-size: 16px; font-weight: 300; color: rgba(245,240,232,0.45); line-height: 1.7; margin-bottom: 52px; max-width: 520px; }
+.contact-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 80px; align-items: start; }
 .contact-left { display: flex; flex-direction: column; gap: 32px; }
 .contact-item .contact-label { font-size: 8.5px; letter-spacing: 0.4em; color: var(--gold); display: block; margin-bottom: 10px; text-transform: uppercase; opacity: 0.9; }
 .contact-item p, .contact-item a { font-family: var(--font-serif); font-size: 16px; font-weight: 300; color: rgba(245,240,232,0.48); line-height: 1.65; text-decoration: none; transition: color 0.25s ease; }
@@ -130,10 +131,9 @@ footer { background: var(--black); border-top: 0.5px solid rgba(245,240,232,0.06
   .team { padding: 48px 40px 80px; grid-template-columns: 1fr; gap: 64px; }
   .sectors { padding: 48px 40px; }
   .sectors-grid { gap: 40px; }
-  .process { padding: 48px 40px 56px; }
-  .process-grid { grid-template-columns: 1fr; }
+  .process { padding: 0 40px; }
+  .process-grid { grid-template-columns: 1fr; gap: 40px; }
   .process-connector { display: none; }
-  .process-step, .process-step:nth-child(2), .process-step:nth-child(3) { padding: 0 0 36px 0; }
   .contact { padding: 56px 40px 72px; }
   .contact-grid { grid-template-columns: 1fr; gap: 48px; }
   footer { padding: 24px 40px; grid-template-columns: 1fr; gap: 14px; text-align: center; }
@@ -149,7 +149,7 @@ footer { background: var(--black); border-top: 0.5px solid rgba(245,240,232,0.06
   .team { padding: 40px 28px 72px; }
   .sectors { padding: 40px 28px; }
   .sectors-grid { gap: 28px; flex-direction: column; }
-  .process { padding: 40px 28px 48px; }
+  .process { padding: 0 28px; }
   .contact { padding: 48px 28px 56px; }
   footer { padding: 18px 28px; }
   .mobile-close { right: 28px; top: 20px; }
@@ -221,23 +221,25 @@ footer { background: var(--black); border-top: 0.5px solid rgba(245,240,232,0.06
 
 <!-- PROCESS -->
 <section class="process" aria-label="Our process">
-  <p class="process-label">The process</p>
-  <div class="process-grid">
-    <div class="process-connector" aria-hidden="true"></div>
-    <div class="process-step">
-      <div class="process-marker" aria-hidden="true"><span>I</span></div>
-      <h3 class="process-title">Introductory conversation</h3>
-      <p class="process-body">A confidential conversation to understand your organization, your standards, and precisely what you need.</p>
-    </div>
-    <div class="process-step">
-      <div class="process-marker" aria-hidden="true"><span>II</span></div>
-      <h3 class="process-title">Principal-led search</h3>
-      <p class="process-body">Every search conducted personally. We draw on a private network built over years across both sides of the Atlantic, not a database.</p>
-    </div>
-    <div class="process-step">
-      <div class="process-marker" aria-hidden="true"><span>III</span></div>
-      <h3 class="process-title">Curated presentation</h3>
-      <p class="process-body">A small number of exceptional candidates, each interviewed in depth and reference checked. Never a shortlist, always a recommendation.</p>
+  <div class="process-inner">
+    <p class="process-label">The process</p>
+    <div class="process-grid">
+      <div class="process-connector" aria-hidden="true"></div>
+      <div class="process-step">
+        <div class="process-marker" aria-hidden="true"><span>I</span></div>
+        <h3 class="process-title">Introductory conversation</h3>
+        <p class="process-body">A confidential conversation to understand your organization, your standards, and precisely what you need.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-marker" aria-hidden="true"><span>II</span></div>
+        <h3 class="process-title">Principal-led search</h3>
+        <p class="process-body">Every search conducted personally. We draw on a private network built over years across both sides of the Atlantic, not a database.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-marker" aria-hidden="true"><span>III</span></div>
+        <h3 class="process-title">Curated presentation</h3>
+        <p class="process-body">A small number of exceptional candidates, each interviewed in depth and reference checked. Never a shortlist, always a recommendation.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -261,8 +263,7 @@ footer { background: var(--black); border-top: 0.5px solid rgba(245,240,232,0.06
         <p>9171 Wilshire Blvd, Suite 500<br>Beverly Hills, CA 90210</p>
       </div>
     </div>
-    <form class="contact-form" name="contact" netlify netlify-honeypot="bot-field" action="/thank-you">
-      <input type="hidden" name="form-name" value="contact" />
+    <form class="contact-form" action="https://formspree.io/f/hello@thehuxleycompany.com" method="POST">
       <input type="text" name="name" placeholder="Your name" required />
       <input type="text" name="organization" placeholder="Organization" />
       <input type="email" name="email" placeholder="Email address" required />
