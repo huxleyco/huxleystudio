@@ -945,22 +945,6 @@
       </div>
     </div>
 
-    <div class="proof-grid">
-      <div class="proof-card reveal">
-        <p class="proof-quote serif">They did not bring us candidates. They brought us the right person. There is a meaningful difference, and most firms never find it.</p>
-        <div class="proof-source">
-          <span class="proof-name">Managing Principal</span>
-          <span class="proof-role">Single-family office, Los Angeles</span>
-        </div>
-      </div>
-      <div class="proof-card reveal">
-        <p class="proof-quote serif">The rigour was evident, but it was the discretion that mattered most. We had worked with larger firms before. There is no comparison.</p>
-        <div class="proof-source">
-          <span class="proof-name">Founder &amp; CEO</span>
-          <span class="proof-role">Private enterprise, London</span>
-        </div>
-      </div>
-    </div>
     <div class="proof-grid-bottom">
       <div class="proof-sector reveal">
         <div class="proof-sector-icon serif">I.</div>
@@ -1041,7 +1025,7 @@
       <div class="contact-details">
         <div>
           <div class="contact-detail-label">Email</div>
-          <a href="mailto:hello@thehuxleycompany.com" class="contact-detail-value">hello@thehuxleycompany.com</a>
+          <a href="/cdn-cgi/l/email-protection#d6beb3babab996a2beb3bea3aebab3afb5b9bba6b7b8aff8b5b9bb" class="contact-detail-value"><span class="__cf_email__" data-cfemail="422a272e2e2d02362a272a373a2e273b212d2f32232c3b6c212d2f">[email&#160;protected]</span></a>
         </div>
         <div>
           <div class="contact-detail-label">Phone</div>
@@ -1120,13 +1104,11 @@
 <script>
   document.addEventListener('DOMContentLoaded', () => {
 
-    // Nav scroll state
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
       navbar.classList.toggle('scrolled', window.scrollY > 40);
     });
 
-    // Scroll reveal
     const reveals = document.querySelectorAll('.reveal');
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -1138,7 +1120,6 @@
     }, { threshold: 0, rootMargin: '0px' });
     reveals.forEach(el => observer.observe(el));
 
-    // Formspree AJAX submission
     const form = document.getElementById('contact-form');
     if (form) {
       form.addEventListener('submit', async (e) => {
@@ -1146,23 +1127,20 @@
         const btn = document.getElementById('form-btn');
         const errorMsg = document.getElementById('form-error');
         const defaultNote = document.getElementById('form-note-default');
-
-        btn.textContent = 'Sending\u2026';
+        btn.textContent = 'Sending...';
         btn.disabled = true;
         errorMsg.style.display = 'none';
-
         try {
           const response = await fetch(form.action, {
             method: 'POST',
             body: new FormData(form),
             headers: { 'Accept': 'application/json' }
           });
-
           if (response.ok) {
             form.style.display = 'none';
             document.getElementById('form-success').style.display = 'block';
           } else {
-            throw new Error('Server error');
+            throw new Error('error');
           }
         } catch (err) {
           btn.textContent = 'Submit Enquiry';
