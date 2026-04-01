@@ -208,11 +208,12 @@
   .stat-cell:hover { background: var(--parchment); transition: background 0.2s; }
   .stat-number {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 42px;
+    font-size: clamp(24px, 3vw, 42px);
     font-weight: 300;
-    line-height: 1;
+    line-height: 1.1;
     margin-bottom: 8px;
     color: var(--ink);
+    white-space: nowrap;
   }
   .stat-label { font-size: 11px; color: var(--muted); letter-spacing: 0.05em; line-height: 1.4; }
 
@@ -297,6 +298,7 @@
     background: var(--rule);
     border: 1px solid var(--rule);
     align-items: stretch;
+    grid-auto-rows: 1fr;
   }
 
   .service-card {
@@ -304,6 +306,7 @@
     padding: 48px 40px;
     display: flex;
     flex-direction: column;
+    height: 100%;
     transition: background 0.25s;
     cursor: default;
   }
@@ -846,11 +849,11 @@
         <div class="stat-label">Principals. No junior associates. No volume model.</div>
       </div>
       <div class="stat-cell">
-        <div class="stat-number serif">Bi-<br>coastal</div>
-        <div class="stat-label">London &amp; Los Angeles. A private network on both sides.</div>
+        <div class="stat-number serif">Bi-Coastal</div>
+        <div class="stat-label">A private network spanning both sides of the Atlantic.</div>
       </div>
       <div class="stat-cell">
-        <div class="stat-number serif">By<br>Appt.</div>
+        <div class="stat-number serif">By Appt.</div>
         <div class="stat-label">We work with a small number of clients at any time.</div>
       </div>
     </div>
@@ -923,7 +926,7 @@
       <div class="service-card reveal">
         <div class="service-num">03</div>
         <h3 class="service-name serif">Private Events &amp; Principal Production</h3>
-        <p class="service-body">For clients who hold themselves to an uncommon standard, the moments that define an occasion matter as much as the people inside them. We advise private clients and creative principals on the talent, logistics, and execution behind events that are not for public record, from intimate gatherings for notable families to large-scale productions where discretion and excellence are equally non-negotiable.</p>
+        <p class="service-body">For clients who hold themselves to an uncommon standard, the moments that define an occasion matter as much as the people inside them. We source and place the talent behind some of the most exceptional private gatherings and large-scale productions, from event leads and creative directors to the full teams that bring them to life.</p>
         <div class="service-tags">
           <span class="tag">Private Clients</span>
           <span class="tag">Notable Families</span>
