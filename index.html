@@ -355,16 +355,15 @@
   .process-steps {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1px;
-    background: rgba(255,255,255,0.08);
-    border: 1px solid rgba(255,255,255,0.08);
+    gap: 0;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding-top: 56px;
   }
   .process-step {
-    padding: 52px 40px;
-    background: var(--ink);
-    transition: background 0.25s;
+    padding: 0 48px 0 0;
+    background: transparent;
   }
-  .process-step:hover { background: #1a1916; }
+  .process-step:hover { background: transparent; }
   .step-roman {
     font-family: 'Cormorant Garamond', serif;
     font-size: 13px;
@@ -726,9 +725,8 @@
     .service-card { padding: 36px 28px; }
 
     /* Process */
-    .process-steps { grid-template-columns: 1fr; }
+    .process-steps { grid-template-columns: 1fr; gap: 40px; }
     .process-coda { flex-direction: column; align-items: flex-start; gap: 28px; }
-    .process-step { padding: 40px 28px; }
 
     /* Team */
     .team-grid { grid-template-columns: 1fr; }
