@@ -78,6 +78,59 @@
   }
   nav.scrolled { border-bottom-color: var(--rule); }
 
+  /* ─── HAMBURGER ─── */
+  .nav-hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    padding: 4px;
+    background: none;
+    border: none;
+    z-index: 200;
+  }
+  .nav-hamburger span {
+    display: block;
+    width: 22px;
+    height: 1px;
+    background: var(--ink);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  .nav-hamburger.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+  .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+  .nav-hamburger.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+  /* ─── MOBILE NAV OVERLAY ─── */
+  .nav-mobile-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(250, 249, 246, 0.98);
+    backdrop-filter: blur(12px);
+    z-index: 150;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+  }
+  .nav-mobile-overlay.open { display: flex; }
+  .nav-mobile-overlay a {
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--muted);
+    transition: color 0.2s;
+  }
+  .nav-mobile-overlay a:hover { color: var(--ink); }
+  .nav-mobile-overlay .nav-mobile-cta {
+    margin-top: 16px;
+    color: var(--ink);
+    border: 1px solid var(--ink);
+    padding: 12px 28px;
+  }
+
   .nav-logo {
     font-family: 'Cormorant Garamond', serif;
     font-size: 18px;
@@ -490,6 +543,8 @@
   @media (max-width: 900px) {
     nav { padding: 20px 24px; }
     .nav-links { display: none; }
+    .nav-cta { display: none; }
+    .nav-hamburger { display: flex; }
     .nav-logo { font-size: 15px; }
     section { padding: 64px 24px; }
     #cta { padding: 64px 24px; }
@@ -518,7 +573,7 @@
   @media (max-width: 520px) {
     .page-hero-headline { font-size: 38px; }
     .sectors-grid { grid-template-columns: 1fr; }
-    .nav-cta { padding: 8px 14px; font-size: 9px; }
+    .nav-cta { display: none; }
   }
   #contact-email { color: inherit; text-decoration: none; }
   #contact-email:hover { color: var(--accent); }
@@ -536,7 +591,19 @@
     <li><a href="index.html#contact">Contact</a></li>
   </ul>
   <a href="index.html#contact" class="nav-cta">By Appointment</a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
+<!-- ─── MOBILE NAV OVERLAY ─── -->
+<div class="nav-mobile-overlay" id="mobileNav">
+  <a href="index.html#advisory" class="nav-mobile-link">Advisory</a>
+  <a href="index.html#process" class="nav-mobile-link">Process</a>
+  <a href="about.html" class="nav-mobile-link">The Team</a>
+  <a href="index.html#contact" class="nav-mobile-link">Contact</a>
+  <a href="index.html#contact" class="nav-mobile-cta nav-mobile-link">By Appointment</a>
+</div>
 
 <!-- ─── PAGE HERO ─── -->
 <div class="page-hero">
@@ -590,7 +657,7 @@
           </div>
           <div class="principal-detail-item">
             <div class="principal-detail-label">Network</div>
-            <div class="principal-detail-value serif">London, Los Angeles &amp; Europe</div>
+            <div class="principal-detail-value serif">Global</div>
           </div>
         </div>
       </div>
@@ -605,15 +672,15 @@
         </div>
         <div class="principal-tags">
           <span class="tag">NASA Artemis</span>
-          <span class="tag">Programme Management</span>
+          <span class="tag">Program Management</span>
           <span class="tag">High-Stakes Advisory</span>
           <span class="tag">Institutional Discretion</span>
         </div>
       </div>
       <div class="principal-right">
         <div class="principal-bio">
-          <p>Chad brings to Huxley &amp; Co. a rare understanding of what it means to operate where the stakes are real and <strong>discretion is non-negotiable</strong>. For several years he has worked at NASA across the Artemis mission, contributing to communications, strategy, and the complex talent and institutional relationships that define one of the most security-conscious organisations in the world. That experience translates directly into how he approaches advisory work: with precision, care, and an understanding of what it takes to earn and keep the trust of people who operate at the highest levels.</p>
-          <p>Managing competing priorities, protecting sensitive information, and maintaining the trust of people operating under extraordinary pressure, these are the conditions in which he has built his career. That experience translates directly into how he approaches advisory work: <strong>with precision, care, and an instinct for what matters most to the people in the room.</strong></p>
+          <p>Chad brings to Huxley &amp; Co. a rare understanding of what it means to operate where the stakes are real and <strong>discretion is non-negotiable</strong>. For several years he has worked at NASA across the Artemis mission, contributing to communications, strategy, and the complex talent and institutional relationships that define one of the most security-conscious organizations in the world.</p>
+          <p>Managing competing priorities, protecting sensitive information, and maintaining the trust of people operating under extraordinary pressure — these are the conditions in which he has built his career. That experience translates directly into how he approaches advisory work: <strong>with precision, care, and an instinct for what matters most to the people in the room.</strong></p>
         </div>
         <div class="principal-detail">
           <div class="principal-detail-item">
@@ -622,7 +689,7 @@
           </div>
           <div class="principal-detail-item">
             <div class="principal-detail-label">Background</div>
-            <div class="principal-detail-value serif">NASA, Government, Programme Management</div>
+            <div class="principal-detail-value serif">NASA, Government, Program Management</div>
           </div>
           <div class="principal-detail-item">
             <div class="principal-detail-label">Network</div>
@@ -694,12 +761,12 @@
       <div class="process-step reveal">
         <span class="step-roman">I</span>
         <h3 class="step-title serif">Introductory Conversation</h3>
-        <p class="step-body">Every engagement begins with a conversation, not a questionnaire. We take the time to understand not just the role, but <strong>the organisation, the culture, and the standard you hold yourself to.</strong> We will ask questions that go beyond the brief. That is intentional.</p>
+        <p class="step-body">Every engagement begins with a conversation, not a questionnaire. We take the time to understand not just the role, but <strong>the organization, the culture, and the standard you hold yourself to.</strong> We will ask questions that go beyond the brief. That is intentional.</p>
       </div>
       <div class="process-step reveal">
         <span class="step-roman">II</span>
         <h3 class="step-title serif">Principal-Led Search</h3>
-        <p class="step-body">We conduct every search personally. <strong>No junior associates. No delegated sourcing.</strong> We draw on a private network built across London and Los Angeles over many years, reaching candidates who are not looking, and who would not respond to anyone else.</p>
+        <p class="step-body">We conduct every search personally. <strong>No junior associates. No delegated sourcing.</strong> We draw on our global network, cultivated across decades of trust-based relationships.</p>
       </div>
       <div class="process-step reveal">
         <span class="step-roman">III</span>
@@ -771,6 +838,22 @@
       });
     }, { threshold: 0, rootMargin: '0px' });
     reveals.forEach(el => observer.observe(el));
+
+    // Hamburger menu
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobileNav');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      mobileNav.classList.toggle('open');
+      document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
+    });
+    document.querySelectorAll('.nav-mobile-link').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        mobileNav.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
 
   });
 </script>
