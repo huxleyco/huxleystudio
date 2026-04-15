@@ -169,17 +169,15 @@
   /* ─── HERO ─── */
   #hero {
     min-height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    align-items: center;
     padding-top: 96px;
+    border-bottom: 1px solid var(--rule);
   }
 
   .hero-left {
-    padding: 80px 48px 80px 48px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border-right: 1px solid var(--rule);
+    padding: 80px 48px;
+    max-width: 900px;
   }
 
   .hero-eyebrow {
@@ -193,11 +191,11 @@
 
   .hero-headline {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(52px, 5.5vw, 80px);
+    font-size: clamp(64px, 8vw, 112px);
     font-weight: 300;
-    line-height: 1.08;
+    line-height: 1.04;
     letter-spacing: -0.01em;
-    margin-bottom: 36px;
+    margin-bottom: 48px;
     opacity: 0;
     animation: fadeUp 0.8s 0.35s forwards;
   }
@@ -207,11 +205,11 @@
   }
 
   .hero-body {
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1.8;
     color: #4a4540;
-    max-width: 420px;
-    margin-bottom: 48px;
+    max-width: 520px;
+    margin-bottom: 56px;
     opacity: 0;
     animation: fadeUp 0.8s 0.5s forwards;
   }
@@ -251,83 +249,6 @@
   .btn-ghost:hover { color: var(--ink); }
   .btn-ghost::after { content: '→'; font-size: 13px; font-family: serif; }
 
-  .hero-right {
-    padding: 80px 48px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-  }
-
-  .hero-stats {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1px;
-    background: var(--rule);
-    border: 1px solid var(--rule);
-    margin-bottom: 48px;
-    opacity: 0;
-    animation: fadeUp 0.8s 0.7s forwards;
-  }
-  .stat-cell {
-    background: var(--warm-white);
-    padding: 32px 28px;
-  }
-  .stat-cell:hover { background: var(--parchment); transition: background 0.2s; }
-  .stat-number {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(24px, 3vw, 42px);
-    font-weight: 300;
-    line-height: 1.1;
-    margin-bottom: 8px;
-    color: var(--ink);
-    white-space: nowrap;
-  }
-  .stat-label { font-size: 11px; color: var(--muted); letter-spacing: 0.05em; line-height: 1.4; }
-
-  .hero-note {
-    opacity: 0;
-    animation: fadeUp 0.8s 0.85s forwards;
-  }
-  .hero-note p {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 17px;
-    font-style: italic;
-    color: var(--muted);
-    line-height: 1.6;
-    border-left: 2px solid var(--accent-light);
-    padding-left: 20px;
-  }
-
-  /* ─── MARQUEE BAND ─── */
-  .marquee-band {
-    border-top: 1px solid var(--rule);
-    border-bottom: 1px solid var(--rule);
-    overflow: hidden;
-    padding: 14px 0;
-    background: var(--parchment);
-  }
-  .marquee-track {
-    display: flex;
-    gap: 0;
-    animation: marquee 28s linear infinite;
-    white-space: nowrap;
-  }
-  .marquee-item {
-    display: inline-flex;
-    align-items: center;
-    gap: 20px;
-    padding: 0 32px;
-    font-size: 10px;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--muted);
-  }
-  .marquee-dot { width: 3px; height: 3px; background: var(--accent-light); border-radius: 50%; }
-
-  @keyframes marquee {
-    from { transform: translateX(0); }
-    to { transform: translateX(-50%); }
-  }
 
   /* ─── SECTION BASE ─── */
   section { padding: 100px 48px; }
@@ -361,11 +282,9 @@
   .services-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1px;
-    background: var(--rule);
+    gap: 0;
     border: 1px solid var(--rule);
     align-items: stretch;
-    grid-auto-rows: 1fr;
   }
 
   .service-card {
@@ -376,7 +295,9 @@
     height: 100%;
     transition: background 0.25s;
     cursor: default;
+    border-right: 1px solid var(--rule);
   }
+  .service-card:last-child { border-right: none; }
   .service-card:hover { background: var(--parchment); }
 
   .service-num {
@@ -392,6 +313,9 @@
     font-weight: 400;
     line-height: 1.2;
     margin-bottom: 20px;
+    min-height: 2.4em;
+    display: flex;
+    align-items: flex-start;
   }
   .service-body {
     font-size: 14px;
@@ -400,11 +324,12 @@
     flex: 1;
   }
   .service-tags {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 8px;
-    margin-top: auto;
+    margin-top: 32px;
     padding-top: 24px;
+    border-top: 1px solid var(--rule);
   }
   .tag {
     font-size: 10px;
@@ -416,42 +341,6 @@
   }
 
 
-  /* ─── SECTOR STRIP ─── */
-  .sector-strip {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 1px;
-    background: var(--rule);
-    border: 1px solid var(--rule);
-    border-top: none;
-    width: 100%;
-  }
-  .sector-strip-cell {
-    background: var(--warm-white);
-    padding: 40px 40px;
-    transition: background 0.25s;
-  }
-  .sector-strip-cell:hover { background: var(--parchment); }
-  .sector-strip-num {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 28px;
-    font-weight: 300;
-    color: var(--accent-light);
-    margin-bottom: 16px;
-    line-height: 1;
-  }
-  .sector-strip-name {
-    font-size: 11px;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--ink);
-    margin-bottom: 10px;
-  }
-  .sector-strip-desc {
-    font-size: 13px;
-    color: var(--muted);
-    line-height: 1.65;
-  }
   /* ─── PROCESS ─── */
   #process {
     background: var(--ink);
@@ -611,35 +500,36 @@
   }
   .team-card {
     background: var(--warm-white);
-    padding: 52px 48px;
-    transition: background 0.25s;
+    padding: 64px 56px;
   }
-  .team-card:hover { background: var(--parchment); }
   .team-role {
     font-size: 10px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: var(--accent);
-    margin-bottom: 12px;
+    margin-bottom: 16px;
   }
   .team-name {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 36px;
+    font-size: 42px;
     font-weight: 300;
-    line-height: 1.1;
-    margin-bottom: 28px;
+    line-height: 1.05;
+    margin-bottom: 36px;
   }
   .team-bio {
-    font-size: 14.5px;
+    font-size: 15px;
     color: #4a4540;
-    line-height: 1.85;
-    margin-bottom: 32px;
+    line-height: 1.9;
+    margin-bottom: 40px;
+    max-width: 520px;
   }
   .team-bio strong { color: var(--ink); font-weight: 400; }
   .team-details {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 8px;
+    padding-top: 32px;
+    border-top: 1px solid var(--rule);
   }
 
   /* ─── CONTACT ─── */
@@ -822,11 +712,9 @@
     #contact { padding: 64px 24px !important; }
 
     /* Hero */
-    #hero { grid-template-columns: 1fr; min-height: auto; padding-top: 80px; }
-    .hero-left { padding: 52px 24px 36px; border-right: none; border-bottom: 1px solid var(--rule); }
-    .hero-right { padding: 36px 24px 52px; }
+    #hero { min-height: auto; padding-top: 80px; }
+    .hero-left { padding: 52px 24px 72px; }
     .hero-headline { font-size: 44px; }
-    .hero-stats { grid-template-columns: 1fr 1fr; }
     .hero-actions { flex-direction: column; align-items: flex-start; gap: 20px; }
 
     /* Sections */
@@ -835,7 +723,6 @@
 
     /* Services */
     .services-grid { grid-template-columns: 1fr; }
-    .sector-strip { grid-template-columns: 1fr 1fr; }
     .service-card { padding: 36px 28px; }
 
     /* Process */
@@ -843,13 +730,9 @@
     .process-coda { flex-direction: column; align-items: flex-start; gap: 28px; }
     .process-step { padding: 40px 28px; }
 
-    /* Proof */
-    .proof-grid { grid-template-columns: 1fr; }
-    .proof-grid-bottom { grid-template-columns: 1fr 1fr; }
-
     /* Team */
     .team-grid { grid-template-columns: 1fr; }
-    .team-card { padding: 40px 28px; }
+    .team-card { padding: 48px 28px; }
 
     /* Contact */
     .contact-inner { grid-template-columns: 1fr; gap: 0; }
@@ -865,9 +748,6 @@
   }
 
   @media (max-width: 520px) {
-    .hero-stats { grid-template-columns: 1fr; }
-    .proof-grid-bottom { grid-template-columns: 1fr; }
-    .sector-strip { grid-template-columns: 1fr; }
     .hero-headline { font-size: 38px; }
     .nav-cta { display: none; }
   }
@@ -912,59 +792,14 @@
       The introduction<br><em>matters.</em>
     </h1>
     <p class="hero-body">
-      Huxley &amp; Co. advises founders, family offices, and private enterprises on the talent and organisational decisions that define them. We operate across both sides of the Atlantic, with the discretion and rigour these engagements demand.
+      Huxley &amp; Co. advises founders, family offices, and private enterprises on the talent and organizational decisions that define them. We operate globally, where standards are highest.
     </p>
     <div class="hero-actions">
       <a href="#contact" class="btn-primary">Request a Conversation</a>
       <a href="#process" class="btn-ghost">How we work</a>
     </div>
   </div>
-  <div class="hero-right">
-    <div class="hero-stats">
-      <div class="stat-cell">
-        <div class="stat-number serif">100%</div>
-        <div class="stat-label">Principal-led. Every search, every time.</div>
-      </div>
-      <div class="stat-cell">
-        <div class="stat-number serif">2</div>
-        <div class="stat-label">Principals. No junior associates. No volume model.</div>
-      </div>
-      <div class="stat-cell">
-        <div class="stat-number serif">Bi-Coastal</div>
-        <div class="stat-label">A private network spanning both sides of the Atlantic.</div>
-      </div>
-      <div class="stat-cell">
-        <div class="stat-number serif">By Appt.</div>
-        <div class="stat-label">We work with a small number of clients at any time.</div>
-      </div>
-    </div>
-    <div class="hero-note">
-      <p>We present a small number of candidates we would stake our own reputation on, each interviewed in depth, thoroughly referenced, and considered against your specific brief.</p>
-    </div>
-  </div>
 </section>
-
-<!-- ─── MARQUEE ─── -->
-<div class="marquee-band" aria-hidden="true">
-  <div class="marquee-track">
-    <span class="marquee-item">Founders<span class="marquee-dot"></span></span>
-    <span class="marquee-item">Principal-Led Search<span class="marquee-dot"></span></span>
-    <span class="marquee-item">Family Offices<span class="marquee-dot"></span></span>
-    <span class="marquee-item">Absolute Discretion<span class="marquee-dot"></span></span>
-    <span class="marquee-item">Creative Studios<span class="marquee-dot"></span></span>
-    <span class="marquee-item">Retained Search<span class="marquee-dot"></span></span>
-    <span class="marquee-item">By Appointment Only<span class="marquee-dot"></span></span>
-    <span class="marquee-item">Transatlantic Network<span class="marquee-dot"></span></span>
-    <span class="marquee-item">Founders<span class="marquee-dot"></span></span>
-    <span class="marquee-item">Principal-Led Search<span class="marquee-dot"></span></span>
-    <span class="marquee-item">Family Offices<span class="marquee-dot"></span></span>
-    <span class="marquee-item">Absolute Discretion<span class="marquee-dot"></span></span>
-    <span class="marquee-item">Creative Studios<span class="marquee-dot"></span></span>
-    <span class="marquee-item">Retained Search<span class="marquee-dot"></span></span>
-    <span class="marquee-item">By Appointment Only<span class="marquee-dot"></span></span>
-    <span class="marquee-item">Transatlantic Network<span class="marquee-dot"></span></span>
-  </div>
-</div>
 
 <!-- ─── ADVISORY ─── -->
 <section id="advisory">
@@ -983,7 +818,7 @@
       <div class="service-card reveal">
         <div class="service-num">01</div>
         <h3 class="service-name serif">Executive Search &amp; Advisory</h3>
-        <p class="service-body">Retained counsel for founders and private offices seeking exceptional talent. We conduct every search personally, drawing on a private network built across both sides of the Atlantic over many years. No junior associates. No process theatre. Every candidate is sourced specifically for you and presented because we believe in them.</p>
+        <p class="service-body">Retained counsel for founders and private offices seeking exceptional talent. We conduct every search personally, drawing on our global network. No junior associates. No process theatre. Every candidate is sourced specifically for you and presented because we believe in them.</p>
         <div class="service-tags">
           <span class="tag">C-Suite</span>
           <span class="tag">Board Advisory</span>
@@ -1010,40 +845,12 @@
         <p class="service-body">For clients who hold themselves to an uncommon standard, the moments that define an occasion matter as much as the people inside them. We source and place the talent behind some of the most exceptional private gatherings and large-scale productions, from event leads and creative directors to the full teams that bring them to life.</p>
         <div class="service-tags">
           <span class="tag">Private Clients</span>
-          <span class="tag">Notable Families</span>
+          <span class="tag">Event Production</span>
           <span class="tag">Production Advisory</span>
-          <span class="tag">Discreet</span>
+          <span class="tag">Creative Talent</span>
         </div>
       </div>
 
-    </div>
-
-    <div class="sector-strip">
-      <div class="sector-strip-cell reveal">
-        <div class="sector-strip-num serif">I.</div>
-        <div class="sector-strip-name">Founders</div>
-        <div class="sector-strip-desc">Seed-stage through to pre-IPO. On both sides of the Atlantic.</div>
-      </div>
-      <div class="sector-strip-cell reveal">
-        <div class="sector-strip-num serif">II.</div>
-        <div class="sector-strip-name">Family Offices</div>
-        <div class="sector-strip-desc">Multi-generational families and single-family offices, managed with absolute confidentiality.</div>
-      </div>
-      <div class="sector-strip-cell reveal">
-        <div class="sector-strip-num serif">III.</div>
-        <div class="sector-strip-name">Creative Studios</div>
-        <div class="sector-strip-desc">Talent advisory for some of the largest productions globally, and the studios behind them.</div>
-      </div>
-      <div class="sector-strip-cell reveal">
-        <div class="sector-strip-num serif">IV.</div>
-        <div class="sector-strip-name">Private Enterprises</div>
-        <div class="sector-strip-desc">Privately held businesses where culture, discretion, and long-term fit matter most.</div>
-      </div>
-      <div class="sector-strip-cell reveal">
-        <div class="sector-strip-num serif">V.</div>
-        <div class="sector-strip-name">Private Events</div>
-        <div class="sector-strip-desc">Notable families and private clients requiring talent and production advisory.</div>
-      </div>
     </div>
   </div>
 </section>
@@ -1066,12 +873,12 @@
       <div class="process-step reveal">
         <span class="step-roman">I</span>
         <h3 class="step-title serif">Introductory Conversation</h3>
-        <p class="step-body">Every engagement begins with a conversation, not a questionnaire. We take the time to understand not just the role, but <strong>the organisation, the culture, and the standard you hold yourself to.</strong> We will ask questions that go beyond the brief. That is intentional.</p>
+        <p class="step-body">Every engagement begins with a conversation, not a questionnaire. We take the time to understand not just the role, but <strong>the organization, the culture, and the standard you hold yourself to.</strong> We will ask questions that go beyond the brief. That is intentional.</p>
       </div>
       <div class="process-step reveal">
         <span class="step-roman">II</span>
         <h3 class="step-title serif">Principal-Led Search</h3>
-        <p class="step-body">We conduct every search personally. <strong>No junior associates. No delegated sourcing.</strong> We draw on a private network built across London and Los Angeles over many years | reaching candidates who are not looking, and who would not respond to anyone else.</p>
+        <p class="step-body">We conduct every search personally. <strong>No junior associates. No delegated sourcing.</strong> We draw on our global network, cultivated across decades of trust-based relationships.</p>
       </div>
       <div class="process-step reveal">
         <span class="step-roman">III</span>
@@ -1122,11 +929,11 @@
         <div class="team-role">Principal</div>
         <h3 class="team-name serif">Chad Siwik</h3>
         <p class="team-bio">
-          Chad brings to Huxley &amp; Co. a rare understanding of what it means to operate where the stakes are real and <strong>discretion is non-negotiable</strong>. For several years he has worked at NASA across the Artemis mission, contributing to communications, strategy, and the complex talent and institutional relationships that define one of the most security-conscious organisations in the world. That experience translates directly into how he approaches advisory work: with precision, care, and an understanding of what it takes to earn and keep the trust of people who operate at the highest levels.
+          Chad brings to Huxley &amp; Co. a rare understanding of what it means to operate where the stakes are real and <strong>discretion is non-negotiable</strong>. For several years he has worked at NASA across the Artemis mission, contributing to communications, strategy, and the complex talent and institutional relationships that define one of the most security-conscious organizations in the world. That experience translates directly into how he approaches advisory work: with precision, care, and an understanding of what it takes to earn and keep the trust of people who operate at the highest levels.
         </p>
         <div class="team-details">
           <span class="tag">NASA Artemis</span>
-          <span class="tag">Programme Management</span>
+          <span class="tag">Program Management</span>
           <span class="tag">High-Stakes Advisory</span>
           <span class="tag">Institutional Discretion</span>
         </div>
@@ -1165,18 +972,18 @@
       <div id="form-success" style="display:none; padding: 48px 40px; border: 1px solid rgba(255,255,255,0.1); height:100%; box-sizing:border-box;">
         <span class="rule" style="background:var(--accent-light); margin-bottom:28px;"></span>
         <p class="serif" style="font-size:26px;font-weight:300;color:var(--warm-white);line-height:1.4;margin-bottom:16px;">Thank you for reaching out.</p>
-        <p style="font-size:14px;color:rgba(250,249,246,0.55);line-height:1.8;">We will be in touch shortly. All enquiries are treated with absolute discretion.</p>
+        <p style="font-size:14px;color:rgba(250,249,246,0.55);line-height:1.8;">We will be in touch shortly. All inquiries are treated with absolute discretion.</p>
       </div>
 
       <form id="contact-form" class="contact-form" action="https://formspree.io/f/mzdkgqbg" method="POST">
         <div class="form-row">
           <div class="form-field">
             <label for="fname">First Name</label>
-            <input type="text" id="fname" name="first_name" placeholder="Laura" required>
+            <input type="text" id="fname" name="first_name" placeholder="First name" required>
           </div>
           <div class="form-field">
             <label for="lname">Last Name</label>
-            <input type="text" id="lname" name="last_name" placeholder="Huxley" required>
+            <input type="text" id="lname" name="last_name" placeholder="Last name" required>
           </div>
         </div>
         <div class="form-field">
@@ -1188,13 +995,13 @@
           <input type="text" id="org" name="organisation" placeholder="Company or family office">
         </div>
         <div class="form-field">
-          <label for="service">Nature of Enquiry</label>
-          <select id="service" name="enquiry_type">
+          <label for="service">Nature of Inquiry</label>
+          <select id="service" name="inquiry_type">
             <option value="" disabled selected>Select one</option>
             <option>Executive Search &amp; Advisory</option>
             <option>Family Office Advisory</option>
             <option>Private Events &amp; Principal Production</option>
-            <option>General Enquiry</option>
+            <option>General Inquiry</option>
           </select>
         </div>
         <div class="form-field">
@@ -1204,7 +1011,7 @@
         <div class="form-submit">
           <span class="form-note" id="form-error" style="color:rgba(220,100,100,0.8);display:none;">Something went wrong. Please try again or email us directly.</span>
           <span class="form-note" id="form-note-default">Treated with absolute discretion.</span>
-          <button type="submit" class="btn-submit" id="form-btn">Submit Enquiry</button>
+          <button type="submit" class="btn-submit" id="form-btn">Submit Inquiry</button>
         </div>
       </form>
     </div>
@@ -1264,7 +1071,7 @@
             throw new Error('error');
           }
         } catch (err) {
-          btn.textContent = 'Submit Enquiry';
+          btn.textContent = 'Submit Inquiry';
           btn.disabled = false;
           defaultNote.style.display = 'none';
           errorMsg.style.display = 'inline';
