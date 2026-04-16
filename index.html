@@ -178,38 +178,36 @@ nav a:hover { color: var(--forest); }
 
 /* SERVICES */
 .services { background: var(--off); border-bottom: 0.5px solid var(--border); }
-.sg {
-  display: grid; grid-template-columns: 1fr 1fr 1fr;
-  margin: 0 72px;
-  gap: 52px;
-}
-.sc { padding: 72px 0; }
-.sc-num { font-family: 'Jost', sans-serif; font-size: 9px; font-weight: 300; letter-spacing: 0.28em; color: var(--forest); text-transform: uppercase; margin-bottom: 22px; }
+.sg { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 52px; }
+.sc { padding: 48px 0 64px; }
+.sc-num { font-family: 'Jost', sans-serif; font-size: 9px; font-weight: 300; letter-spacing: 0.28em; color: var(--forest); text-transform: uppercase; margin-bottom: 20px; }
 .sc-title { font-size: 21px; font-weight: 400; color: var(--ink); line-height: 1.25; margin-bottom: 16px; }
 .sc-title em { font-style: italic; color: var(--ink); }
 .sc-body { font-size: 16px; font-weight: 400; color: var(--body); line-height: 1.85; }
+
+.services-sh { display: flex; flex-direction: column; gap: 10px; border-bottom: 0.5px solid var(--border); margin-bottom: 0; padding: 52px 0 32px; }
 
 /* QUOTE */
 .quote {
   background: var(--off);
   border-top: 0.5px solid var(--border);
   border-bottom: 0.5px solid var(--border);
-  padding: 120px 72px;
+  padding: 88px 72px;
   display: flex; flex-direction: column; align-items: center; text-align: center;
 }
-.q-r { width: 32px; height: 0.5px; background: var(--forest); opacity: 0.35; margin-bottom: 52px; }
+.q-r { width: 32px; height: 0.5px; background: var(--forest); opacity: 0.35; margin-bottom: 44px; }
 .q-t {
   font-family: 'Libre Baskerville', serif;
   font-size: clamp(20px, 2.5vw, 34px);
   font-weight: 400; font-style: italic;
-  color: var(--ink); max-width: 700px; line-height: 1.6; margin-bottom: 44px;
+  color: var(--ink); max-width: 700px; line-height: 1.6; margin-bottom: 36px;
 }
 .q-a { font-family: 'Jost', sans-serif; font-size: 9px; font-weight: 300; letter-spacing: 0.28em; color: var(--forest); text-transform: uppercase; display: flex; align-items: center; gap: 16px; }
 .q-a::before, .q-a::after { content: ''; display: block; width: 22px; height: 0.5px; background: var(--border); }
 
 /* PROCESS */
-.process { background: var(--off2); padding: 0 72px 88px; border-bottom: 0.5px solid var(--border); }
-.sh { display: flex; align-items: baseline; justify-content: space-between; padding: 68px 0 52px; border-bottom: 0.5px solid var(--border); margin-bottom: 52px; }
+.process { background: var(--off2); padding: 0 72px 72px; border-bottom: 0.5px solid var(--border); }
+.sh { display: flex; flex-direction: column; gap: 10px; padding: 52px 0 32px; border-bottom: 0.5px solid var(--border); margin-bottom: 48px; }
 .sl { font-family: 'Jost', sans-serif; font-size: 9px; font-weight: 300; letter-spacing: 0.28em; color: var(--forest); text-transform: uppercase; }
 .st { font-size: clamp(24px, 2.8vw, 36px); font-weight: 400; color: var(--ink); line-height: 1.15; }
 .st em { font-style: italic; color: var(--forest); }
@@ -220,7 +218,7 @@ nav a:hover { color: var(--forest); }
 .pi-b { font-size: 15px; color: var(--body); line-height: 1.9; }
 
 /* TEAM */
-.team { background: var(--white); padding: 88px 72px; border-bottom: 0.5px solid var(--border); }
+.team { background: var(--white); padding: 0 72px 72px; border-bottom: 0.5px solid var(--border); }
 .tg { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; }
 .tc { }
 .tc-r { font-family: 'Jost', sans-serif; font-size: 9px; font-weight: 300; letter-spacing: 0.28em; color: var(--forest); text-transform: uppercase; margin-bottom: 12px; }
@@ -285,13 +283,15 @@ footer { background: var(--off); border-top: 0.5px solid var(--border); padding:
 </section>
 
 <div class="services" id="advisory">
-  <div class="sh" style="border-bottom:0.5px solid var(--border);margin-bottom:0;padding:68px 72px 52px;">
-    <span class="sl">What We Do</span><h2 class="st">Advisory & <em>Search</em></h2>
-  </div>
-  <div class="sg">
+  <div style="margin: 0 72px;">
+    <div class="sh services-sh">
+      <span class="sl">What We Do</span><h2 class="st">Advisory & <em>Search</em></h2>
+    </div>
+    <div class="sg">
     <div class="sc"><p class="sc-num">01</p><h3 class="sc-title">Executive Search<br>& <em>Advisory</em></h3><p class="sc-body">Retained counsel for founders and private offices seeking exceptional talent. Every search conducted personally. No junior associates. No process theatre.</p></div>
     <div class="sc"><p class="sc-num">02</p><h3 class="sc-title">Family Office<br>& <em>Private Clients</em></h3><p class="sc-body">For multi-generational families who require depth and absolute confidentiality. These relationships are built slowly and held for the long term.</p></div>
     <div class="sc"><p class="sc-num">03</p><h3 class="sc-title">Principal<br><em>Production</em></h3><p class="sc-body">For clients who hold themselves to an uncommon standard. We place the talent behind exceptional private gatherings and large-scale productions.</p></div>
+  </div>
   </div>
 </div>
 
@@ -316,13 +316,13 @@ footer { background: var(--off); border-top: 0.5px solid var(--border); padding:
   </div>
   <div class="tg">
     <div class="tc"><p class="tc-r">Founder</p><h3 class="tc-n">Laura Huxley</h3><div class="tc-rule"></div><p class="tc-b">Laura got her start in London across PR, television, arts, and live events before moving into talent advisory in Los Angeles and Europe. She went on to embed with one of the world's leading multidisciplinary creative studios, advising on the people behind some of the largest productions globally. She now works with principals, family offices, and founders who hold themselves to an uncommon standard, on the belief that understanding people is the only honest basis for placing them.</p><div class="tc-tags"><span class="tc-tag">London → Los Angeles</span><span class="tc-tag">Psychology</span><span class="tc-tag">Creative Studios</span><span class="tc-tag">Family Office</span></div></div>
-    <div class="tc"><p class="tc-r">Principal</p><h3 class="tc-n">Chad Siwik</h3><div class="tc-rule"></div><p class="tc-b">Chad has spent several years at NASA contributing to communications and strategy across the Artemis mission. Working inside one of the most consequential and security-conscious institutions in the world gave him a rare fluency in discretion, consequential decisions, and the kind of trust that can only be earned over time. He brings that standard to every search and advisory engagement at Huxley & Co.</p><div class="tc-tags"><span class="tc-tag">NASA Artemis</span><span class="tc-tag">Strategy & Communications</span><span class="tc-tag">Program Management</span><span class="tc-tag">Institutional Advisory</span></div></div>
+    <div class="tc"><p class="tc-r">Principal</p><h3 class="tc-n">Chad Siwik</h3><div class="tc-rule"></div><p class="tc-b">Chad has spent several years at NASA contributing to communications and strategy across the Artemis mission. Working inside one of the most consequential and security-conscious institutions in the world gave him a rare fluency in discretion, precision, and the kind of trust that can only be earned over time. He brings that standard to every search and advisory engagement at Huxley & Co.</p><div class="tc-tags"><span class="tc-tag">NASA Artemis</span><span class="tc-tag">Strategy & Communications</span><span class="tc-tag">Program Management</span><span class="tc-tag">Institutional Advisory</span></div></div>
   </div>
 </section>
 
 <section class="contact" id="contact">
   <div>
-    <h2 class="ch2">Every engagement begins<br>with a <em>conversation.</em></h2>
+    <h2 class="ch2">Every engagement begins<br>with a <em>conversation</em>.</h2>
     <p class="cb">We accept a limited number of new engagements each year. If you are considering a search or advisory relationship, we would welcome an introductory call, without obligation, and in complete confidence.</p>
     <div class="cds">
       <div class="cd"><span class="cd-l">Email</span><span class="cd-v"><a href="mailto:hello@thehuxleycompany.com" style="color:inherit;text-decoration:none;">hello@thehuxleycompany.com</a></span></div>
