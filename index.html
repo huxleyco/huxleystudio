@@ -3,7 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Huxley & Co.</title>
+<title>Huxley & Co. | Executive Search & Private Advisory</title>
+<meta name="description" content="Huxley & Co. is a boutique executive search and private advisory firm serving founders, family offices, and principals. Beverly Hills and London.">
+<meta property="og:title" content="Huxley & Co. | Executive Search & Private Advisory">
+<meta property="og:description" content="Retained counsel for founders, family offices, and principals who hold themselves to an uncommon standard. We operate globally, where standards are highest.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.thehuxleycompany.com">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;1,400&family=Jost:wght@200;300&family=Playfair+Display:wght@400&display=swap" rel="stylesheet">
 <style>
@@ -186,7 +191,8 @@ nav a:hover { color: var(--forest); }
 
 /* QUOTE */
 .quote {
-  background: var(--white);
+  background: var(--off);
+  border-top: 0.5px solid var(--border);
   border-bottom: 0.5px solid var(--border);
   padding: 120px 72px;
   display: flex; flex-direction: column; align-items: center; text-align: center;
@@ -240,7 +246,8 @@ nav a:hover { color: var(--forest); }
 .field input, .field select, .field textarea { background: transparent; border: none; border-bottom: 0.5px solid rgba(255,255,255,0.12); color: #f2ede4; font-family: 'Libre Baskerville', serif; font-size: 17px; padding: 9px 0; outline: none; transition: border-color 0.2s; width: 100%; }
 .field input:focus, .field select:focus, .field textarea:focus { border-bottom-color: rgba(255,255,255,0.4); }
 .field textarea { height: 72px; resize: none; }
-.field select { appearance: none; cursor: pointer; }
+.field select { appearance: none; cursor: pointer; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23a8a5a0'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 4px center; padding-right: 20px; }
+.form-success { display: none; font-family: 'Libre Baskerville', serif; font-size: 16px; color: rgba(242,237,228,0.6); line-height: 1.8; padding: 40px 0; }
 .fsub { font-family: 'Jost', sans-serif; font-size: 9px; font-weight: 300; letter-spacing: 0.22em; text-transform: uppercase; color: var(--ink); background: #f2ede4; border: none; padding: 14px 34px; cursor: pointer; align-self: flex-start; margin-top: 4px; transition: background 0.2s; }
 .fsub:hover { background: white; }
 
@@ -269,7 +276,7 @@ footer { background: var(--off); border-top: 0.5px solid var(--border); padding:
 <section class="hero">
   <p class="hero-eyebrow">Beverly Hills · London</p>
   <h1 class="hero-h1">The introduction<br><em>matters.</em></h1>
-  <p class="hero-sub">Advisory for founders, family offices, and private enterprises who hold themselves to an uncommon standard.</p>
+  <p class="hero-sub">Advisory for founders and family offices who hold themselves to an uncommon standard.</p>
   <div class="hero-divider"></div>
   <div class="hero-btns">
     <a href="#contact" class="btn-forest">Request a Conversation</a>
@@ -278,6 +285,9 @@ footer { background: var(--off); border-top: 0.5px solid var(--border); padding:
 </section>
 
 <div class="services" id="advisory">
+  <div class="sh" style="border-bottom:0.5px solid var(--border);margin-bottom:0;padding:68px 72px 52px;">
+    <span class="sl">What We Do</span><h2 class="st">Advisory & <em>Search</em></h2>
+  </div>
   <div class="sg">
     <div class="sc"><p class="sc-num">01</p><h3 class="sc-title">Executive Search<br>& <em>Advisory</em></h3><p class="sc-body">Retained counsel for founders and private offices seeking exceptional talent. Every search conducted personally. No junior associates. No process theatre.</p></div>
     <div class="sc"><p class="sc-num">02</p><h3 class="sc-title">Family Office<br>& <em>Private Clients</em></h3><p class="sc-body">For multi-generational families who require depth and absolute confidentiality. These relationships are built slowly and held for the long term.</p></div>
@@ -313,7 +323,7 @@ footer { background: var(--off); border-top: 0.5px solid var(--border); padding:
 <section class="contact" id="contact">
   <div>
     <h2 class="ch2">Every engagement begins<br>with a <em>conversation.</em></h2>
-    <p class="cb">We accept a limited number of new engagements each year. If you are considering a search or advisory relationship, we would welcome an introductory call — without obligation, and in complete confidence.</p>
+    <p class="cb">We accept a limited number of new engagements each year. If you are considering a search or advisory relationship, we would welcome an introductory call, without obligation, and in complete confidence.</p>
     <div class="cds">
       <div class="cd"><span class="cd-l">Email</span><span class="cd-v"><a href="mailto:hello@thehuxleycompany.com" style="color:inherit;text-decoration:none;">hello@thehuxleycompany.com</a></span></div>
       <div class="cd"><span class="cd-l">Telephone</span><span class="cd-v">(424) 253-1320</span></div>
@@ -326,14 +336,31 @@ footer { background: var(--off); border-top: 0.5px solid var(--border); padding:
     <div class="field"><label>Organization</label><input type="text"></div>
     <div class="field"><label>Nature of Inquiry</label><select><option value="">Select</option><option>Executive Search & Advisory</option><option>Family Office Advisory</option><option>Private Events & Principal Production</option><option>General Inquiry</option></select></div>
     <div class="field"><label>Brief</label><textarea></textarea></div>
-    <button class="fsub">Submit Inquiry</button>
+    <button class="fsub" id="submit-btn">Submit Inquiry</button>
+    <p class="form-success" id="form-success">Thank you. We will be in touch shortly. All inquiries are treated with absolute discretion.</p>
   </div>
 </section>
+
+<script>
+  document.getElementById('submit-btn').addEventListener('click', function(e) {
+    e.preventDefault();
+    const form = this.closest('.form');
+    const inputs = form.querySelectorAll('input, select, textarea');
+    let valid = true;
+    inputs.forEach(function(input) {
+      if (input.hasAttribute('type') && input.type === 'email' && input.value && !/\S+@\S+\.\S+/.test(input.value)) valid = false;
+    });
+    if (valid) {
+      form.style.display = 'none';
+      document.getElementById('form-success').style.display = 'block';
+    }
+  });
+</script>
 
 <footer>
   <span class="fl">Huxley & Co.</span>
   <span class="ft">We operate where reputation is everything.</span>
-  <ul class="fls"><li><a href="#">LinkedIn</a></li><li><a href="#">Privacy</a></li><li><a href="#">Terms</a></li></ul>
+  <ul class="fls"><li><a href="https://www.linkedin.com/company/huxley-co" target="_blank" rel="noopener">LinkedIn</a></li><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li></ul>
 </footer>
 
 </body>
