@@ -1,226 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy — Huxley &amp; Co.</title>
-  <meta name="description" content="Privacy policy for Huxley &amp; Co. We are committed to protecting the privacy of those who engage with us.">
-  <meta property="og:title" content="Privacy Policy — Huxley &amp; Co.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://thehuxleycompany.com/privacy.html">
-  <link rel="canonical" href="https://thehuxleycompany.com/privacy.html">
-  <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy | Huxley & Co.</title>
+<meta name="description" content="Privacy Policy for Huxley & Co., boutique executive search and private advisory.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;1,400&family=Jost:wght@200;300&family=Playfair+Display:wght@400&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --white: #ffffff; --off: #f6f4f0; --off2: #eeebe4;
+  --border: #e0ddd6; --ink: #1a1917; --forest: #2d5c47;
+  --body: #4a4742; --muted: #7a7772; --faint: #a8a5a0;
+}
+html { font-size: 16px; }
+body { background: var(--white); color: var(--ink); font-family: 'Libre Baskerville', Georgia, serif; -webkit-font-smoothing: antialiased; }
 
-    :root {
-      --cream: #F5F0E8;
-      --black: #1A1A18;
-      --gold: #9A8660;
-      --body-text: #5A4E3A;
-      --warm-grey: #8A7A5A;
-      --font-serif: 'Cormorant Garamond', Georgia, serif;
-      --font-sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    }
+header {
+  display: flex; flex-direction: column; align-items: center;
+  gap: 14px; padding: 28px 0 20px;
+  border-bottom: 0.5px solid var(--border);
+  background: var(--white);
+}
+.logo { font-family: 'Playfair Display', serif; font-weight: 400; font-size: 20px; letter-spacing: 0.22em; color: var(--ink); text-decoration: none; }
+.logo-sub { font-family: 'Jost', sans-serif; font-size: 9px; font-weight: 300; letter-spacing: 0.32em; color: var(--faint); text-transform: uppercase; }
+.back { font-family: 'Jost', sans-serif; font-size: 9px; font-weight: 300; letter-spacing: 0.2em; color: var(--muted); text-decoration: none; text-transform: uppercase; display: flex; align-items: center; gap: 10px; transition: color 0.2s; }
+.back:hover { color: var(--forest); }
+.back::before { content: ''; display: block; width: 24px; height: 0.5px; background: currentColor; }
 
-    html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; scroll-behavior: smooth; }
-    body { background: var(--cream); color: var(--black); font-family: var(--font-sans); overflow-x: hidden; }
+.page-header { background: var(--off); border-bottom: 0.5px solid var(--border); padding: 80px 72px 72px; }
+.page-tag { font-family: 'Jost', sans-serif; font-size: 9px; font-weight: 300; letter-spacing: 0.28em; color: var(--forest); text-transform: uppercase; margin-bottom: 24px; }
+.page-title { font-family: 'Libre Baskerville', serif; font-size: clamp(28px, 3.5vw, 44px); font-weight: 400; color: var(--ink); line-height: 1.15; margin-bottom: 16px; }
+.page-date { font-family: 'Jost', sans-serif; font-size: 9px; font-weight: 300; letter-spacing: 0.2em; color: var(--faint); text-transform: uppercase; }
 
-    /* NAV */
-    nav {
-      display: flex; justify-content: space-between; align-items: center;
-      padding: 32px 64px; position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      background: var(--cream); transition: padding 0.4s ease, border-color 0.4s ease;
-      border-bottom: 0.5px solid transparent;
-    }
-    nav.scrolled { padding: 20px 64px; border-bottom-color: rgba(26,26,24,0.06); }
-    .logo { display: flex; align-items: baseline; gap: 7px; text-decoration: none; }
-    .logo-main { font-family: var(--font-serif); font-size: 21px; font-weight: 500; letter-spacing: 0.14em; color: var(--black); text-transform: uppercase; }
-    .logo-accent { font-family: var(--font-serif); font-size: 12px; font-style: italic; color: var(--gold); letter-spacing: 0.04em; }
-    .nav-links { display: flex; gap: 44px; list-style: none; }
-    .nav-links a { font-size: 8.5px; letter-spacing: 0.4em; color: rgba(26,26,24,0.35); text-decoration: none; text-transform: uppercase; transition: color 0.25s ease; }
-    .nav-links a:hover { color: var(--black); }
-    .nav-links a:focus-visible { outline: 1px solid var(--gold); outline-offset: 4px; }
-    .nav-toggle { display: none; flex-direction: column; gap: 6px; cursor: pointer; padding: 4px; background: none; border: none; }
-    .nav-toggle:focus-visible { outline: 1px solid var(--gold); outline-offset: 4px; }
-    .nav-toggle span { display: block; width: 20px; height: 0.5px; background: var(--black); }
+.content { max-width: 720px; margin: 0 auto; padding: 72px 72px 96px; }
+.content h2 { font-family: 'Libre Baskerville', serif; font-size: 18px; font-weight: 400; color: var(--ink); margin: 48px 0 16px; line-height: 1.3; }
+.content h2:first-child { margin-top: 0; }
+.content p { font-size: 16px; color: var(--body); line-height: 1.9; margin-bottom: 18px; }
+.content a { color: var(--forest); text-decoration: none; border-bottom: 0.5px solid rgba(45,92,71,0.3); }
+.content a:hover { border-bottom-color: var(--forest); }
+.content ul { margin: 0 0 18px 0; padding-left: 20px; }
+.content ul li { font-size: 16px; color: var(--body); line-height: 1.9; margin-bottom: 8px; }
 
-    /* PAGE */
-    .page { padding: 152px 64px 120px; max-width: 780px; }
-
-    .page-label { font-size: 8.5px; letter-spacing: 0.4em; color: var(--gold); text-transform: uppercase; margin-bottom: 40px; opacity: 0.8; }
-
-    .page-title { font-family: var(--font-serif); font-size: clamp(40px, 5vw, 64px); font-weight: 300; line-height: 1.0; letter-spacing: -0.02em; margin-bottom: 16px; }
-
-    .page-date { font-size: 8.5px; letter-spacing: 0.3em; color: rgba(26,26,24,0.35); text-transform: uppercase; margin-bottom: 72px; }
-
-    .policy-section { margin-bottom: 52px; }
-
-    .policy-section h2 { font-size: 8.5px; letter-spacing: 0.4em; color: var(--black); text-transform: uppercase; margin-bottom: 20px; }
-
-    .policy-section p { font-family: var(--font-serif); font-size: 17px; font-weight: 300; line-height: 1.8; color: var(--body-text); margin-bottom: 16px; }
-
-    .policy-section p:last-child { margin-bottom: 0; }
-
-    .policy-section a { color: var(--body-text); border-bottom: 0.5px solid rgba(154,134,96,0.4); text-decoration: none; transition: color 0.2s ease, border-color 0.2s ease; }
-    .policy-section a:hover { color: var(--black); border-color: var(--gold); }
-
-    /* FOOTER */
-    footer { background: var(--black); border-top: 0.5px solid rgba(26,26,24,0.15); padding: 28px 64px; display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 40px; }
-    .footer-logo { display: flex; align-items: baseline; gap: 6px; text-decoration: none; }
-    .footer-logo:focus-visible { outline: 1px solid var(--gold); outline-offset: 4px; }
-    .footer-logo-main { font-family: var(--font-serif); font-size: 14px; font-weight: 500; letter-spacing: 0.14em; color: rgba(245,240,232,0.55); text-transform: uppercase; }
-    .footer-logo-accent { font-family: var(--font-serif); font-size: 9px; font-style: italic; color: var(--gold); opacity: 0.8; }
-    .footer-tagline { font-family: var(--font-serif); font-size: 12px; font-weight: 300; font-style: italic; color: rgba(245,240,232,0.35); text-align: center; }
-    .footer-links { display: flex; gap: 24px; align-items: center; justify-content: flex-end; list-style: none; }
-    .footer-links a { font-size: 7.5px; letter-spacing: 0.24em; color: rgba(245,240,232,0.4); text-decoration: none; text-transform: uppercase; transition: color 0.25s ease; }
-    .footer-links a:hover { color: rgba(245,240,232,0.75); }
-    .footer-links a:focus-visible { outline: 1px solid var(--gold); outline-offset: 4px; }
-    .footer-copy { font-size: 7.5px; letter-spacing: 0.2em; color: rgba(245,240,232,0.28); text-transform: uppercase; }
-
-    /* MOBILE MENU */
-    .mobile-menu { display: none; position: fixed; inset: 0; background: var(--black); z-index: 200; flex-direction: column; justify-content: center; align-items: center; gap: 44px; }
-    .mobile-menu.open { display: flex; }
-    .mobile-menu a { font-family: var(--font-serif); font-size: 28px; font-weight: 300; color: rgba(245,240,232,0.45); text-decoration: none; letter-spacing: 0.06em; transition: color 0.25s ease; }
-    .mobile-menu a:hover { color: rgba(245,240,232,0.9); }
-    .mobile-close { position: absolute; top: 32px; right: 64px; font-size: 8.5px; letter-spacing: 0.32em; color: rgba(245,240,232,0.3); text-transform: uppercase; cursor: pointer; font-family: var(--font-sans); background: none; border: none; transition: color 0.25s ease; }
-    .mobile-close:hover { color: rgba(245,240,232,0.7); }
-
-    /* RESPONSIVE */
-    @media (max-width: 960px) {
-      nav, nav.scrolled { padding: 24px 40px; }
-      .nav-links { display: none; }
-      .nav-toggle { display: flex; }
-      .page { padding: 120px 40px 96px; }
-      footer { padding: 24px 40px; grid-template-columns: 1fr; gap: 14px; text-align: center; }
-      .footer-logo { justify-content: center; }
-      .footer-links { justify-content: center; }
-      .mobile-close { right: 40px; }
-    }
-
-    @media (max-width: 560px) {
-      nav, nav.scrolled { padding: 20px 28px; }
-      .logo-main { font-size: 18px; }
-      .page { padding: 104px 28px 80px; }
-      footer { padding: 18px 28px; }
-      .mobile-close { right: 28px; top: 20px; }
-    }
-  </style>
+footer { background: var(--off); border-top: 0.5px solid var(--border); padding: 28px 72px; display: flex; align-items: center; justify-content: space-between; }
+.fl { font-family: 'Playfair Display', serif; font-size: 13px; color: var(--faint); }
+.ft { font-size: 13px; font-style: italic; color: var(--faint); }
+.fls { display: flex; gap: 28px; list-style: none; }
+.fls a { font-family: 'Jost', sans-serif; font-size: 9px; font-weight: 300; letter-spacing: 0.18em; color: var(--faint); text-decoration: none; text-transform: uppercase; transition: color 0.2s; }
+.fls a:hover { color: var(--forest); }
+</style>
 </head>
 <body>
 
-  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Navigation menu">
-    <button class="mobile-close" onclick="toggleMenu()" aria-label="Close menu">CLOSE</button>
-    <a href="index.html" onclick="toggleMenu()">Overview</a>
-    <a href="index.html#advisory" onclick="toggleMenu()">Advisory</a>
-    <a href="about.html" onclick="toggleMenu()">Team</a>
-    <a href="index.html#contact" onclick="toggleMenu()">Contact</a>
-  </div>
+<header>
+  <a href="huxley-B.html" class="logo">Huxley & Co.</a>
+  <span class="logo-sub">Executive Search & Private Advisory</span>
+  <a href="huxley-B.html" class="back">Back to site</a>
+</header>
 
-  <nav id="mainNav" role="navigation" aria-label="Main navigation">
-    <a href="index.html" class="logo" aria-label="Huxley &amp; Co. — Home">
-      <span class="logo-main">Huxley</span>
-      <span class="logo-accent">& co.</span>
-    </a>
-    <ul class="nav-links" role="list">
-      <li><a href="index.html">OVERVIEW</a></li>
-      <li><a href="index.html#advisory">ADVISORY</a></li>
-      <li><a href="about.html">TEAM</a></li>
-      <li><a href="index.html#contact">CONTACT</a></li>
-    </ul>
-    <button class="nav-toggle" onclick="toggleMenu()" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu">
-      <span></span>
-      <span></span>
-    </button>
-  </nav>
+<div class="page-header">
+  <p class="page-tag">Legal</p>
+  <h1 class="page-title">Privacy Policy</h1>
+  <p class="page-date">Last updated: April 2026</p>
+</div>
 
-  <main class="page" role="main">
-    <p class="page-label">Legal</p>
-    <h1 class="page-title">Privacy Policy</h1>
-    <p class="page-date">Last updated: March 2026</p>
+<div class="content">
 
-    <div class="policy-section">
-      <p>Huxley &amp; Co. is committed to protecting the privacy of those who engage with us. This policy outlines how we collect, use, and safeguard any information provided through this website or in connection with our advisory services.</p>
-    </div>
+  <h2>Who we are</h2>
+  <p>Huxley & Co. ("we," "us," or "our") is a boutique executive search and private advisory firm. Our principal place of business is 9171 Wilshire Blvd, Suite 500, Beverly Hills, CA 90210. We can be reached at <a href="mailto:hello@thehuxleycompany.com">hello@thehuxleycompany.com</a>.</p>
 
-    <div class="policy-section">
-      <h2>Information We Collect</h2>
-      <p>We may collect personal information that you voluntarily provide when contacting us, including your name, email address, phone number, and any other details you choose to share. We do not collect sensitive personal data unless required for a specific engagement and with your explicit consent.</p>
-      <p>We may also collect non-personal information automatically through standard website analytics, including browser type, pages visited, and time spent on the site.</p>
-    </div>
+  <h2>Information we collect</h2>
+  <p>We collect information you voluntarily provide to us through our website contact form, including:</p>
+  <ul>
+    <li>First and last name</li>
+    <li>Email address</li>
+    <li>Organization name</li>
+    <li>Nature of inquiry and any brief you choose to share</li>
+  </ul>
+  <p>We do not use cookies for tracking or advertising purposes. We do not run analytics software that collects personal data without your knowledge.</p>
 
-    <div class="policy-section">
-      <h2>How We Use Your Information</h2>
-      <p>Information you provide is used solely to respond to your inquiry, conduct our advisory work, and maintain the relationship between us. We do not sell, rent, or share your personal information with third parties for marketing purposes under any circumstances.</p>
-      <p>All client and candidate information is handled with the highest degree of discretion. Confidentiality is not a policy. It is the foundation of how we operate.</p>
-    </div>
+  <h2>How we use your information</h2>
+  <p>Information you submit is used solely to respond to your inquiry and, where relevant, to conduct the search or advisory engagement you have requested. We do not sell, rent, trade, or otherwise share your personal information with any third party, except as required by law or as strictly necessary to fulfill an engagement (for example, with a candidate you have asked us to evaluate).</p>
+  <p>All inquiries and engagement details are treated with absolute discretion. This is not a legal obligation we discharge reluctantly — it is fundamental to how we operate.</p>
 
-    <div class="policy-section">
-      <h2>Confidentiality</h2>
-      <p>All engagements are conducted under formal confidentiality agreements as standard. This applies to our clients, the individuals we work with, and any third parties involved in an engagement. No information relating to a search, placement, or advisory matter is shared without the explicit consent of all parties concerned.</p>
-      <p>We take the trust placed in us seriously. Every person who engages with Huxley &amp; Co. can expect their involvement to remain private.</p>
-    </div>
+  <h2>Data retention</h2>
+  <p>We retain your contact information and correspondence for as long as is necessary to manage our relationship with you, or as required by applicable law. If you would like us to delete your information, please contact us at <a href="mailto:hello@thehuxleycompany.com">hello@thehuxleycompany.com</a> and we will do so promptly.</p>
 
-    <div class="policy-section">
-      <h2>Data Retention</h2>
-      <p>We retain personal information only for as long as necessary to fulfill the purpose for which it was collected, or as required by applicable law. You may request the deletion of your information at any time by contacting us directly.</p>
-    </div>
+  <h2>Your rights</h2>
+  <p>Depending on your jurisdiction, you may have the right to access, correct, or delete personal information we hold about you, or to object to or restrict certain processing. To exercise any of these rights, please contact us directly. We will respond within 30 days.</p>
 
-    <div class="policy-section">
-      <h2>Cookies</h2>
-      <p>This website may use cookies and similar technologies to improve the browsing experience and gather anonymous usage data. You may disable cookies in your browser settings at any time without affecting your ability to use this site.</p>
-    </div>
+  <h2>Security</h2>
+  <p>We take reasonable technical and organizational measures to protect the information you share with us. However, no method of transmission over the internet is entirely secure, and we cannot guarantee absolute security.</p>
 
-    <div class="policy-section">
-      <h2>Third-Party Services</h2>
-      <p>We may use trusted third-party services such as website analytics providers to help us understand how our site is used. These providers are contractually prohibited from using your data for their own purposes. We do not use third-party advertising platforms.</p>
-    </div>
+  <h2>Contact</h2>
+  <p>For any questions regarding this policy or how we handle your data, please write to us at <a href="mailto:hello@thehuxleycompany.com">hello@thehuxleycompany.com</a> or at our Beverly Hills address above.</p>
 
-    <div class="policy-section">
-      <h2>Your Rights</h2>
-      <p>You have the right to access, correct, or request deletion of any personal information we hold about you. To exercise these rights, please contact us at <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#101;&#108;&#108;&#111;&#64;&#116;&#104;&#101;&#104;&#117;&#120;&#108;&#101;&#121;&#99;&#111;&#109;&#112;&#97;&#110;&#121;&#46;&#99;&#111;&#109;">&#104;&#101;&#108;&#108;&#111;&#64;&#116;&#104;&#101;&#104;&#117;&#120;&#108;&#101;&#121;&#99;&#111;&#109;&#112;&#97;&#110;&#121;&#46;&#99;&#111;&#109;</a>. We will respond promptly and personally.</p>
-    </div>
+</div>
 
-    <div class="policy-section">
-      <h2>California Residents (CCPA)</h2>
-      <p>If you are a California resident, the California Consumer Privacy Act grants you specific rights regarding your personal information. You have the right to know what personal information we collect about you, the right to request deletion of that information, and the right to opt out of the sale of your personal information. We do not sell personal information under any circumstances.</p>
-      <p>To exercise your rights under the CCPA, please contact us at <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#101;&#108;&#108;&#111;&#64;&#116;&#104;&#101;&#104;&#117;&#120;&#108;&#101;&#121;&#99;&#111;&#109;&#112;&#97;&#110;&#121;&#46;&#99;&#111;&#109;">&#104;&#101;&#108;&#108;&#111;&#64;&#116;&#104;&#101;&#104;&#117;&#120;&#108;&#101;&#121;&#99;&#111;&#109;&#112;&#97;&#110;&#121;&#46;&#99;&#111;&#109;</a>. We will not discriminate against you for exercising any of your rights under California law.</p>
-    </div>
+<footer>
+  <span class="fl">Huxley & Co.</span>
+  <span class="ft">We operate where reputation is everything.</span>
+  <ul class="fls">
+    <li><a href="https://www.linkedin.com/company/huxley-co" target="_blank" rel="noopener">LinkedIn</a></li>
+    <li><a href="privacy.html">Privacy</a></li>
+    <li><a href="terms.html">Terms</a></li>
+  </ul>
+</footer>
 
-    <div class="policy-section">
-      <h2>European Residents (GDPR)</h2>
-      <p>If you are located in the European Economic Area, United Kingdom, or Switzerland, the General Data Protection Regulation and applicable local laws give you certain rights with respect to your personal data. These include the right to access, rectify, erase, restrict, or object to the processing of your personal data, as well as the right to data portability.</p>
-      <p>The legal basis on which we process your personal data is legitimate interest, where we have a genuine and proportionate reason to do so in connection with our advisory services, or consent, where you have explicitly provided it.</p>
-      <p>We do not transfer your personal data outside of your jurisdiction without ensuring appropriate safeguards are in place. If you wish to exercise any of your rights under the GDPR, please contact us at <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#101;&#108;&#108;&#111;&#64;&#116;&#104;&#101;&#104;&#117;&#120;&#108;&#101;&#121;&#99;&#111;&#109;&#112;&#97;&#110;&#121;&#46;&#99;&#111;&#109;">&#104;&#101;&#108;&#108;&#111;&#64;&#116;&#104;&#101;&#104;&#117;&#120;&#108;&#101;&#121;&#99;&#111;&#109;&#112;&#97;&#110;&#121;&#46;&#99;&#111;&#109;</a>. You also have the right to lodge a complaint with your local supervisory authority.</p>
-    </div>
-
-    <div class="policy-section">
-      <h2>Contact</h2>
-      <p>If you have any questions about this policy or how your information is handled, please reach out directly.</p>
-      <p>Huxley &amp; Co.<br>9171 Wilshire Blvd, Suite 500<br>Beverly Hills, CA 90210<br><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#101;&#108;&#108;&#111;&#64;&#116;&#104;&#101;&#104;&#117;&#120;&#108;&#101;&#121;&#99;&#111;&#109;&#112;&#97;&#110;&#121;&#46;&#99;&#111;&#109;">&#104;&#101;&#108;&#108;&#111;&#64;&#116;&#104;&#101;&#104;&#117;&#120;&#108;&#101;&#121;&#99;&#111;&#109;&#112;&#97;&#110;&#121;&#46;&#99;&#111;&#109;</a></p>
-    </div>
-  </main>
-
-  <footer role="contentinfo">
-    <a href="index.html" class="footer-logo" aria-label="Huxley &amp; Co. — Home">
-      <span class="footer-logo-main">Huxley</span>
-      <span class="footer-logo-accent">& co.</span>
-    </a>
-    <p class="footer-tagline">We operate where reputation is everything.</p>
-    <ul class="footer-links" role="list">
-      <li><a href="https://www.linkedin.com/company/huxley-co" target="_blank" rel="noopener noreferrer">LINKEDIN</a></li>
-      <li><a href="privacy.html" aria-current="page">PRIVACY</a></li>
-      <li><a href="terms.html">TERMS</a></li>
-      <li><span class="footer-copy">© 2026</span></li>
-    </ul>
-  </footer>
-
-  <script>
-    const mobileMenu = document.getElementById('mobileMenu');
-    const navToggle = document.querySelector('.nav-toggle');
-
-    function toggleMenu() {
-      const isOpen = mobileMen
+</body>
+</html>
