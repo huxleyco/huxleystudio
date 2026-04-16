@@ -3,1109 +3,341 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Huxley & Co. | Executive Search & Private Advisory</title>
-  <!-- SEO Meta Tags -->
-  <meta name="description" content="Huxley & Co. is a boutique executive search and private advisory firm serving founders, family offices, and creative studios across London and Los Angeles. Principal-led. By appointment only.">
-  <meta name="keywords" content="executive search Beverly Hills, boutique executive search Los Angeles, family office advisory, private talent advisory, executive recruiter LA, executive search London, founder advisory, creative studio talent, principal-led search">
-  <meta name="author" content="Huxley & Co.">
-  <meta name="robots" content="index, follow">
-
-  <!-- Open Graph (LinkedIn, iMessage previews) -->
-  <meta property="og:title" content="Huxley & Co. | Executive Search & Private Advisory">
-  <meta property="og:description" content="Boutique executive search and private advisory for founders, family offices, and creative studios. Beverly Hills and London.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://thehuxleycompany.com">
-
-  <!-- Canonical -->
-  <link rel="canonical" href="https://thehuxleycompany.com">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Didact+Gothic&display=swap" rel="stylesheet">
+<title>Huxley & Co.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;1,400&family=Jost:wght@200;300&family=Playfair+Display:wght@400&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --ink: #0e0d0b;
-    --parchment: #f5f2ec;
-    --warm-white: #faf9f6;
-    --rule: #d4cfc6;
-    --muted: #888077;
-    --accent: #8b7355;
-    --accent-light: #c9b99a;
-  }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --white:   #ffffff;
+  --off:     #f6f4f0;
+  --off2:    #eeebe4;
+  --border:  #e0ddd6;
+  --ink:     #1a1917;
+  --forest:  #2d5c47;
+  --fmid:    #3d7a5e;
+  --body:    #4a4742;
+  --muted:   #7a7772;
+  --faint:   #a8a5a0;
+  --r:       rgba(26,25,23,0.09);
+  --rf:      rgba(42,68,56,0.18);
+}
 
-  html { scroll-behavior: smooth; }
+html { font-size: 16px; scroll-behavior: smooth; }
+body {
+  background: var(--white);
+  color: var(--ink);
+  font-family: 'Libre Baskerville', Georgia, serif;
+  -webkit-font-smoothing: antialiased;
+}
 
-  body {
-    background: var(--warm-white);
-    color: var(--ink);
-    font-family: 'Didact Gothic', sans-serif;
-    font-size: 15px;
-    line-height: 1.7;
-    overflow-x: hidden;
-  }
+/* MASTHEAD */
+header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  background: rgba(255,255,255,0.98);
+  backdrop-filter: blur(12px);
+  border-bottom: 0.5px solid var(--border);
+  padding: 24px 0 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
 
-  /* ─── UTILITY ─── */
-  .serif { font-family: 'Cormorant Garamond', serif; }
-  .rule { width: 32px; height: 1px; background: var(--accent); display: block; }
-  .rule--full { width: 100%; height: 1px; background: var(--rule); display: block; }
-  .label {
-    font-family: 'Didact Gothic', sans-serif;
-    font-size: 10px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--muted);
-  }
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  font-size: 22px;
+  letter-spacing: 0.22em;
+  color: var(--ink);
+  text-decoration: none;
+}
 
-  /* ─── NAV ─── */
-  nav {
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    z-index: 100;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 28px 48px;
-    background: rgba(250, 249, 246, 0.92);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid transparent;
-    transition: border-color 0.4s ease;
-  }
-  nav.scrolled { border-bottom-color: var(--rule); }
+.logo-sub {
+  font-family: 'Jost', sans-serif;
+  font-size: 9px;
+  font-weight: 300;
+  letter-spacing: 0.32em;
+  color: var(--faint);
+  text-transform: uppercase;
+  margin-top: -10px;
+}
 
-  /* ─── HAMBURGER ─── */
-  .nav-hamburger {
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    gap: 5px;
-    cursor: pointer;
-    padding: 4px;
-    background: none;
-    border: none;
-    z-index: 200;
-  }
-  .nav-hamburger span {
-    display: block;
-    width: 22px;
-    height: 1px;
-    background: var(--ink);
-    transition: transform 0.3s ease, opacity 0.3s ease;
-  }
-  .nav-hamburger.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
-  .nav-hamburger.open span:nth-child(2) { opacity: 0; }
-  .nav-hamburger.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+nav { display: flex; gap: 56px; list-style: none; }
 
-  /* ─── MOBILE NAV OVERLAY ─── */
-  .nav-mobile-overlay {
-    display: none;
-    position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(250, 249, 246, 0.98);
-    backdrop-filter: blur(12px);
-    z-index: 150;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-  }
-  .nav-mobile-overlay.open { display: flex; }
-  .nav-mobile-overlay a {
-    font-size: 11px;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: var(--muted);
-    transition: color 0.2s;
-  }
-  .nav-mobile-overlay a:hover { color: var(--ink); }
-  .nav-mobile-overlay .nav-mobile-cta {
-    margin-top: 16px;
-    color: var(--ink);
-    border: 1px solid var(--ink);
-    padding: 12px 28px;
-  }
+nav a {
+  font-family: 'Jost', sans-serif;
+  font-size: 10px;
+  font-weight: 300;
+  letter-spacing: 0.2em;
+  color: var(--muted);
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
 
-  .nav-logo {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 18px;
-    font-weight: 400;
-    letter-spacing: 0.08em;
-    text-decoration: none;
-    color: var(--ink);
-    line-height: 1.2;
-    white-space: nowrap;
-  }
-  .nav-logo .co { color: #8b7355; font-style: italic; }
+nav a:hover { color: var(--forest); }
 
+.appt {
+  position: absolute;
+  right: 52px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: 'Jost', sans-serif;
+  font-size: 9px;
+  font-weight: 300;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--forest);
+  text-decoration: none;
+  border: 0.5px solid var(--rf);
+  padding: 9px 20px;
+  transition: all 0.2s;
+}
 
-  .nav-links {
-    display: flex;
-    gap: 40px;
-    list-style: none;
-  }
-  .nav-links a {
-    font-size: 10px;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: var(--muted);
-    transition: color 0.2s;
-  }
-  .nav-links a:hover { color: var(--ink); }
+.appt:hover { background: var(--forest); color: white; border-color: var(--forest); }
 
-  .nav-cta {
-    font-size: 10px;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: var(--ink);
-    border: 1px solid var(--ink);
-    padding: 10px 20px;
-    transition: background 0.2s, color 0.2s;
-  }
-  .nav-cta:hover { background: var(--ink); color: var(--warm-white); }
+/* HERO — pure white, immense type, left-anchored */
+.hero {
+  background: var(--white);
+  min-height: 100vh;
+  padding-top: 115px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 72px;
+  padding-right: 72px;
+  border-bottom: 0.5px solid var(--border);
+}
 
-  /* ─── HERO ─── */
-  #hero {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    padding-top: 96px;
-    border-bottom: 1px solid var(--rule);
-  }
+.hero-eyebrow {
+  font-family: 'Jost', sans-serif;
+  font-size: 9px;
+  font-weight: 300;
+  letter-spacing: 0.3em;
+  color: var(--forest);
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
 
-  .hero-left {
-    padding: 80px 48px;
-    max-width: 900px;
-  }
+.hero-eyebrow::before { content: ''; display: block; width: 24px; height: 0.5px; background: var(--forest); opacity: 0.5; }
 
-  .hero-eyebrow {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    margin-bottom: 48px;
-    opacity: 0;
-    animation: fadeUp 0.8s 0.2s forwards;
-  }
+.hero-h1 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: clamp(44px, 5.5vw, 76px);
+  font-weight: 400;
+  line-height: 1.08;
+  color: var(--ink);
+  max-width: 700px;
+  margin-bottom: 36px;
+  letter-spacing: -0.015em;
+}
 
-  .hero-headline {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(64px, 8vw, 112px);
-    font-weight: 300;
-    line-height: 1.04;
-    letter-spacing: -0.01em;
-    margin-bottom: 48px;
-    opacity: 0;
-    animation: fadeUp 0.8s 0.35s forwards;
-  }
-  .hero-headline em {
-    font-style: italic;
-    color: var(--accent);
-  }
+.hero-h1 em { font-style: italic; color: var(--forest); }
 
-  .hero-body {
-    font-size: 16px;
-    line-height: 1.8;
-    color: #4a4540;
-    max-width: 520px;
-    margin-bottom: 56px;
-    opacity: 0;
-    animation: fadeUp 0.8s 0.5s forwards;
-  }
+.hero-sub {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 19px;
+  font-weight: 400;
+  color: var(--muted);
+  max-width: 460px;
+  line-height: 1.8;
+  margin-bottom: 52px;
+}
 
-  .hero-actions {
-    display: flex;
-    align-items: center;
-    gap: 32px;
-    opacity: 0;
-    animation: fadeUp 0.8s 0.65s forwards;
-  }
+/* hero divider removed */
+.hero-divider { display: none; }
 
-  .btn-primary {
-    display: inline-block;
-    font-size: 10px;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: var(--warm-white);
-    background: var(--ink);
-    padding: 16px 32px;
-    transition: background 0.2s;
-  }
-  .btn-primary:hover { background: var(--accent); }
+.hero-btns { display: flex; align-items: center; gap: 36px; }
 
-  .btn-ghost {
-    font-size: 10px;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: var(--muted);
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    transition: color 0.2s;
-  }
-  .btn-ghost:hover { color: var(--ink); }
-  .btn-ghost::after { content: '→'; font-size: 13px; font-family: serif; }
+.btn-forest {
+  font-family: 'Jost', sans-serif;
+  font-size: 9px; font-weight: 300; letter-spacing: 0.22em; text-transform: uppercase;
+  color: white; background: var(--forest); padding: 14px 34px; text-decoration: none; transition: background 0.2s;
+}
+.btn-forest:hover { background: var(--fmid); }
 
+.btn-ghost {
+  font-family: 'Jost', sans-serif;
+  font-size: 9px; font-weight: 300; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--muted); text-decoration: none; display: flex; align-items: center; gap: 12px; transition: color 0.2s;
+}
+.btn-ghost:hover { color: var(--ink); }
+.btn-ghost::after { content: ''; display: block; width: 32px; height: 0.5px; background: currentColor; }
 
-  /* ─── SECTION BASE ─── */
-  section { padding: 100px 48px; }
-  .section-inner { max-width: 1200px; margin: 0 auto; }
+/* SERVICES */
+.services { background: var(--off); border-bottom: 0.5px solid var(--border); }
+.sg {
+  display: grid; grid-template-columns: 1fr 0.5px 1fr 0.5px 1fr;
+  margin: 0 72px;
+}
+.sg-d { background: var(--border); }
+.sc { padding: 72px 52px; }
+.sc:first-child { padding-left: 0; }
+.sc:last-child  { padding-right: 0; }
+.sc-num { font-family: 'Jost', sans-serif; font-size: 9px; font-weight: 300; letter-spacing: 0.28em; color: var(--forest); text-transform: uppercase; margin-bottom: 22px; }
+.sc-title { font-size: 21px; font-weight: 400; color: var(--ink); line-height: 1.25; margin-bottom: 16px; }
+.sc-title em { font-style: italic; color: var(--forest); }
+.sc-body { font-size: 16px; font-weight: 400; color: var(--body); line-height: 1.85; }
 
-  .section-header {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    margin-bottom: 64px;
-    gap: 40px;
-  }
-  .section-header-left { display: flex; align-items: center; gap: 16px; }
-  .section-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(36px, 3.5vw, 52px);
-    font-weight: 300;
-    line-height: 1.1;
-  }
-  .section-title em { font-style: italic; color: var(--accent); }
-  .section-desc {
-    max-width: 400px;
-    color: #4a4540;
-    line-height: 1.8;
-    font-size: 14.5px;
-  }
+/* QUOTE */
+.quote {
+  background: var(--white);
+  border-bottom: 0.5px solid var(--border);
+  padding: 120px 72px;
+  display: flex; flex-direction: column; align-items: center; text-align: center;
+}
+.q-r { width: 32px; height: 0.5px; background: var(--forest); opacity: 0.35; margin-bottom: 52px; }
+.q-t {
+  font-family: 'Libre Baskerville', serif;
+  font-size: clamp(20px, 2.5vw, 34px);
+  font-weight: 400; font-style: italic;
+  color: var(--ink); max-width: 700px; line-height: 1.6; margin-bottom: 44px;
+}
+.q-a { font-family: 'Jost', sans-serif; font-size: 9px; font-weight: 300; letter-spacing: 0.28em; color: var(--forest); text-transform: uppercase; display: flex; align-items: center; gap: 16px; }
+.q-a::before, .q-a::after { content: ''; display: block; width: 22px; height: 0.5px; background: var(--border); }
 
-  /* ─── ADVISORY / SERVICES ─── */
-  #advisory { background: var(--warm-white); }
+/* PROCESS */
+.process { background: var(--off2); padding: 0 72px 88px; border-bottom: 0.5px solid var(--border); }
+.sh { display: flex; align-items: baseline; justify-content: space-between; padding: 68px 0 52px; border-bottom: 0.5px solid var(--border); margin-bottom: 52px; }
+.sl { font-family: 'Jost', sans-serif; font-size: 9px; font-weight: 300; letter-spacing: 0.28em; color: var(--forest); text-transform: uppercase; }
+.st { font-size: clamp(24px, 2.8vw, 36px); font-weight: 400; color: var(--ink); line-height: 1.15; }
+.st em { font-style: italic; color: var(--forest); }
+.pg { display: grid; grid-template-columns: repeat(3,1fr); gap: 56px; }
+.pi { }
+.pi-n { font-family: 'Jost', sans-serif; font-size: 9px; font-weight: 300; letter-spacing: 0.28em; color: var(--forest); text-transform: uppercase; margin-bottom: 20px; }
+.pi-h { font-size: 18px; font-weight: 400; color: var(--ink); line-height: 1.3; margin-bottom: 14px; }
+.pi-b { font-size: 15px; color: var(--body); line-height: 1.9; }
 
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0;
-    border: 1px solid var(--rule);
-    align-items: stretch;
-  }
+/* TEAM */
+.team { background: var(--white); padding: 88px 72px; border-bottom: 0.5px solid var(--border); }
+.tg { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; }
+.tc { }
+.tc-r { font-family: 'Jost', sans-serif; font-size: 9px; font-weight: 300; letter-spacing: 0.28em; color: var(--forest); text-transform: uppercase; margin-bottom: 12px; }
+.tc-n { font-size: 22px; font-weight: 400; color: var(--ink); margin-bottom: 20px; }
+.tc-rule { width: 100%; height: 0.5px; background: var(--border); margin-bottom: 20px; }
+.tc-b { font-size: 16px; color: var(--body); line-height: 1.85; margin-bottom: 28px; }
+.tc-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.tc-tag { font-family: 'Jost', sans-serif; font-size: 9px; font-weight: 300; letter-spacing: 0.14em; color: var(--body); text-transform: uppercase; border: 0.5px solid var(--border); padding: 5px 12px; }
 
-  .service-card {
-    background: var(--warm-white);
-    padding: 48px 40px;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    transition: background 0.25s;
-    cursor: default;
-    border-right: 1px solid var(--rule);
-  }
-  .service-card:last-child { border-right: none; }
-  .service-card:hover { background: var(--parchment); }
+/* CONTACT — ink dark */
+.contact { background: var(--ink); padding: 88px 72px; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+.ch2 { font-size: clamp(22px, 2.4vw, 32px); font-weight: 400; color: #f2ede4; line-height: 1.25; margin-bottom: 22px; }
+.ch2 em { font-style: italic; color: rgba(242,237,228,0.4); }
+.cb { font-size: 16px; color: rgba(242,237,228,0.35); line-height: 1.85; margin-bottom: 40px; max-width: 400px; }
+.cds { display: flex; flex-direction: column; gap: 16px; }
+.cd { display: flex; flex-direction: column; gap: 4px; }
+.cd-l { font-family: 'Jost', sans-serif; font-size: 9px; font-weight: 300; letter-spacing: 0.28em; color: var(--fmid); text-transform: uppercase; opacity: 0.8; }
+.cd-v { font-size: 17px; color: rgba(242,237,228,0.5); line-height: 1.6; }
+.form { display: flex; flex-direction: column; gap: 22px; }
+.frow { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.field { display: flex; flex-direction: column; gap: 7px; }
+.field label { font-family: 'Jost', sans-serif; font-size: 9px; font-weight: 300; letter-spacing: 0.28em; color: rgba(242,237,228,0.22); text-transform: uppercase; }
+.field input, .field select, .field textarea { background: transparent; border: none; border-bottom: 0.5px solid rgba(255,255,255,0.12); color: #f2ede4; font-family: 'Libre Baskerville', serif; font-size: 17px; padding: 9px 0; outline: none; transition: border-color 0.2s; width: 100%; }
+.field input:focus, .field select:focus, .field textarea:focus { border-bottom-color: rgba(255,255,255,0.4); }
+.field textarea { height: 72px; resize: none; }
+.field select { appearance: none; cursor: pointer; }
+.fsub { font-family: 'Jost', sans-serif; font-size: 9px; font-weight: 300; letter-spacing: 0.22em; text-transform: uppercase; color: var(--ink); background: #f2ede4; border: none; padding: 14px 34px; cursor: pointer; align-self: flex-start; margin-top: 4px; transition: background 0.2s; }
+.fsub:hover { background: white; }
 
-  .service-num {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 13px;
-    color: var(--accent-light);
-    letter-spacing: 0.1em;
-    margin-bottom: 32px;
-  }
-  .service-name {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 26px;
-    font-weight: 400;
-    line-height: 1.2;
-    margin-bottom: 20px;
-    min-height: 2.4em;
-    display: flex;
-    align-items: flex-start;
-  }
-  .service-body {
-    font-size: 14px;
-    color: #4a4540;
-    line-height: 1.8;
-    flex: 1;
-  }
-  .service-tags {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
-    margin-top: 32px;
-    padding-top: 24px;
-    border-top: 1px solid var(--rule);
-  }
-  .tag {
-    font-size: 10px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--muted);
-    border: 1px solid var(--rule);
-    padding: 5px 10px;
-  }
-
-
-  /* ─── PROCESS ─── */
-  #process {
-    background: var(--ink);
-    color: var(--warm-white);
-  }
-  #process .rule { background: var(--accent-light); }
-  #process .label { color: var(--accent-light); }
-  #process .section-title { color: var(--warm-white); }
-  #process .section-title em { color: var(--accent-light); }
-  #process .section-desc { color: rgba(250,249,246,0.6); }
-
-  .process-steps {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0;
-    border-top: 1px solid rgba(255,255,255,0.08);
-    padding-top: 56px;
-  }
-  .process-step {
-    padding: 0 48px 0 0;
-    background: transparent;
-  }
-  .process-step:hover { background: transparent; }
-  .step-roman {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 13px;
-    letter-spacing: 0.15em;
-    color: var(--accent-light);
-    margin-bottom: 28px;
-    display: block;
-  }
-  .step-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 24px;
-    font-weight: 400;
-    color: var(--warm-white);
-    margin-bottom: 16px;
-    line-height: 1.2;
-  }
-  .step-body {
-    font-size: 14px;
-    color: rgba(250,249,246,0.55);
-    line-height: 1.8;
-  }
-  .step-body strong {
-    color: rgba(250,249,246,0.85);
-    font-weight: 400;
-  }
-
-  .process-coda {
-    margin-top: 56px;
-    padding: 40px;
-    border: 1px solid rgba(255,255,255,0.1);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
-  }
-  .process-coda-text {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 22px;
-    font-style: italic;
-    font-weight: 300;
-    color: rgba(250,249,246,0.75);
-    max-width: 600px;
-    line-height: 1.5;
-  }
-  .process-coda-text strong {
-    color: var(--warm-white);
-    font-style: normal;
-  }
-
-  /* ─── PROOF / SOCIAL ─── */
-  #proof { background: var(--parchment); }
-
-  .proof-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1px;
-    background: var(--rule);
-    border: 1px solid var(--rule);
-    margin-bottom: 1px;
-  }
-  .proof-grid-bottom {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1px;
-    background: var(--rule);
-    border: 1px solid var(--rule);
-    
-  }
-
-  .proof-card {
-    background: var(--parchment);
-    padding: 44px 40px;
-    transition: background 0.25s;
-  }
-  .proof-card:hover { background: #ede9e0; }
-
-  .proof-quote {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 21px;
-    font-weight: 300;
-    font-style: italic;
-    line-height: 1.5;
-    color: var(--ink);
-    margin-bottom: 24px;
-  }
-  .proof-quote::before { content: '\201C'; }
-  .proof-quote::after { content: '\201D'; }
-
-  .proof-source {
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
-  }
-  .proof-name {
-    font-size: 12px;
-    letter-spacing: 0.08em;
-    color: var(--ink);
-    font-weight: 400;
-  }
-  .proof-role { font-size: 11px; color: var(--muted); letter-spacing: 0.05em; }
-
-  .proof-sector {
-    background: var(--parchment);
-    padding: 36px 32px;
-    transition: background 0.25s;
-  }
-  .proof-sector:hover { background: #ede9e0; }
-  .proof-sector-icon {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 32px;
-    font-weight: 300;
-    color: var(--accent-light);
-    margin-bottom: 12px;
-  }
-  .proof-sector-name {
-    font-size: 12px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--ink);
-    margin-bottom: 6px;
-  }
-  .proof-sector-desc { font-size: 13px; color: var(--muted); line-height: 1.6; }
-
-  /* ─── TEAM ─── */
-  #team { background: var(--warm-white); }
-
-  .team-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1px;
-    background: var(--rule);
-    border: 1px solid var(--rule);
-  }
-  .team-card {
-    background: var(--warm-white);
-    padding: 64px 56px;
-  }
-  .team-role {
-    font-size: 10px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin-bottom: 16px;
-  }
-  .team-name {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 42px;
-    font-weight: 300;
-    line-height: 1.05;
-    margin-bottom: 36px;
-  }
-  .team-bio {
-    font-size: 15px;
-    color: #4a4540;
-    line-height: 1.9;
-    margin-bottom: 40px;
-    max-width: 520px;
-  }
-  .team-bio strong { color: var(--ink); font-weight: 400; }
-  .team-details {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    padding-top: 32px;
-    border-top: 1px solid var(--rule);
-  }
-
-  /* ─── CONTACT ─── */
-  #contact {
-    background: var(--ink);
-    color: var(--warm-white);
-  }
-
-  .contact-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
-    align-items: start;
-  }
-
-  .contact-left {}
-  .contact-headline {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(40px, 4vw, 60px);
-    font-weight: 300;
-    line-height: 1.1;
-    color: var(--warm-white);
-    margin-bottom: 24px;
-  }
-  .contact-headline em { font-style: italic; color: var(--accent-light); }
-  .contact-body {
-    font-size: 14.5px;
-    color: rgba(250,249,246,0.6);
-    line-height: 1.8;
-    margin-bottom: 48px;
-    max-width: 400px;
-  }
-  .contact-details { display: flex; flex-direction: column; gap: 24px; }
-  .contact-detail-label {
-    font-size: 10px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--accent-light);
-    margin-bottom: 4px;
-  }
-  .contact-detail-value {
-    font-size: 15px;
-    color: var(--warm-white);
-    text-decoration: none;
-    transition: color 0.2s;
-  }
-  .contact-detail-value:hover { color: var(--accent-light); }
-
-  .contact-right {}
-  .contact-form { display: flex; flex-direction: column; gap: 0; }
-
-  .form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1px;
-  }
-  .form-field {
-    display: flex;
-    flex-direction: column;
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.1);
-    margin-bottom: 1px;
-    transition: background 0.2s;
-  }
-  .form-field:focus-within { background: rgba(255,255,255,0.07); border-color: rgba(255,255,255,0.2); }
-
-  .form-row .form-field { border: none; border-bottom: 1px solid rgba(255,255,255,0.1); }
-  .form-row .form-field:first-child { border-right: 1px solid rgba(255,255,255,0.1); }
-
-  .form-field label {
-    font-size: 10px;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: rgba(250,249,246,0.4);
-    padding: 16px 20px 0;
-  }
-  .form-field input,
-  .form-field select,
-  .form-field textarea {
-    background: transparent;
-    border: none;
-    outline: none;
-    color: var(--warm-white);
-    font-family: 'Didact Gothic', sans-serif;
-    font-size: 14px;
-    padding: 8px 20px 16px;
-    resize: none;
-    -webkit-appearance: none;
-  }
-  .form-field select option { background: var(--ink); color: var(--warm-white); }
-  .form-field input::placeholder,
-  .form-field textarea::placeholder { color: rgba(250,249,246,0.2); }
-
-  .form-submit {
-    margin-top: 1px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0;
-  }
-  .form-note {
-    font-size: 11px;
-    color: rgba(250,249,246,0.3);
-    letter-spacing: 0.03em;
-  }
-  .btn-submit {
-    background: var(--accent);
-    color: var(--warm-white);
-    border: none;
-    padding: 18px 36px;
-    font-family: 'Didact Gothic', sans-serif;
-    font-size: 10px;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: background 0.2s;
-    margin-top: 16px;
-  }
-  .btn-submit:hover { background: #7a6347; }
-
-  /* ─── FOOTER ─── */
-  footer {
-    padding: 32px 48px;
-    border-top: 1px solid rgba(255,255,255,0.08);
-    background: var(--ink);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .footer-logo {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 15px;
-    letter-spacing: 0.1em;
-    color: rgba(250,249,246,0.4);
-    text-decoration: none;
-  }
-  .footer-links {
-    display: flex;
-    gap: 32px;
-    list-style: none;
-  }
-  .footer-links a {
-    font-size: 10px;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: rgba(250,249,246,0.3);
-    transition: color 0.2s;
-  }
-  .footer-links a:hover { color: rgba(250,249,246,0.7); }
-  .footer-copy { font-size: 11px; color: rgba(250,249,246,0.25); }
-
-  /* ─── ANIMATIONS ─── */
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  .reveal {
-    opacity: 0;
-    transform: translateY(24px);
-    transition: opacity 0.7s ease, transform 0.7s ease;
-  }
-  .reveal.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  /* ─── RESPONSIVE ─── */
-  @media (max-width: 900px) {
-    nav { padding: 20px 24px; }
-    .nav-links { display: none; }
-    .nav-cta { display: none; }
-    .nav-hamburger { display: flex; }
-    .nav-logo { font-size: 15px; }
-
-    section { padding: 64px 24px; }
-    #contact { padding: 64px 24px !important; }
-
-    /* Hero */
-    #hero { min-height: auto; padding-top: 80px; }
-    .hero-left { padding: 52px 24px 72px; }
-    .hero-headline { font-size: 44px; }
-    .hero-actions { flex-direction: column; align-items: flex-start; gap: 20px; }
-
-    /* Sections */
-    .section-header { flex-direction: column; gap: 20px; }
-    .section-desc { max-width: 100%; }
-
-    /* Services */
-    .services-grid { grid-template-columns: 1fr; }
-    .service-card { padding: 36px 28px; }
-
-    /* Process */
-    .process-steps { grid-template-columns: 1fr; gap: 40px; }
-    .process-coda { flex-direction: column; align-items: flex-start; gap: 28px; }
-
-    /* Team */
-    .team-grid { grid-template-columns: 1fr; }
-    .team-card { padding: 48px 28px; }
-
-    /* Contact */
-    .contact-inner { grid-template-columns: 1fr; gap: 0; }
-    .contact-left { padding: 48px 24px 40px; }
-    .contact-right { padding: 0 24px; }
-    .form-row { grid-template-columns: 1fr; }
-    .form-submit { flex-direction: column; align-items: flex-start; gap: 16px; }
-    .btn-submit { margin-top: 0; width: 100%; white-space: nowrap; }
-
-    /* Footer */
-    footer { flex-direction: column; gap: 20px; text-align: center; padding: 32px 24px; }
-    .footer-links { flex-wrap: wrap; justify-content: center; gap: 20px; }
-  }
-
-  @media (max-width: 520px) {
-    .hero-headline { font-size: 38px; }
-    .nav-cta { display: none; }
-  }
-  #contact-email { color: inherit; text-decoration: none; }
-  #contact-email:hover { color: var(--accent); }
+/* FOOTER */
+footer { background: var(--off); border-top: 0.5px solid var(--border); padding: 30px 72px; display: flex; align-items: center; justify-content: space-between; }
+.fl { font-family: 'Playfair Display', serif; font-size: 13px; font-weight: 400; letter-spacing: 0.12em; color: var(--faint); }
+.ft { font-size: 14px; font-style: italic; color: var(--faint); }
+.fls { display: flex; gap: 32px; list-style: none; }
+.fls a { font-family: 'Jost', sans-serif; font-size: 9px; font-weight: 300; letter-spacing: 0.18em; color: var(--faint); text-decoration: none; text-transform: uppercase; transition: color 0.2s; }
+.fls a:hover { color: var(--forest); }
 </style>
 </head>
 <body>
 
-<!-- ─── NAV ─── -->
-<nav id="navbar">
-  <a href="#" class="nav-logo">Huxley <span class="co">&amp; Co.</span></a>
-  <ul class="nav-links">
-    <li><a href="#advisory">Advisory</a></li>
-    <li><a href="#process">Process</a></li>
-    <li><a href="#team">The Team</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-  <a href="#contact" class="nav-cta">By Appointment</a>
-  <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
+<header>
+  <a href="#" class="logo">Huxley & Co.</a>
+  <span class="logo-sub">Executive Search & Private Advisory</span>
+  <nav>
+    <a href="#advisory">Advisory</a>
+    <a href="#process">Process</a>
+    <a href="#team">The Team</a>
+  </nav>
+  <a href="#contact" class="appt">By Appointment</a>
+</header>
 
-<!-- ─── MOBILE NAV OVERLAY ─── -->
-<div class="nav-mobile-overlay" id="mobileNav">
-  <a href="#advisory" class="nav-mobile-link">Advisory</a>
-  <a href="#process" class="nav-mobile-link">Process</a>
-  <a href="#team" class="nav-mobile-link">The Team</a>
-  <a href="#contact" class="nav-mobile-link">Contact</a>
-  <a href="#contact" class="nav-mobile-cta nav-mobile-link">By Appointment</a>
+<section class="hero">
+  <p class="hero-eyebrow">Beverly Hills · London</p>
+  <h1 class="hero-h1">The introduction<br><em>matters.</em></h1>
+  <p class="hero-sub">Advisory for founders, family offices, and private enterprises who hold themselves to an uncommon standard.</p>
+  <div class="hero-divider"></div>
+  <div class="hero-btns">
+    <a href="#contact" class="btn-forest">Request a Conversation</a>
+    <a href="#process" class="btn-ghost">How we work</a>
+  </div>
+</section>
+
+<div class="services" id="advisory">
+  <div class="sg">
+    <div class="sc"><p class="sc-num">01</p><h3 class="sc-title">Executive Search<br>& <em>Advisory</em></h3><p class="sc-body">Retained counsel for founders and private offices seeking exceptional talent. Every search conducted personally. No junior associates. No process theatre.</p></div>
+    <div class="sg-d"></div>
+    <div class="sc"><p class="sc-num">02</p><h3 class="sc-title">Family Office<br>& <em>Private Clients</em></h3><p class="sc-body">For multi-generational families who require depth and absolute confidentiality. These relationships are built slowly and held for the long term.</p></div>
+    <div class="sg-d"></div>
+    <div class="sc"><p class="sc-num">03</p><h3 class="sc-title">Principal<br><em>Production</em></h3><p class="sc-body">For clients who hold themselves to an uncommon standard. We place the talent behind exceptional private gatherings and large-scale productions.</p></div>
+  </div>
 </div>
 
-<!-- ─── HERO ─── -->
-<section id="hero">
-  <div class="hero-left">
-    <div class="hero-eyebrow">
-      <span class="rule"></span>
-      <span class="label">Executive Search &amp; Private Advisory</span>
-    </div>
-    <h1 class="hero-headline">
-      The introduction<br><em>matters.</em>
-    </h1>
-    <p class="hero-body">
-      Huxley &amp; Co. advises founders, family offices, and private enterprises on the talent and organizational decisions that define them. We operate globally, where standards are highest.
-    </p>
-    <div class="hero-actions">
-      <a href="#contact" class="btn-primary">Request a Conversation</a>
-      <a href="#process" class="btn-ghost">How we work</a>
-    </div>
+<section class="quote">
+  <div class="q-r"></div>
+  <p class="q-t">"Understanding people, how they think, what they need, and where they thrive, is the only honest basis for placing them."</p>
+  <span class="q-a">Laura Huxley, Founder</span>
+</section>
+
+<section class="process" id="process">
+  <div class="sh"><span class="sl">How We Work</span><h2 class="st">The <em>Process</em></h2></div>
+  <div class="pg">
+    <div class="pi"><p class="pi-n">I</p><h4 class="pi-h">Introductory Conversation</h4><p class="pi-b">Every engagement begins with a conversation, not a questionnaire. We take the time to understand not just the role, but the organization, the culture, and the standard you hold yourself to.</p></div>
+    <div class="pi"><p class="pi-n">II</p><h4 class="pi-h">Principal-Led Search</h4><p class="pi-b">We conduct every search personally. No junior associates. No delegated sourcing. We draw on our global network, cultivated across decades of trust-based relationships.</p></div>
+    <div class="pi"><p class="pi-n">III</p><h4 class="pi-h">Curated Presentation</h4><p class="pi-b">We present a small number of candidates, never a longlist designed to demonstrate effort. Each name we put forward, we would stake our own reputation on.</p></div>
   </div>
 </section>
 
-<!-- ─── ADVISORY ─── -->
-<section id="advisory">
-  <div class="section-inner">
-    <div class="section-header reveal" style="justify-content:flex-start;">
-      <div>
-        <div style="display:flex;align-items:center;gap:16px;margin-bottom:8px">
-          <span class="rule"></span>
-          <span class="label">What We Do</span>
-        </div>
-        <h2 class="section-title">Advisory &amp; <em>Search</em></h2>
-      </div>
-    </div>
-
-    <div class="services-grid">
-      <div class="service-card reveal">
-        <div class="service-num">01</div>
-        <h3 class="service-name serif">Executive Search &amp; Advisory</h3>
-        <p class="service-body">Retained counsel for founders and private offices seeking exceptional talent. We conduct every search personally, drawing on our global network. No junior associates. No process theatre. Every candidate is sourced specifically for you and presented because we believe in them.</p>
-        <div class="service-tags">
-          <span class="tag">C-Suite</span>
-          <span class="tag">Board Advisory</span>
-          <span class="tag">Senior Leadership</span>
-          <span class="tag">Retained</span>
-        </div>
-      </div>
-
-      <div class="service-card reveal">
-        <div class="service-num">02</div>
-        <h3 class="service-name serif">Family Office &amp; Private Clients</h3>
-        <p class="service-body">Advisory for multi-generational families and family offices who require both depth and absolute confidentiality. These relationships are built slowly and held for the long term. We understand that in this world, a misplaced introduction is not merely an inconvenience. It is a breach of trust. The relationship always comes first.</p>
-        <div class="service-tags">
-          <span class="tag">Family Office</span>
-          <span class="tag">Private Clients</span>
-          <span class="tag">Confidential</span>
-          <span class="tag">Long-term</span>
-        </div>
-      </div>
-
-      <div class="service-card reveal">
-        <div class="service-num">03</div>
-        <h3 class="service-name serif">Private Events &amp; Principal Production</h3>
-        <p class="service-body">For clients who hold themselves to an uncommon standard, the moments that define an occasion matter as much as the people inside them. We source and place the talent behind some of the most exceptional private gatherings and large-scale productions, from event leads and creative directors to the full teams that bring them to life.</p>
-        <div class="service-tags">
-          <span class="tag">Private Clients</span>
-          <span class="tag">Event Production</span>
-          <span class="tag">Production Advisory</span>
-          <span class="tag">Creative Talent</span>
-        </div>
-      </div>
-
-    </div>
+<section class="team" id="team">
+  <div class="sh" style="border-bottom:0.5px solid var(--border);margin-bottom:52px;">
+    <span class="sl">Principal Advisors</span><h2 class="st">The <em>Team</em></h2>
+  </div>
+  <div class="tg">
+    <div class="tc"><p class="tc-r">Founder</p><h3 class="tc-n">Laura Huxley</h3><div class="tc-rule"></div><p class="tc-b">Laura got her start in London across PR, television, arts, and live events before moving into talent advisory in Los Angeles and Europe. She went on to embed with one of the world's leading multidisciplinary creative studios, advising on the people behind some of the largest productions globally. She now works with principals, family offices, and founders who hold themselves to an uncommon standard, on the belief that understanding people is the only honest basis for placing them.</p><div class="tc-tags"><span class="tc-tag">London → Los Angeles</span><span class="tc-tag">Psychology</span><span class="tc-tag">Creative Studios</span><span class="tc-tag">Family Office</span></div></div>
+    <div class="tc"><p class="tc-r">Principal</p><h3 class="tc-n">Chad Siwik</h3><div class="tc-rule"></div><p class="tc-b">Chad has spent several years at NASA contributing to communications and strategy across the Artemis mission. Working inside one of the most consequential and security-conscious institutions in the world gave him a rare fluency in discretion, high-stakes decision-making, and the kind of trust that can only be earned over time. He brings that standard to every search and advisory engagement at Huxley & Co.</p><div class="tc-tags"><span class="tc-tag">NASA Artemis</span><span class="tc-tag">Strategy & Communications</span><span class="tc-tag">Program Management</span><span class="tc-tag">Institutional Advisory</span></div></div>
   </div>
 </section>
 
-<!-- ─── PROCESS ─── -->
-<section id="process">
-  <div class="section-inner">
-    <div class="section-header reveal">
-      <div class="section-header-left">
-        <span class="rule" style="background:var(--accent-light)"></span>
-        <div>
-          <span class="label" style="color:var(--accent-light)">How We Work</span>
-          <h2 class="section-title" style="color:var(--warm-white);margin-top:8px">The <em>Process</em></h2>
-        </div>
-      </div>
-
+<section class="contact" id="contact">
+  <div>
+    <h2 class="ch2">Every engagement begins<br>with a <em>conversation.</em></h2>
+    <p class="cb">We accept a limited number of new engagements each year. If you are considering a search or advisory relationship, we would welcome an introductory call — without obligation, and in complete confidence.</p>
+    <div class="cds">
+      <div class="cd"><span class="cd-l">Telephone</span><span class="cd-v">(424) 253-1320</span></div>
+      <div class="cd"><span class="cd-l">Address</span><span class="cd-v">9171 Wilshire Blvd, Suite 500<br>Beverly Hills, CA 90210</span></div>
     </div>
-
-    <div class="process-steps">
-      <div class="process-step reveal">
-        <span class="step-roman">I</span>
-        <h3 class="step-title serif">Introductory Conversation</h3>
-        <p class="step-body">Every engagement begins with a conversation, not a questionnaire. We take the time to understand not just the role, but <strong>the organization, the culture, and the standard you hold yourself to.</strong> We will ask questions that go beyond the brief. That is intentional.</p>
-      </div>
-      <div class="process-step reveal">
-        <span class="step-roman">II</span>
-        <h3 class="step-title serif">Principal-Led Search</h3>
-        <p class="step-body">We conduct every search personally. <strong>No junior associates. No delegated sourcing.</strong> We draw on our global network, cultivated across decades of trust-based relationships.</p>
-      </div>
-      <div class="process-step reveal">
-        <span class="step-roman">III</span>
-        <h3 class="step-title serif">Curated Presentation</h3>
-        <p class="step-body">We present a small number of candidates, <strong>never a longlist designed to demonstrate effort.</strong> Each has been interviewed in depth, thoroughly referenced, and considered against your specific brief. We would stake our own reputation on every name we put forward.</p>
-      </div>
-    </div>
-
-    <div class="process-coda reveal">
-      <p class="process-coda-text">"Understanding people, how they think, what they need, and where they thrive, is <strong>the only honest basis for placing them.</strong>"</p>
-      <a href="#contact" class="btn-primary" style="white-space:nowrap">Begin a Conversation</a>
-    </div>
+  </div>
+  <div class="form">
+    <div class="frow"><div class="field"><label>First Name</label><input type="text"></div><div class="field"><label>Last Name</label><input type="text"></div></div>
+    <div class="field"><label>Email Address</label><input type="email"></div>
+    <div class="field"><label>Organization</label><input type="text"></div>
+    <div class="field"><label>Nature of Inquiry</label><select><option value="">Select</option><option>Executive Search & Advisory</option><option>Family Office Advisory</option><option>Private Events & Principal Production</option><option>General Inquiry</option></select></div>
+    <div class="field"><label>Brief</label><textarea></textarea></div>
+    <button class="fsub">Submit Inquiry</button>
   </div>
 </section>
 
-
-<!-- ─── TEAM ─── -->
-<section id="team">
-  <div class="section-inner">
-    <div class="section-header reveal">
-      <div class="section-header-left">
-        <span class="rule"></span>
-        <div>
-          <span class="label">Principal Advisors</span>
-          <h2 class="section-title" style="margin-top:8px">The <em>Team</em></h2>
-        </div>
-      </div>
-    </div>
-
-    <div class="team-grid">
-      <div class="team-card reveal">
-        <div class="team-role">Founder</div>
-        <h3 class="team-name serif">Laura Huxley</h3>
-        <p class="team-bio">
-          Laura grew up in Bristol and has spent her career at the intersection of exceptional work and the people who make it. She began in London in PR across art, music, events, and television, before moving into talent advisory in Los Angeles and Europe. For four years she was embedded within one of the world's <strong>leading multidisciplinary creative studios</strong>, advising on the people behind some of the largest productions globally.
-          <br><br>
-          She also works with <strong>venture capital firms, family offices, and founders</strong> who hold themselves to an uncommon standard. A student of psychology and a trainee pilot, she founded Huxley &amp; Co. on the belief that understanding people, how they think, what they need, and where they thrive, is the only honest basis for placing them.
-        </p>
-        <div class="team-details">
-          <span class="tag">London → Los Angeles</span>
-          <span class="tag">Psychology</span>
-          <span class="tag">Creative Studios</span>
-          <span class="tag">Family Office</span>
-        </div>
-      </div>
-
-      <div class="team-card reveal">
-        <div class="team-role">Principal</div>
-        <h3 class="team-name serif">Chad Siwik</h3>
-        <p class="team-bio">
-          Chad brings to Huxley &amp; Co. a rare understanding of what it means to operate where the stakes are real and <strong>discretion is non-negotiable</strong>. For several years he has worked at NASA across the Artemis mission, contributing to communications, strategy, and the complex talent and institutional relationships that define one of the most security-conscious organizations in the world. That experience translates directly into how he approaches advisory work: with precision, care, and an understanding of what it takes to earn and keep the trust of people who operate at the highest levels.
-        </p>
-        <div class="team-details">
-          <span class="tag">NASA Artemis</span>
-          <span class="tag">Program Management</span>
-          <span class="tag">High-Stakes Advisory</span>
-          <span class="tag">Institutional Discretion</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ─── CONTACT ─── -->
-<section id="contact" style="padding:100px 48px;">
-  <div class="contact-inner">
-    <div class="contact-left reveal">
-      <span class="label" style="color:var(--accent-light);display:block;margin-bottom:20px">Get in Touch</span>
-      <h2 class="contact-headline serif">Every engagement<br>begins with a<br><em>conversation.</em></h2>
-      <p class="contact-body">We accept a limited number of new engagements each year. If you are considering a search or advisory relationship, we would welcome an introductory call, without obligation, and in complete confidence.</p>
-
-      <div class="contact-details">
-        <div>
-          <div class="contact-detail-label">Email</div>
-          <a id="contact-email" href="#" class="contact-detail-value"></a>
-        </div>
-        <div>
-          <div class="contact-detail-label">Phone</div>
-          <a href="tel:+14242531320" class="contact-detail-value">(424) 253-1320</a>
-        </div>
-        <div>
-          <div class="contact-detail-label">Address</div>
-          <span class="contact-detail-value" style="cursor:default">9171 Wilshire Blvd, Suite 500<br>Beverly Hills, CA 90210</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="contact-right reveal">
-
-      <!-- Success state -->
-      <div id="form-success" style="display:none; padding: 48px 40px; border: 1px solid rgba(255,255,255,0.1); height:100%; box-sizing:border-box;">
-        <span class="rule" style="background:var(--accent-light); margin-bottom:28px;"></span>
-        <p class="serif" style="font-size:26px;font-weight:300;color:var(--warm-white);line-height:1.4;margin-bottom:16px;">Thank you for reaching out.</p>
-        <p style="font-size:14px;color:rgba(250,249,246,0.55);line-height:1.8;">We will be in touch shortly. All inquiries are treated with absolute discretion.</p>
-      </div>
-
-      <form id="contact-form" class="contact-form" action="https://formspree.io/f/mzdkgqbg" method="POST">
-        <div class="form-row">
-          <div class="form-field">
-            <label for="fname">First Name</label>
-            <input type="text" id="fname" name="first_name" placeholder="First name" required>
-          </div>
-          <div class="form-field">
-            <label for="lname">Last Name</label>
-            <input type="text" id="lname" name="last_name" placeholder="Last name" required>
-          </div>
-        </div>
-        <div class="form-field">
-          <label for="email">Email Address</label>
-          <input type="email" id="email" name="email" placeholder="your@email.com" required>
-        </div>
-        <div class="form-field">
-          <label for="org">Organisation</label>
-          <input type="text" id="org" name="organisation" placeholder="Company or family office">
-        </div>
-        <div class="form-field">
-          <label for="service">Nature of Inquiry</label>
-          <select id="service" name="inquiry_type">
-            <option value="" disabled selected>Select one</option>
-            <option>Executive Search &amp; Advisory</option>
-            <option>Family Office Advisory</option>
-            <option>Private Events &amp; Principal Production</option>
-            <option>General Inquiry</option>
-          </select>
-        </div>
-        <div class="form-field">
-          <label for="message">Brief</label>
-          <textarea id="message" name="message" rows="4" placeholder="A brief note on what you are looking for…"></textarea>
-        </div>
-        <div class="form-submit">
-          <span class="form-note" id="form-error" style="color:rgba(220,100,100,0.8);display:none;">Something went wrong. Please try again or email us directly.</span>
-          <span class="form-note" id="form-note-default">Treated with absolute discretion.</span>
-          <button type="submit" class="btn-submit" id="form-btn">Submit Inquiry</button>
-        </div>
-      </form>
-    </div>
-  </div>
-</section>
-
-<!-- ─── FOOTER ─── -->
 <footer>
-  <a href="#" class="footer-logo">Huxley &amp; Co.</a>
-  <ul class="footer-links">
-    <li><a href="https://www.linkedin.com/company/huxley-co" target="_blank">LinkedIn</a></li>
-    <li><a href="#">Privacy</a></li>
-    <li><a href="#">Terms</a></li>
-  </ul>
-  <span class="footer-copy">© 2026 Huxley &amp; Co. We operate where reputation is everything.</span>
+  <span class="fl">Huxley & Co.</span>
+  <span class="ft">We operate where reputation is everything.</span>
+  <ul class="fls"><li><a href="#">LinkedIn</a></li><li><a href="#">Privacy</a></li><li><a href="#">Terms</a></li></ul>
 </footer>
 
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-
-    const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-      navbar.classList.toggle('scrolled', window.scrollY > 40);
-    });
-
-    const reveals = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          setTimeout(() => entry.target.classList.add('visible'), 80);
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0, rootMargin: '0px' });
-    reveals.forEach(el => observer.observe(el));
-
-    const form = document.getElementById('contact-form');
-    if (form) {
-      form.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        const btn = document.getElementById('form-btn');
-        const errorMsg = document.getElementById('form-error');
-        const defaultNote = document.getElementById('form-note-default');
-        btn.textContent = 'Sending...';
-        btn.disabled = true;
-        errorMsg.style.display = 'none';
-        try {
-          const response = await fetch(form.action, {
-            method: 'POST',
-            body: new FormData(form),
-            headers: { 'Accept': 'application/json' }
-          });
-          if (response.ok) {
-            form.style.display = 'none';
-            document.getElementById('form-success').style.display = 'block';
-          } else {
-            throw new Error('error');
-          }
-        } catch (err) {
-          btn.textContent = 'Submit Inquiry';
-          btn.disabled = false;
-          defaultNote.style.display = 'none';
-          errorMsg.style.display = 'inline';
-        }
-      });
-    }
-
-    // Hamburger menu
-    const hamburger = document.getElementById('hamburger');
-    const mobileNav = document.getElementById('mobileNav');
-    hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('open');
-      mobileNav.classList.toggle('open');
-      document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
-    });
-    document.querySelectorAll('.nav-mobile-link').forEach(link => {
-      link.addEventListener('click', () => {
-        hamburger.classList.remove('open');
-        mobileNav.classList.remove('open');
-        document.body.style.overflow = '';
-      });
-    });
-
-  });
-</script>
-
-<script>
-  (function() {
-    var u = 'hello', d = 'thehuxleycompany', t = 'com';
-    var addr = u + '@' + d + '.' + t;
-    var els = document.querySelectorAll('#contact-email');
-    els.forEach(function(el) {
-      el.href = 'mailto:' + addr;
-      el.textContent = addr;
-    });
-  })();
-</script>
 </body>
 </html>
