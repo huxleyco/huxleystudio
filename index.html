@@ -174,16 +174,14 @@ nav a:hover { color: var(--forest); }
 /* SERVICES */
 .services { background: var(--off); border-bottom: 0.5px solid var(--border); }
 .sg {
-  display: grid; grid-template-columns: 1fr 0.5px 1fr 0.5px 1fr;
+  display: grid; grid-template-columns: 1fr 1fr 1fr;
   margin: 0 72px;
+  gap: 52px;
 }
-.sg-d { background: var(--border); }
-.sc { padding: 72px 52px; }
-.sc:first-child { padding-left: 0; }
-.sc:last-child  { padding-right: 0; }
+.sc { padding: 72px 0; }
 .sc-num { font-family: 'Jost', sans-serif; font-size: 9px; font-weight: 300; letter-spacing: 0.28em; color: var(--forest); text-transform: uppercase; margin-bottom: 22px; }
 .sc-title { font-size: 21px; font-weight: 400; color: var(--ink); line-height: 1.25; margin-bottom: 16px; }
-.sc-title em { font-style: italic; color: var(--forest); }
+.sc-title em { font-style: italic; color: var(--ink); }
 .sc-body { font-size: 16px; font-weight: 400; color: var(--body); line-height: 1.85; }
 
 /* QUOTE */
@@ -228,13 +226,13 @@ nav a:hover { color: var(--forest); }
 
 /* CONTACT — ink dark */
 .contact { background: var(--ink); padding: 88px 72px; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
-.ch2 { font-size: clamp(22px, 2.4vw, 32px); font-weight: 400; color: #f2ede4; line-height: 1.25; margin-bottom: 22px; }
-.ch2 em { font-style: italic; color: rgba(242,237,228,0.4); }
-.cb { font-size: 16px; color: rgba(242,237,228,0.35); line-height: 1.85; margin-bottom: 40px; max-width: 400px; }
+.ch2 { font-size: clamp(18px, 2vw, 26px); font-weight: 400; color: rgba(242,237,228,0.7); line-height: 1.3; margin-bottom: 22px; }
+.ch2 em { font-style: italic; color: rgba(242,237,228,0.35); }
+.cb { font-size: 15px; color: rgba(242,237,228,0.28); line-height: 1.9; margin-bottom: 40px; max-width: 400px; }
 .cds { display: flex; flex-direction: column; gap: 16px; }
 .cd { display: flex; flex-direction: column; gap: 4px; }
-.cd-l { font-family: 'Jost', sans-serif; font-size: 9px; font-weight: 300; letter-spacing: 0.28em; color: var(--fmid); text-transform: uppercase; opacity: 0.8; }
-.cd-v { font-size: 17px; color: rgba(242,237,228,0.5); line-height: 1.6; }
+.cd-l { font-family: 'Jost', sans-serif; font-size: 9px; font-weight: 300; letter-spacing: 0.28em; color: rgba(242,237,228,0.28); text-transform: uppercase; }
+.cd-v { font-size: 15px; color: rgba(242,237,228,0.42); line-height: 1.6; }
 .form { display: flex; flex-direction: column; gap: 22px; }
 .frow { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
 .field { display: flex; flex-direction: column; gap: 7px; }
@@ -282,9 +280,7 @@ footer { background: var(--off); border-top: 0.5px solid var(--border); padding:
 <div class="services" id="advisory">
   <div class="sg">
     <div class="sc"><p class="sc-num">01</p><h3 class="sc-title">Executive Search<br>& <em>Advisory</em></h3><p class="sc-body">Retained counsel for founders and private offices seeking exceptional talent. Every search conducted personally. No junior associates. No process theatre.</p></div>
-    <div class="sg-d"></div>
     <div class="sc"><p class="sc-num">02</p><h3 class="sc-title">Family Office<br>& <em>Private Clients</em></h3><p class="sc-body">For multi-generational families who require depth and absolute confidentiality. These relationships are built slowly and held for the long term.</p></div>
-    <div class="sg-d"></div>
     <div class="sc"><p class="sc-num">03</p><h3 class="sc-title">Principal<br><em>Production</em></h3><p class="sc-body">For clients who hold themselves to an uncommon standard. We place the talent behind exceptional private gatherings and large-scale productions.</p></div>
   </div>
 </div>
@@ -319,6 +315,7 @@ footer { background: var(--off); border-top: 0.5px solid var(--border); padding:
     <h2 class="ch2">Every engagement begins<br>with a <em>conversation.</em></h2>
     <p class="cb">We accept a limited number of new engagements each year. If you are considering a search or advisory relationship, we would welcome an introductory call — without obligation, and in complete confidence.</p>
     <div class="cds">
+      <div class="cd"><span class="cd-l">Email</span><span class="cd-v"><a href="mailto:hello@thehuxleycompany.com" style="color:inherit;text-decoration:none;">hello@thehuxleycompany.com</a></span></div>
       <div class="cd"><span class="cd-l">Telephone</span><span class="cd-v">(424) 253-1320</span></div>
       <div class="cd"><span class="cd-l">Address</span><span class="cd-v">9171 Wilshire Blvd, Suite 500<br>Beverly Hills, CA 90210</span></div>
     </div>
