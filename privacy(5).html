@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Privacy · Huxley &amp; Co.</title>
-<meta name="description" content="How Huxley &amp; Co. handles personal data for clients, candidates, and visitors to this site.">
+<title>Inquire · Huxley &amp; Co.</title>
+<meta name="description" content="Inquire about a search, an operations engagement, or an advisory conversation with Huxley &amp; Co.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -151,6 +151,46 @@ h1.hero {
   margin: 36px 0 0;
   max-width: 18ch;
   color: var(--text);
+}
+
+/* ---------- Homepage hero variant (centered, large signet) ---------- */
+
+.hero-centered {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px 0 64px;
+}
+
+.hero-centered .signet-large {
+  width: 88px;
+  height: 88px;
+  display: block;
+  color: var(--text);
+}
+
+.hero-centered .section-label-centered {
+  margin-top: 22px;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.24em;
+  color: var(--meta);
+  text-transform: uppercase;
+}
+
+.hero-centered h1.hero {
+  margin: 44px auto 0;
+  text-align: center;
+  max-width: 18ch;
+}
+
+@media (max-width: 820px) {
+  .hero-centered { padding: 16px 0 40px; }
+  .hero-centered .signet-large { width: 64px; height: 64px; }
+  .hero-centered h1.hero { margin-top: 32px; }
 }
 
 /* ---------- Content prose ---------- */
@@ -482,12 +522,12 @@ h1.hero {
 <div class="page">
 
   <header class="doc-header">
-    <a href="index.html" class="brand" aria-label="Huxley &amp; Co. home">Huxley &amp; Co. &nbsp;·&nbsp; Independent talent practice</a>
+    <a href="index.html" class="brand" aria-label="Huxley &amp; Co. home">Huxley &amp; Co.</a>
     <nav aria-label="Primary">
       <a href="index.html">Index</a>
       <a href="work.html">The work</a>
       <a href="studio.html">The studio</a>
-      <a href="inquire.html">Inquire</a>
+      <a href="inquire.html" class="current">Inquire</a>
     </nav>
   </header>
 
@@ -499,38 +539,53 @@ h1.hero {
         <line x1="14.5" y1="5.5" x2="14.5" y2="16.5" stroke="currentColor" stroke-width="0.8"/>
         <line x1="7.5" y1="11" x2="14.5" y2="11" stroke="currentColor" stroke-width="0.8"/>
       </svg>
-      <span>Privacy</span>
+      <span>№ 004 &nbsp;·&nbsp; Inquiries</span>
     </div>
 
-    <p class="lede">Discretion is the premise of our work. This statement sets out how we handle the personal information entrusted to us.</p>
+    <p class="lede">A short note is enough. We reply personally, usually within forty-eight hours.</p>
 
-    <div class="body">
-      <h3 class="legal-heading">Who we are</h3>
-      <p>Huxley &amp; Co. ("Huxley," "we," "us") is an independent talent practice based at 9171 Wilshire Blvd, Suite 500, Beverly Hills, CA 90210. For any privacy question, write to <a href="mailto:hello@thehuxleycompany.com">hello@thehuxleycompany.com</a>.</p>
+    <form class="inquire" action="https://formspree.io/f/xrerjyrl" method="POST">
 
-      <h3 class="legal-heading">Information we collect</h3>
-      <p>In the normal course of our work we collect information from three groups of people:</p>
-      <p><strong>Clients and prospective clients.</strong> Names, business contact details, role and company information, and the contents of correspondence with us.</p>
-      <p><strong>Candidates and prospective candidates.</strong> Names, contact details, professional history, CVs, references, compensation information, and any other details shared with us by the candidate or by third parties with the candidate's knowledge, for the purpose of considering the candidate for a role.</p>
-      <p><strong>Visitors to this website.</strong> Limited technical information such as IP address, browser type, and pages viewed, collected by standard web hosting services. If you complete the inquiry form, we also receive the information you submit.</p>
+      <div class="field">
+        <label for="name">Your name</label>
+        <input type="text" id="name" name="name" required autocomplete="name">
+      </div>
 
-      <h3 class="legal-heading">How we use information</h3>
-      <p>We use personal information only for the purposes for which it was provided: to advise and represent clients, to consider and represent candidates, to respond to inquiries, and to operate and improve our practice. We do not sell personal information. We do not share it with third parties except as necessary to deliver our services (for example, presenting a candidate to a client who has engaged us), as required by law, or with the explicit consent of the individual concerned.</p>
+      <div class="field">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required autocomplete="email">
+      </div>
 
-      <h3 class="legal-heading">How we protect information</h3>
-      <p>We take reasonable technical and organizational measures to protect the information we hold, including access controls, encryption in transit, and a principle of collecting only what is necessary for the work at hand.</p>
+      <div class="field">
+        <label for="organization">Organization</label>
+        <input type="text" id="organization" name="organization" autocomplete="organization">
+      </div>
 
-      <h3 class="legal-heading">How long we retain information</h3>
-      <p>We retain personal information for as long as it is relevant to our work with you, and for such further period as required by law or reasonable commercial practice. Candidates and clients may request that we delete their information at any time; we will do so unless we are legally required to retain it.</p>
+      <div class="field">
+        <label for="role">Your role</label>
+        <input type="text" id="role" name="role" autocomplete="organization-title">
+      </div>
 
-      <h3 class="legal-heading">Your rights</h3>
-      <p>Depending on where you live, you may have rights under applicable privacy law (including the California Consumer Privacy Act and, for residents of the United Kingdom and European Economic Area, the UK and EU General Data Protection Regulations) to request access to, correction of, or deletion of the personal information we hold about you. To exercise any of these rights, write to us at <a href="mailto:hello@thehuxleycompany.com">hello@thehuxleycompany.com</a>. We will respond within the timeframes required by the applicable law.</p>
+      <div class="field">
+        <label for="message">A short note</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+      </div>
 
-      <h3 class="legal-heading">Changes to this statement</h3>
-      <p>We may update this statement from time to time. The current version will always be available at this page.</p>
+      <button type="submit" class="submit">Send inquiry ↗</button>
 
-      <p class="legal-meta">Last updated: April 2026.</p>
+    </form>
+
+    <div class="direct-contact">
+      <div class="dc-label">Email</div>
+      <div class="dc-value"><a href="mailto:hello@thehuxleycompany.com">hello@thehuxleycompany.com</a></div>
+
+      <div class="dc-label">Telephone</div>
+      <div class="dc-value"><a href="tel:+14242531320">+1 (424) 253&#8209;1320</a></div>
+
+      <div class="dc-label">Address</div>
+      <div class="dc-value">9171 Wilshire Blvd, Suite 500<br>Beverly Hills, CA 90210</div>
     </div>
+
   </main>
 
   <footer class="doc-footer">
