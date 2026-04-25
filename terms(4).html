@@ -153,6 +153,46 @@ h1.hero {
   color: var(--text);
 }
 
+/* ---------- Homepage hero variant (centered, large signet) ---------- */
+
+.hero-centered {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px 0 64px;
+}
+
+.hero-centered .signet-large {
+  width: 88px;
+  height: 88px;
+  display: block;
+  color: var(--text);
+}
+
+.hero-centered .section-label-centered {
+  margin-top: 22px;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.24em;
+  color: var(--meta);
+  text-transform: uppercase;
+}
+
+.hero-centered h1.hero {
+  margin: 44px auto 0;
+  text-align: center;
+  max-width: 18ch;
+}
+
+@media (max-width: 820px) {
+  .hero-centered { padding: 16px 0 40px; }
+  .hero-centered .signet-large { width: 64px; height: 64px; }
+  .hero-centered h1.hero { margin-top: 32px; }
+}
+
 /* ---------- Content prose ---------- */
 
 .lede {
@@ -482,7 +522,7 @@ h1.hero {
 <div class="page">
 
   <header class="doc-header">
-    <a href="index.html" class="brand" aria-label="Huxley &amp; Co. home">Huxley &amp; Co. &nbsp;·&nbsp; Independent talent practice</a>
+    <a href="index.html" class="brand" aria-label="Huxley &amp; Co. home">Huxley &amp; Co.</a>
     <nav aria-label="Primary">
       <a href="index.html">Index</a>
       <a href="work.html">The work</a>
@@ -506,7 +546,7 @@ h1.hero {
 
     <div class="body">
       <h3 class="legal-heading">About this site</h3>
-      <p>This website is operated by Huxley &amp; Co., an independent talent practice based at 9171 Wilshire Blvd, Suite 500, Beverly Hills, CA 90210. By visiting or using this site, you agree to these terms.</p>
+      <p>This website is operated by Huxley &amp; Co., an independent talent and advisory practice based at 9171 Wilshire Blvd, Suite 500, Beverly Hills, CA 90210. By visiting or using this site, you agree to these terms.</p>
 
       <h3 class="legal-heading">Scope</h3>
       <p>The pages of this site describe our practice at a high level. They are not an offer, a commitment to act, or a binding proposal. Huxley &amp; Co. undertakes work only under a written engagement letter signed by both parties. These website terms do not govern the commercial terms of any engagement; those terms are set out in the engagement letter.</p>
