@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The studio · Huxley &amp; Co.</title>
-<meta name="description" content="A two-principal talent practice held directly by Laura Huxley and Chad Siwik, based in Beverly Hills and London.">
+<meta name="description" content="A founder-led talent and advisory practice with an international client base. Search, operations, and advisory mandates held directly.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -151,6 +151,46 @@ h1.hero {
   margin: 36px 0 0;
   max-width: 18ch;
   color: var(--text);
+}
+
+/* ---------- Homepage hero variant (centered, large signet) ---------- */
+
+.hero-centered {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px 0 64px;
+}
+
+.hero-centered .signet-large {
+  width: 88px;
+  height: 88px;
+  display: block;
+  color: var(--text);
+}
+
+.hero-centered .section-label-centered {
+  margin-top: 22px;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.24em;
+  color: var(--meta);
+  text-transform: uppercase;
+}
+
+.hero-centered h1.hero {
+  margin: 44px auto 0;
+  text-align: center;
+  max-width: 18ch;
+}
+
+@media (max-width: 820px) {
+  .hero-centered { padding: 16px 0 40px; }
+  .hero-centered .signet-large { width: 64px; height: 64px; }
+  .hero-centered h1.hero { margin-top: 32px; }
 }
 
 /* ---------- Content prose ---------- */
@@ -482,7 +522,7 @@ h1.hero {
 <div class="page">
 
   <header class="doc-header">
-    <a href="index.html" class="brand" aria-label="Huxley &amp; Co. home">Huxley &amp; Co. &nbsp;·&nbsp; Independent talent practice</a>
+    <a href="index.html" class="brand" aria-label="Huxley &amp; Co. home">Huxley &amp; Co.</a>
     <nav aria-label="Primary">
       <a href="index.html">Index</a>
       <a href="work.html">The work</a>
@@ -502,11 +542,8 @@ h1.hero {
       <span>№ 003 &nbsp;·&nbsp; The studio</span>
     </div>
 
-    <p class="lede">A founder-led practice with an international client base. We take a small number of mandates each year and hold every engagement directly.</p>
+    <p class="lede">Huxley &amp; Co. is a talent and advisory practice for the moment a company decides who it wants to be next. The hire, the structure, the next chapter.</p>
 
-    <div class="body">
-      <p>Huxley &amp; Co. exists in the space between traditional executive search and in-house talent leadership. Most of what we do is invisible from the outside: a confidential brief, a quiet longlist, a set of conversations, a placement. We prefer it that way, and so do our clients.</p>
-    </div>
 
     <div class="principals">
 
